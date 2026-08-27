@@ -3,6 +3,9 @@
 人生の節目に発生する行政手続を「東京の路線図」として可視化し、
 **役所への往復回数を減らす**ための Web アプリ。依存ライブラリなし、静的ファイルのみで動く。
 
+**▶ 触ってみる: https://wngbuyx.github.io/tetsuzuki-metro/**
+
+![CI](https://github.com/WngBuYx/tetsuzuki-metro/actions/workflows/ci.yml/badge.svg)
 ![状態](https://img.shields.io/badge/tests-13%20passing-brightgreen)
 ![データ](https://img.shields.io/badge/手続-69-blue)
 ![ライセンス](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -11,7 +14,8 @@
 npm test        # エンジンのテスト13件
 npm run validate # データ整合性チェック
 npm run route   # CLI で7ライフイベントの計算結果を見る
-# ブラウザで見るには index.html を任意の静的サーバーで開く
+# ローカルで見るには index.html を任意の静的サーバーで開く
+# （ES モジュールを使うので file:// では動かない）
 ```
 
 ## 現状（2026-08-27）
