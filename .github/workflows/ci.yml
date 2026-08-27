@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 依存ライブラリなしなので npm install は不要
+      - name: エンジンのテスト
+        run: npm test
+
+      - name: データ整合性チェック
+        run: npm run validate
+
+      # 証拠チェーン監査は EVIDENCE_TODO.md を書き換えるだけなので、
+      # 差分が出ても失敗させない（残作業の可視化が目的）
+      - name: 証拠チェーン監査
+        run: npm run audit
