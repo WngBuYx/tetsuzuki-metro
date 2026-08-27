@@ -1,0 +1,9 @@
+# 依存
+node_modules/
+
+# 一次情報PDF（再配布可否が未確認のため公開リポジトリに含めない。README §6.5 参照）
+sources/*.pdf
+
+# 作業中の中間ファイル
+.superpowers/
+*.log

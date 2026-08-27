@@ -1,0 +1,59 @@
+{
+  "$schema_version": "1.0",
+  "verified_on": "2026-08-10",
+  "coverage_status_values": ["complete", "partial", "missing", "unverified"],
+  "capability_values": ["yes", "no", "unknown", "not_applicable"],
+  "events": [
+    {
+      "id": "moving",
+      "name": {"ja": "引っ越し", "zh": "搬家", "en": "Moving"},
+      "subflows": [
+        {"id": "moving_guidance", "name": {"ja": "引越し手続案内", "zh": "搬家手续导航", "en": "Moving procedure guidance"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "move_out_notification", "name": {"ja": "転出届", "zh": "迁出申报", "en": "Moving-out notification"}, "procedure_ids": ["tenshutsu-todoke"], "jurisdiction": "ward"},
+        {"id": "myna_move_out_online", "name": {"ja": "マイナポータル転出届", "zh": "MyNa在线迁出", "en": "MyNa Portal online moving-out"}, "procedure_ids": ["tenshutsu-todoke"], "jurisdiction": "national_ward"},
+        {"id": "move_in_notification", "name": {"ja": "転入届", "zh": "迁入申报", "en": "Moving-in notification"}, "procedure_ids": ["tennyu-todoke"], "jurisdiction": "ward"},
+        {"id": "intra_ward_move_notification", "name": {"ja": "転居届", "zh": "区内迁居申报", "en": "Intra-ward move notification"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "mynumber_address_continued_use", "name": {"ja": "マイナンバー住所変更・継続利用", "zh": "My Number地址更新与继续使用", "en": "My Number address update and continued use"}, "procedure_ids": ["mynumber-keizoku-riyou"], "jurisdiction": "ward"},
+        {"id": "national_health_insurance_move", "name": {"ja": "国民健康保険の異動", "zh": "国民健康保险迁移手续", "en": "National Health Insurance move procedures"}, "procedure_ids": ["kokuho-tetsuzuki-moving"], "jurisdiction": "ward"},
+        {"id": "child_allowance_move", "name": {"ja": "児童手当の異動", "zh": "儿童津贴迁移手续", "en": "Child allowance move procedures"}, "procedure_ids": ["jidou-teate-moving"], "jurisdiction": "ward"},
+        {"id": "care_insurance_move", "name": {"ja": "介護保険の異動", "zh": "介护保险迁移手续", "en": "Long-term care insurance move procedures"}, "procedure_ids": ["kaigo-juusho-henko"], "jurisdiction": "ward"},
+        {"id": "seal_registration_move", "name": {"ja": "印鑑登録の異動", "zh": "印鉴登记迁移手续", "en": "Seal registration move procedures"}, "procedure_ids": ["inkan-touroku-moving"], "jurisdiction": "ward"},
+        {"id": "mandatory_visit_summary", "name": {"ja": "来庁必須事項", "zh": "必须到厅事项", "en": "Mandatory visit summary"}, "procedure_ids": [], "jurisdiction": "derived"}
+      ]
+    },
+    {
+      "id": "childbirth",
+      "name": {"ja": "妊娠・出産・子育て", "zh": "妊娠、出生、育儿", "en": "Pregnancy, birth and child-rearing"},
+      "subflows": [
+        {"id": "pregnancy_notification_handbook", "name": {"ja": "妊娠届・母子健康手帳", "zh": "妊娠申报与母子健康手册", "en": "Pregnancy notification and handbook"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "pregnancy_interview_support", "name": {"ja": "妊婦面接・伴走支援", "zh": "孕妇面谈与伴走支援", "en": "Pregnancy interview and support"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "birth_notification", "name": {"ja": "出生届", "zh": "出生申报", "en": "Birth notification"}, "procedure_ids": ["shussho-todoke"], "jurisdiction": "ward"},
+        {"id": "child_health_insurance", "name": {"ja": "子どもの健康保険加入", "zh": "孩子加入健康保险", "en": "Child health insurance enrollment"}, "procedure_ids": ["kodomo-hoken-kanyu"], "jurisdiction": "ward_employer"},
+        {"id": "child_allowance_birth", "name": {"ja": "児童手当", "zh": "儿童津贴", "en": "Child allowance"}, "procedure_ids": ["jidou-teate-shussho"], "jurisdiction": "ward"},
+        {"id": "child_medical_subsidy", "name": {"ja": "子ども医療費助成", "zh": "儿童医疗费补助", "en": "Child medical subsidy"}, "procedure_ids": ["nyuyoji-iryosho"], "jurisdiction": "ward"},
+        {"id": "childbirth_lump_sum", "name": {"ja": "出産育児一時金", "zh": "出产育儿一时金", "en": "Childbirth lump-sum benefit"}, "procedure_ids": ["shussan-ichijikin"], "jurisdiction": "insurer"},
+        {"id": "newborn_visit_health_guidance", "name": {"ja": "新生児訪問・保健指導", "zh": "新生儿访问与保健指导", "en": "Newborn visit and health guidance"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "foreign_child_residence_status", "name": {"ja": "外国籍児の在留資格取得", "zh": "外国籍孩子取得在留资格", "en": "Residence status for a foreign-national child"}, "procedure_ids": ["kodomo-zairyu-shutoku"], "jurisdiction": "national"},
+        {"id": "childcare_support_navigation", "name": {"ja": "子育て支援案内", "zh": "育儿支援导航", "en": "Child-rearing support navigation"}, "procedure_ids": [], "jurisdiction": "ward_tokyo"}
+      ]
+    },
+    {
+      "id": "death",
+      "name": {"ja": "死亡・おくやみ", "zh": "死亡与身后手续", "en": "Death and bereavement"},
+      "subflows": [
+        {"id": "death_guidance", "name": {"ja": "おくやみ手続案内", "zh": "身后手续导航", "en": "Bereavement procedure guidance"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "death_notification_cremation", "name": {"ja": "死亡届・火葬許可", "zh": "死亡申报与火葬许可", "en": "Death notification and cremation permit"}, "procedure_ids": ["shibou-todoke"], "jurisdiction": "ward"},
+        {"id": "household_register_change", "name": {"ja": "住民記録・世帯主変更", "zh": "住民记录与户主变更", "en": "Resident register and household-head change"}, "procedure_ids": ["setainushi-henko"], "jurisdiction": "ward"},
+        {"id": "mynumber_seal_return", "name": {"ja": "マイナンバー・印鑑登録証", "zh": "My Number与印鉴登记证处理", "en": "My Number and seal-registration-card handling"}, "procedure_ids": ["mynumber-henno", "inkan-henno"], "jurisdiction": "ward"},
+        {"id": "health_insurance_return", "name": {"ja": "健康保険資格確認書等の返納", "zh": "健康保险资料返还", "en": "Health insurance document return"}, "procedure_ids": ["kokuho-henno", "kouki-henno", "kokuho-fuyou-kanyu"], "jurisdiction": "ward"},
+        {"id": "funeral_benefit", "name": {"ja": "葬祭費", "zh": "葬祭费", "en": "Funeral benefit"}, "procedure_ids": ["sousaihi-kokuho", "sousaihi-kouki"], "jurisdiction": "ward"},
+        {"id": "care_insurance_return", "name": {"ja": "介護保険証等の返納", "zh": "介护保险资料返还", "en": "Long-term care insurance document return"}, "procedure_ids": ["kaigo-henno"], "jurisdiction": "ward"},
+        {"id": "pension_survivor_procedures", "name": {"ja": "年金・遺族給付", "zh": "年金与遗属给付", "en": "Pension and survivor benefits"}, "procedure_ids": ["nenkin-mishikyu-kokumin", "nenkin-mishikyu-jimusho", "shibou-ichijikin", "izoku-kiso-nenkin", "kafu-nenkin"], "jurisdiction": "ward_national"},
+        {"id": "resident_tax_heir_representative", "name": {"ja": "住民税相続人代表者", "zh": "住民税继承人代表", "en": "Resident-tax heir representative"}, "procedure_ids": ["sozokunin-daihyo"], "jurisdiction": "ward"},
+        {"id": "foreign_resident_card_return", "name": {"ja": "在留カード等の返納", "zh": "在留卡等返还", "en": "Residence-card return"}, "procedure_ids": ["zairyu-card-henno"], "jurisdiction": "national"},
+        {"id": "bereavement_counter_reservation", "name": {"ja": "おくやみ窓口予約・支援", "zh": "身后手续窗口预约与协助", "en": "Bereavement counter reservation and assistance"}, "procedure_ids": [], "jurisdiction": "ward"},
+        {"id": "inheritance_referral", "name": {"ja": "相続・民間手続への案内", "zh": "继承及民间手续转介", "en": "Inheritance and private-procedure referrals"}, "procedure_ids": ["junkakutei-shinkoku", "sozokuzei-shinkoku", "sozokunin-kakutei", "houtei-sozoku-joho", "sozoku-houki", "sozoku-touki", "ginko-kouza", "seimei-hoken", "koukyo-ryokin"], "jurisdiction": "mixed"}
+      ]
+    }
+  ]
+}

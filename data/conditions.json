@@ -1,0 +1,958 @@
+{
+  "$schema_version": "0.2",
+  "note": "条件はフラットなリストで持ち、scenarios と tier で絞り込む。tier: profile=最初に1回だけ / core=そのシナリオで必ず聞く / detailed=「もっと詳しく」で開く / follow_up=親の回答次第。全て未回答のまま先へ進めること（遺族や来日直後の人に尋問をしない）。 question_variants がある条件は、シナリオごとに問い方を差し替える（死別の『亡くなられた方の…』を引っ越しや来日でそのまま出さない）。",
+  "tiers": {
+    "profile": {
+      "ja": "最初に1回だけ",
+      "en": "Asked once at the start"
+    },
+    "core": {
+      "ja": "そのシナリオの必須質問",
+      "en": "Core question for the scenario"
+    },
+    "detailed": {
+      "ja": "「もっと詳しく」で開く",
+      "en": "Behind a 'more detail' toggle"
+    },
+    "follow_up": {
+      "ja": "親の回答次第で出る",
+      "en": "Shown depending on the parent answer"
+    }
+  },
+  "conditions": [
+    {
+      "id": "deceased_was_head",
+      "question": {
+        "ja": "亡くなられた方は世帯主でしたか？",
+        "easy": "しんだ 人は せたいぬし（いえの だいひょう）でしたか？",
+        "en": "Was the deceased the head of the household?"
+      },
+      "type": "boolean",
+      "affects": [
+        "setainushi-henko"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "core"
+    },
+    {
+      "when": "true",
+      "id": "household_members_15plus",
+      "question": {
+        "ja": "同じ世帯に、15歳以上の方は何人残っていますか？",
+        "easy": "おなじ いえに 15さい いじょうの 人は なん人 のこって いますか？",
+        "en": "How many household members aged 15 or over remain?"
+      },
+      "type": "number",
+      "note": {
+        "ja": "2人以上のときだけ世帯主変更届が必要。1人なら自動的にその方が世帯主になるため手続きは不要。",
+        "easy": "2人いじょうの ときだけ てつづきが ひつようです。",
+        "en": "Only needed if two or more remain; with one, they become head automatically."
+      },
+      "scenarios": [
+        "death"
+      ],
+      "tier": "follow_up",
+      "parent": "deceased_was_head",
+      "affects": [
+        "setainushi-henko"
+      ]
+    },
+    {
+      "id": "insurance",
+      "question": {
+        "ja": "亡くなられた方の健康保険は次のどれでしたか？",
+        "easy": "しんだ 人の けんこうほけんは どれでしたか？",
+        "en": "Which health insurance did the deceased have?"
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "kokuho",
+          "label": {
+            "ja": "国民健康保険（74歳まで）",
+            "easy": "こくみん けんこうほけん",
+            "en": "National Health Insurance (up to 74)"
+          }
+        },
+        {
+          "value": "kouki",
+          "label": {
+            "ja": "後期高齢者医療制度（75歳以上）",
+            "easy": "75さい いじょうの ほけん",
+            "en": "Elderly medical system (75+)"
+          }
+        },
+        {
+          "value": "shaho",
+          "label": {
+            "ja": "勤務先の健康保険（社会保険）",
+            "easy": "かいしゃの ほけん",
+            "en": "Employer's health insurance"
+          },
+          "label_variants": {
+            "moving": {
+              "ja": "勤務先の健康保険（社会保険）",
+              "easy": "かいしゃの ほけん",
+              "en": "Employer's health insurance"
+            }
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "ja": "わからない",
+            "easy": "わからない",
+            "en": "Not sure"
+          }
+        }
+      ],
+      "affects": [
+        "kokuho-henno",
+        "sousaihi-kokuho",
+        "sousaihi-kouki",
+        "kouki-henno"
+      ],
+      "note": {
+        "ja": "葬祭費の窓口がこの答えで変わる（国保=医療保険年金課 国保給付係／後期高齢=高齢者医療担当課）。勤務先の健康保険だった場合は区役所ではなく勤務先・健保組合で「埋葬料」を請求する。",
+        "easy": "こたえに よって いく まどぐちが かわります。",
+        "en": "This determines which counter handles the funeral benefit — and if it was an employer's plan, you claim from the employer instead of the ward."
+      },
+      "scenarios": [
+        "death",
+        "employment",
+        "moving"
+      ],
+      "tier": "core",
+      "question_variants": {
+        "moving": {
+          "ja": "あなたの健康保険は次のどれですか？",
+          "easy": "あなたの けんこうほけんは どれですか？",
+          "en": "Which health insurance do you have?"
+        }
+      }
+    },
+    {
+      "id": "nenkin_type",
+      "question": {
+        "ja": "亡くなられた方は年金を受給していましたか？",
+        "easy": "しんだ 人は ねんきんを もらって いましたか？",
+        "en": "Was the deceased receiving a pension?"
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "kousei",
+          "label": {
+            "ja": "厚生年金",
+            "easy": "こうせいねんきん",
+            "en": "Employees' pension"
+          }
+        },
+        {
+          "value": "kokumin",
+          "label": {
+            "ja": "国民年金",
+            "easy": "こくみんねんきん",
+            "en": "National pension"
+          }
+        },
+        {
+          "value": "none",
+          "label": {
+            "ja": "受給していない",
+            "easy": "もらって いない",
+            "en": "Not receiving"
+          },
+          "label_variants": {
+            "moving": {
+              "ja": "加入していない／わからない",
+              "easy": "はいって いない",
+              "en": "Not enrolled / not sure"
+            }
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "ja": "わからない",
+            "easy": "わからない",
+            "en": "Not sure"
+          }
+        }
+      ],
+      "affects": [
+        "nenkin-mishikyu-kokumin",
+        "nenkin-mishikyu-jimusho",
+        "shibou-ichijikin",
+        "izoku-kiso-nenkin",
+        "kafu-nenkin"
+      ],
+      "note": {
+        "ja": "受給権者死亡届の期限が変わる（厚生年金10日／国民年金14日）。未支給年金の請求はいずれも5年以内。",
+        "easy": "きげんが かわります。こうせい=10か、こくみん=14か。",
+        "en": "Changes the death-report deadline: 10 days (employees') vs 14 days (national)."
+      },
+      "scenarios": [
+        "death",
+        "moving"
+      ],
+      "tier": "core",
+      "question_variants": {
+        "moving": {
+          "ja": "あなたの年金は次のどれですか？",
+          "easy": "あなたの ねんきんは どれですか？",
+          "en": "Which pension are you enrolled in?"
+        }
+      }
+    },
+    {
+      "id": "has_real_estate",
+      "question": {
+        "ja": "土地や建物（持ち家）はありますか？",
+        "easy": "とちや いえを もって いましたか？",
+        "en": "Did the deceased own land or a home?"
+      },
+      "type": "boolean",
+      "affects": [
+        "sozoku-touki"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "「はい」の場合、相続登記が義務（3年以内・10万円以下の過料）。この質問は必ず聞く。",
+        "easy": "「はい」の ばあい 3ねん いないに てつづきが ひつようです。",
+        "en": "If yes, registration is mandatory within 3 years, with a fine of up to ¥100,000."
+      },
+      "scenarios": [
+        "death"
+      ],
+      "tier": "core"
+    },
+    {
+      "id": "possible_debt",
+      "question": {
+        "ja": "借金や保証人になっていた可能性はありますか？",
+        "easy": "しゃっきんが あるかも しれませんか？",
+        "en": "Might there be debts or guarantees?"
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "ja": "ある / 可能性がある",
+            "easy": "ある かもしれない",
+            "en": "Yes / possibly"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "ja": "ない",
+            "easy": "ない",
+            "en": "No"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "ja": "わからない",
+            "easy": "わからない",
+            "en": "Not sure"
+          }
+        }
+      ],
+      "affects": [
+        "sozoku-houki"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "「わからない」も含めて相続放棄(3か月)を最優先で表示する。この期限だけは過ぎると取り返しがつかないため、不確実な場合こそ強調する。",
+        "easy": "「わからない」ときも 3かげつの きげんを みせます。すぎると もどせません。",
+        "en": "Show the 3-month renunciation deadline prominently even when the answer is 'not sure' — this is the one deadline you cannot undo."
+      },
+      "scenarios": [
+        "death"
+      ],
+      "tier": "core"
+    },
+    {
+      "id": "mynumber_linked_to_nenkin",
+      "question": {
+        "ja": "マイナンバーは日本年金機構に登録済みでしたか？",
+        "easy": "マイナンバーは ねんきんに とうろく されて いましたか？",
+        "en": "Was the My Number registered with the Pension Service?"
+      },
+      "type": "boolean",
+      "affects": [
+        "nenkin-mishikyu-jimusho"
+      ],
+      "note": {
+        "ja": "登録済みなら受給権者死亡届の提出は原則不要（=この駅は通過できる）。",
+        "easy": "とうろく されて いれば しぼうとどけは いりません。",
+        "en": "If registered, the death report is generally unnecessary — the train passes this station."
+      },
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "age",
+      "question": {
+        "ja": "亡くなられた方の年齢は？",
+        "easy": "なんさいでしたか？",
+        "en": "Age of the deceased?"
+      },
+      "type": "number",
+      "affects": [
+        "kaigo-henno"
+      ],
+      "scenarios": [
+        "arrival",
+        "death"
+      ],
+      "tier": "detailed",
+      "question_variants": {
+        "arrival": {
+          "ja": "あなたの年齢は？",
+          "easy": "なんさいですか？",
+          "en": "How old are you?"
+        }
+      }
+    },
+    {
+      "id": "kaigo_nintei",
+      "question": {
+        "ja": "介護認定を受けていましたか？",
+        "easy": "かいごの にんていを うけて いましたか？",
+        "en": "Were they certified for long-term care?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kaigo-henno"
+      ],
+      "scenarios": [
+        "death",
+        "moving"
+      ],
+      "tier": "detailed",
+      "question_variants": {
+        "moving": {
+          "ja": "要介護認定を受けていますか？",
+          "easy": "かいごの にんていを うけて いますか？",
+          "en": "Are you certified for long-term care?"
+        }
+      }
+    },
+    {
+      "id": "had_dependents",
+      "question": {
+        "ja": "扶養していたご家族はいますか？",
+        "easy": "ふようして いた かぞくが いますか？",
+        "en": "Were there dependents?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kokuho-fuyou-kanyu"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "has_life_insurance",
+      "question": {
+        "ja": "生命保険に加入していましたか？",
+        "easy": "せいめいほけんに はいって いましたか？",
+        "en": "Did they have life insurance?"
+      },
+      "type": "boolean",
+      "affects": [
+        "seimei-hoken"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "was_foreign_resident",
+      "question": {
+        "ja": "在留カード・特別永住者証明書をお持ちでしたか？",
+        "easy": "ざいりゅうカードを もって いましたか？",
+        "en": "Did they hold a residence card?"
+      },
+      "type": "boolean",
+      "affects": [
+        "zairyu-card-henno"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "has_inkan_toroku",
+      "question": {
+        "ja": "印鑑登録証をお持ちでしたか？",
+        "easy": "いんかんとうろくしょうを もって いましたか？",
+        "en": "Did they have a seal registration card?"
+      },
+      "type": "boolean",
+      "affects": [
+        "inkan-henno"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "has_mynumber_card",
+      "question": {
+        "ja": "マイナンバーカードをお持ちでしたか？",
+        "easy": "マイナンバーカードを もって いましたか？",
+        "en": "Did they have a My Number card?"
+      },
+      "type": "boolean",
+      "affects": [
+        "mynumber-henno"
+      ],
+      "scenarios": [
+        "arrival",
+        "death",
+        "moving"
+      ],
+      "tier": "detailed",
+      "question_variants": {
+        "arrival": {
+          "ja": "マイナンバーカードをお持ちですか？",
+          "easy": "マイナンバーカードを もって いますか？",
+          "en": "Do you have a My Number card?"
+        },
+        "moving": {
+          "ja": "マイナンバーカードをお持ちですか？",
+          "easy": "マイナンバーカードを もって いますか？",
+          "en": "Do you have a My Number card?"
+        }
+      }
+    },
+    {
+      "id": "estate_over_threshold",
+      "question": {
+        "ja": "遺産は基礎控除（3,000万円+600万円×法定相続人数）を超えそうですか？",
+        "easy": "いさんが おおいですか？",
+        "en": "Might the estate exceed the basic deduction?"
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes"
+        },
+        {
+          "value": "no"
+        },
+        {
+          "value": "unknown"
+        }
+      ],
+      "affects": [
+        "sozokuzei-shinkoku"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "needs_tax_return",
+      "question": {
+        "ja": "確定申告をする必要がある方でしたか（自営業・年金以外の収入など）？",
+        "easy": "かくていしんこくを して いましたか？",
+        "en": "Did they normally file a tax return?"
+      },
+      "type": "boolean",
+      "affects": [
+        "junkakutei-shinkoku"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "had_resident_tax",
+      "question": {
+        "ja": "住民税の納税がありましたか？",
+        "easy": "じゅうみんぜいを はらって いましたか？",
+        "en": "Were they paying resident tax?"
+      },
+      "type": "boolean",
+      "affects": [
+        "sozokunin-daihyo"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "received_pension",
+      "question": {
+        "ja": "実際に年金を受け取っていましたか？",
+        "easy": "ねんきんを もらって いましたか？",
+        "en": "Were they actually receiving payments?"
+      },
+      "type": "boolean",
+      "affects": [
+        "shibou-ichijikin"
+      ],
+      "scenarios": [
+        "death"
+      ],
+      "tier": "detailed"
+    },
+    {
+      "id": "is_foreign_resident",
+      "scenarios": [
+        "death",
+        "arrival",
+        "moving",
+        "employment",
+        "retirement",
+        "marriage",
+        "childbirth"
+      ],
+      "tier": "profile",
+      "question": {
+        "ja": "あなたは外国籍の方ですか？",
+        "easy": "あなたは がいこくせきですか？",
+        "en": "Are you a foreign national?"
+      },
+      "type": "boolean",
+      "affects": [
+        "juukyochi-todokede",
+        "juukyochi-henko",
+        "zairyu-kisai-henko",
+        "shikakugai-katsudo",
+        "zairyu-kikan-koushin",
+        "mynumber-yuukoukikan-henko",
+        "mynumber-tokurei-encho",
+        "dattai-ichijikin",
+        "zairyu-shikaku-henko-shuro",
+        "shozoku-kikan-todokede-nyusha",
+        "shozoku-kikan-todokede-ridatsu",
+        "shuro-shikaku-shomeisho",
+        "zairyu-kisai-henko-kekkon",
+        "kodomo-zairyu-shutoku"
+      ],
+      "note": {
+        "ja": "「はい」の場合、在留線（住居地届出・在留期間更新・マイナンバーカードの有効期間変更など）が追加される。日本人には存在しない手続が8つ増える。",
+        "easy": "「はい」の ばあい、ざいりゅうカードの てつづきが ふえます。",
+        "en": "If yes, the Residency Line appears — eight procedures that do not exist for Japanese nationals."
+      }
+    },
+    {
+      "id": "stay_over_3months",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "在留資格の期間は3か月を超えますか？",
+        "easy": "にほんに 3かげつ より ながく いますか？",
+        "en": "Is your status of residence longer than three months?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kokuho-kanyu-gaikokujin"
+      ],
+      "note": {
+        "ja": "3か月を超える在留資格があれば、国民健康保険の加入は「義務」であり任意ではない。入国当初が3か月以下でも、その後3か月を超えると認められる場合は加入対象になる。",
+        "easy": "3かげつを こえる ばあい、こくみん けんこうほけんに かならず はいります。えらべません。",
+        "en": "Over three months makes National Health Insurance mandatory, not optional."
+      },
+      "critical": true
+    },
+    {
+      "id": "has_employer_insurance",
+      "scenarios": [
+        "arrival",
+        "moving"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "勤務先の健康保険に入っていますか？",
+        "easy": "かいしゃの けんこうほけんに はいって いますか？",
+        "en": "Are you covered by an employer health insurance plan?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kokuho-kanyu-gaikokujin"
+      ],
+      "note": {
+        "ja": "勤務先の健康保険に入っている場合、国民健康保険には加入しない。",
+        "easy": "かいしゃの ほけんが ある ばあい、こくほには はいりません。",
+        "en": "If you have employer coverage you do not enroll in National Health Insurance."
+      }
+    },
+    {
+      "id": "has_employer_pension",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "勤務先の厚生年金に入っていますか？",
+        "easy": "かいしゃの ねんきんに はいって いますか？",
+        "en": "Are you enrolled in an employees' pension through work?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kokumin-nenkin-kanyu"
+      ],
+      "note": {
+        "ja": "厚生年金に加入していれば国民年金の手続きは勤務先が行うため、本人の届出は不要。",
+        "easy": "かいしゃの ねんきんが ある ばあい、じぶんでは しません。",
+        "en": "If you are in the employees' pension your employer handles it."
+      }
+    },
+    {
+      "id": "will_work_part_time",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "アルバイトをする予定はありますか？",
+        "easy": "アルバイトを する よてい が ありますか？",
+        "en": "Do you plan to work part-time?"
+      },
+      "type": "boolean",
+      "affects": [
+        "shikakugai-katsudo"
+      ],
+      "note": {
+        "ja": "★「はい」なら、働き始める『前』に入管で資格外活動許可を取る必要がある。無許可で働くと不法就労となり、1年以下の懲役または200万円以下の罰金、在留資格取消・退去強制の対象になりうる。許可を得ても週28時間まで。",
+        "easy": "★はたらく まえに にゅうかんで きょかを とって ください。きょかが ないと ばっせられます。1しゅうかん 28じかんまでです。",
+        "en": "You must obtain permission BEFORE starting work. Working without it is illegal employment with serious consequences."
+      },
+      "critical": true
+    },
+    {
+      "id": "renewal_pending_at_card_expiry",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "在留期間の更新を申請中で、マイナンバーカードの有効期限が近づいていますか？",
+        "easy": "ざいりゅうきかんを しんせいちゅうで、カードの きげんが ちかいですか？",
+        "en": "Is your residence renewal still under review while your My Number card is about to expire?"
+      },
+      "type": "boolean",
+      "affects": [
+        "mynumber-tokurei-encho"
+      ],
+      "note": {
+        "ja": "★「はい」なら、在留カード裏面の『在留資格更新許可申請中』のハンコを持って区役所へ行けば、カードの有効期限を特例で2か月延長できる（再延長は不可）。この延長を知らずに期限を過ぎるとカードは失効し、再交付に1か月半と1,000円かかる。",
+        "easy": "★ざいりゅうカードの うらの ハンコを もって くやくしょへ いくと、2かげつ のばせます。1かいだけです。",
+        "en": "If yes, take the stamped residence card to the ward office for a one-time two-month extension."
+      },
+      "critical": true
+    },
+    {
+      "id": "name_or_nationality_changed",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "氏名・国籍などが変わりましたか？",
+        "easy": "なまえや こくせきが かわりましたか？",
+        "en": "Have your name or nationality changed?"
+      },
+      "type": "boolean",
+      "affects": [
+        "zairyu-kisai-henko"
+      ],
+      "note": {
+        "ja": "★住所の変更は市区町村、氏名・国籍等の変更は入管。同じ在留カードでも窓口が分かれる。",
+        "easy": "★じゅうしょは くやくしょ、なまえは にゅうかんです。",
+        "en": "Address changes go to the municipality; name and nationality changes go to immigration."
+      }
+    },
+    {
+      "id": "leaving_japan",
+      "scenarios": [
+        "arrival"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "日本を離れる（帰国する）予定はありますか？",
+        "easy": "にほんを でる よてい が ありますか？",
+        "en": "Are you planning to leave Japan?"
+      },
+      "type": "boolean",
+      "affects": [
+        "dattai-ichijikin"
+      ],
+      "note": {
+        "ja": "年金の加入期間が6か月以上あれば、出国後2年以内に脱退一時金を請求できる。2026年4月1日から支給上限が60か月から96か月に引き上げられた。",
+        "easy": "6かげつ いじょう ねんきんを はらった 人は、でてから 2ねん いないに もうしこめます。",
+        "en": "With six or more months of contributions you can claim a lump-sum withdrawal within two years of departure."
+      }
+    },
+    {
+      "id": "moving_across_municipality",
+      "scenarios": [
+        "moving"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "引っ越し先は今と別の区市町村ですか？",
+        "easy": "ひっこしさきは いまと ちがう まちですか？",
+        "en": "Are you moving to a different municipality?"
+      },
+      "type": "choice",
+      "affects": [
+        "tenshutsu-todoke"
+      ],
+      "options": [
+        {
+          "value": "across",
+          "label": {
+            "ja": "別の区市町村へ引っ越す",
+            "easy": "ちがう まちへ ひっこす",
+            "en": "To a different municipality"
+          }
+        },
+        {
+          "value": "within",
+          "label": {
+            "ja": "同じ区市町村の中で引っ越す",
+            "easy": "おなじ まちの なかで ひっこす",
+            "en": "Within the same municipality"
+          }
+        }
+      ],
+      "note": {
+        "ja": "同一区市町村内なら「転居届」のみで、転出届・転入届は不要。国保・介護なども住所変更だけで済む。",
+        "easy": "おなじ まちの なかなら、てつづきは すくないです。",
+        "en": "Within the same municipality you file only a change-of-address notice, which is far simpler."
+      }
+    },
+    {
+      "id": "has_children",
+      "scenarios": [
+        "moving"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "児童手当を受け取っているお子さんはいますか？",
+        "easy": "じどう てあてを もらって いる こどもが いますか？",
+        "en": "Do you receive child allowance for any children?"
+      },
+      "type": "boolean",
+      "affects": [
+        "jidou-teate-moving"
+      ],
+      "note": {
+        "ja": "★15日特例。転出予定日の翌日から15日以内に新住所地へ認定請求を出せば、申請が翌月にずれ込んでも前月分から支給される。過ぎた分は遡って受け取れない。",
+        "easy": "★15にち いないに もうしこむと、まえの つきから もらえます。おくれると もらえません。",
+        "en": "File within 15 days and payment continues from the prior month; miss it and that money is gone."
+      },
+      "critical": true
+    },
+    {
+      "id": "has_drivers_license",
+      "scenarios": [
+        "moving"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "運転免許証をお持ちですか？",
+        "easy": "うんてん めんきょしょうを もって いますか？",
+        "en": "Do you have a driver licence?"
+      },
+      "type": "boolean",
+      "affects": [
+        "menkyo-juusho-henko"
+      ],
+      "note": {
+        "ja": "日数の定めはないが、更新通知が旧住所に届いて免許更新自体を逃す原因になる。",
+        "easy": "はやめに して ください。おしらせが とどかなく なります。",
+        "en": "No fixed deadline, but renewal notices go to your registered address."
+      }
+    },
+    {
+      "id": "has_dog",
+      "scenarios": [
+        "moving"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "犬を飼っていますか？",
+        "easy": "いぬを かって いますか？",
+        "en": "Do you have a dog?"
+      },
+      "type": "boolean",
+      "affects": [
+        "inu-touroku-henko"
+      ],
+      "note": {
+        "ja": "狂犬病予防法に基づき30日以内の届出が必要。旧区の鑑札を新区の鑑札と交換する。",
+        "easy": "30にち いないに とどけます。",
+        "en": "Required within 30 days under the Rabies Prevention Act."
+      }
+    },
+    {
+      "id": "needs_inkan_shomei",
+      "scenarios": [
+        "moving"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "近いうちに印鑑証明が必要になる予定はありますか？（不動産・自動車・相続など）",
+        "easy": "いんかん しょうめいが ひつように なりますか？",
+        "en": "Will you need a seal certificate soon (property, car, inheritance)?"
+      },
+      "type": "boolean",
+      "affects": [
+        "inkan-touroku-moving"
+      ],
+      "note": {
+        "ja": "転出により旧区の印鑑登録は自動的に失効している。新区での再登録は自動では行われないため、必要になる前に自分で登録し直す。",
+        "easy": "まえの まちの とうろくは きえて います。あたらしい まちで もういちど します。",
+        "en": "Your old registration lapsed automatically; the new one is not created for you."
+      }
+    },
+    {
+      "id": "employment_type",
+      "scenarios": [
+        "employment"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "働き方は次のどれですか？",
+        "easy": "どんな はたらきかたですか？",
+        "en": "What kind of employment?"
+      },
+      "type": "choice",
+      "affects": [
+        "shakai-hoken-kanyu",
+        "shozoku-kikan-todokede-nyusha"
+      ],
+      "options": [
+        {
+          "value": "seishain",
+          "label": {
+            "ja": "正社員・契約社員（社会保険あり）",
+            "easy": "しゃかいほけんが ある",
+            "en": "Regular or contract (with social insurance)"
+          }
+        },
+        {
+          "value": "part",
+          "label": {
+            "ja": "パート・アルバイト（社会保険なし）",
+            "easy": "しゃかいほけんが ない",
+            "en": "Part-time (no social insurance)"
+          }
+        },
+        {
+          "value": "none",
+          "label": {
+            "ja": "働いていない",
+            "easy": "はたらいて いない",
+            "en": "Not employed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "changing_from_student",
+      "scenarios": [
+        "employment"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "在留資格「留学」から就労資格に変更しますか？",
+        "easy": "「りゅうがく」から「しごと」の ビザに かえますか？",
+        "en": "Are you changing from a student to a work status?"
+      },
+      "type": "boolean",
+      "affects": [
+        "zairyu-shikaku-henko-shuro"
+      ],
+      "note": {
+        "ja": "★許可が下りる前に働き始めることはできない。内定が出たら早めに申請する。",
+        "easy": "★きょかの まえに はたらいては いけません。",
+        "en": "You cannot start work before permission is granted."
+      },
+      "critical": true
+    },
+    {
+      "id": "job_change",
+      "scenarios": [
+        "retirement"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "転職しますか（次の勤務先が決まっていますか）？",
+        "easy": "つぎの しごとが きまって いますか？",
+        "en": "Are you moving to another employer?"
+      },
+      "type": "boolean",
+      "affects": [
+        "shuro-shikaku-shomeisho"
+      ],
+      "note": {
+        "ja": "外国人の場合、転職先の業務が在留資格に合うかを就労資格証明書で事前確認しておくと、次の更新での不許可を避けられる。",
+        "easy": "がいこくじんは、つぎの しごとが ビザに あうか たしかめて おくと あんしんです。",
+        "en": "For foreign residents, pre-confirming that the new job fits your status avoids a refusal at renewal."
+      }
+    },
+    {
+      "id": "name_changed",
+      "scenarios": [
+        "marriage"
+      ],
+      "tier": "core",
+      "question": {
+        "ja": "結婚により姓（名字）が変わりますか？",
+        "easy": "けっこんで なまえが かわりますか？",
+        "en": "Will your surname change?"
+      },
+      "type": "boolean",
+      "affects": [
+        "kaisei-tetsuzuki",
+        "zairyu-kisai-henko-kekkon"
+      ],
+      "note": {
+        "ja": "変わる場合、免許・銀行・カード・保険を1か所ずつ変更する必要がある。外国人はさらに入管への届出（14日以内）が加わる。",
+        "easy": "かわる ばあい、1つずつ てつづきが ひつようです。",
+        "en": "Each institution must be updated individually; foreign residents also report to immigration within 14 days."
+      }
+    },
+    {
+      "id": "spouse_becomes_dependent",
+      "scenarios": [
+        "marriage"
+      ],
+      "tier": "detailed",
+      "question": {
+        "ja": "配偶者を扶養に入れますか？",
+        "easy": "はいぐうしゃを ふように いれますか？",
+        "en": "Will your spouse become your dependent?"
+      },
+      "type": "boolean",
+      "affects": [
+        "hifuyousha-todoke"
+      ]
+    }
+  ]
+}

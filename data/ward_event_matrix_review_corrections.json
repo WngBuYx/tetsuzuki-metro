@@ -1,0 +1,271 @@
+{
+    "$schema_version":  "1.0",
+    "reviewed_on":  "2026-08-11",
+    "purpose":  "独立抽查后的最终矩阵修正账本。research_parts 保留原始研究结果，最终 ward_event_source_matrix.json 应用本账本后发布。",
+    "principles":  [
+                       "相同官方 URL 的七种能力必须使用同一规范值。",
+                       "空白下载表格不等于预填；来厅予定通知不等于有时段承诺的预约。",
+                       "家庭访问不等于行政窗口协助；信息手册自身不证明必须或无需到厅。",
+                       "健康保险、出产育儿一时金及遗属年金存在区国保、雇主保险或年金制度分支，未逐项覆盖全部主要分支时标为 partial。"
+                   ],
+    "common_source_capability_overrides":  [
+                                               {
+                                                   "source_id":  "national-moving-digital-agency",
+                                                   "set":  {
+                                                               "capabilities":  {
+                                                                                    "information":  "yes",
+                                                                                    "questionnaire":  "no",
+                                                                                    "reservation":  "no",
+                                                                                    "prefill":  "no",
+                                                                                    "online_submission":  "yes",
+                                                                                    "mandatory_visit":  "yes",
+                                                                                    "assisted_counter":  "not_applicable"
+                                                                                },
+                                                               "evidence_note":  "MyNa Portal可正式在线提交转出届并向转入地传送来厅予定与申报信息；这不是保证时段的预约，也不是预填服务。转入和转居届本身仍须到新住所自治体窗口提交。"
+                                                           }
+                                               },
+                                               {
+                                                   "source_id":  "national-foreign-child-residence",
+                                                   "set":  {
+                                                               "capabilities":  {
+                                                                                    "information":  "yes",
+                                                                                    "questionnaire":  "no",
+                                                                                    "reservation":  "no",
+                                                                                    "prefill":  "no",
+                                                                                    "online_submission":  "yes",
+                                                                                    "mandatory_visit":  "unknown",
+                                                                                    "assisted_counter":  "unknown"
+                                                                                },
+                                                               "evidence_note":  "在日本出生且预计停留超过60日的外国籍孩子，原则上应在事由发生后30日内申请在留资格；官方页面列有在线申请渠道，也允许法定代理人或合资格取次者办理。"
+                                                           }
+                                               }
+                                           ],
+    "source_overrides":  [
+                             {
+                                 "source_id":  "13102_oss",
+                                 "set_capabilities":  {
+                                                          "reservation":  "no",
+                                                          "prefill":  "no"
+                                                      },
+                                 "evidence_note":  "说明在线转出和转入・转居的来厅予定通知/事前信息传送；前者是正式提交，后者不是时段预约或预填，转入・转居仍须窗口提交。"
+                             },
+                             {
+                                 "source_id":  "13103_visit",
+                                 "set_capabilities":  {
+                                                          "assisted_counter":  "no"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13106_visit",
+                                 "set_capabilities":  {
+                                                          "assisted_counter":  "no"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13107_nhi",
+                                 "set_capabilities":  {
+                                                          "online_submission":  "yes",
+                                                          "mandatory_visit":  "yes"
+                                                      },
+                                 "evidence_note":  "直接覆盖转入、职域保险丧失和出生时的国保加入；部分加入情形有电子申请，其他分支仍需窗口。国保丧失与区内地址变更须查阅其他页面，因此不能代表完整迁移流程。"
+                             },
+                             {
+                                 "source_id":  "13107_pregnancy",
+                                 "set_capabilities":  {
+                                                          "reservation":  "yes",
+                                                          "prefill":  "no",
+                                                          "assisted_counter":  "no"
+                                                      },
+                                 "evidence_note":  "正式妊娠届可电子或窗口提交；孕妇面谈须事前预约。电子申报不是预填，普通受理和面谈也不等于行政窗口协助。"
+                             },
+                             {
+                                 "source_id":  "13109_move_checklist",
+                                 "evidence_note":  "官方页面仅列转入届和区内转居届两份清单，整理My Number、保险、育儿、介护和印鉴等伴随事项；不包含迁出届清单。"
+                             },
+                             {
+                                 "source_id":  "13117_move_form",
+                                 "set_capabilities":  {
+                                                          "prefill":  "no"
+                                                      },
+                                 "evidence_note":  "可下载的空白住民异动届样式，含转入、转出、转居及相关栏位；空白表格不属于系统预填。"
+                             },
+                             {
+                                 "source_id":  "13117_companion",
+                                 "set_capabilities":  {
+                                                          "online_submission":  "unknown"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13117_death_guide",
+                                 "set_capabilities":  {
+                                                          "mandatory_visit":  "not_applicable"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13123_preg",
+                                 "set_capabilities":  {
+                                                          "mandatory_visit":  "yes"
+                                                      },
+                                 "evidence_note":  "妊娠届有窗口、邮寄及MyNa渠道；邮寄路线可远程完成，但MyNa电子申报后仍须到健康支援中心领取手帳，故按“某主要分支须到厅”的定义标为yes。"
+                             },
+                             {
+                                 "source_id":  "13123_life_guide",
+                                 "set_capabilities":  {
+                                                          "mandatory_visit":  "not_applicable"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13123_death_counter",
+                                 "set_capabilities":  {
+                                                          "questionnaire":  "no",
+                                                          "prefill":  "no"
+                                                      },
+                                 "evidence_note":  "互联网或电话事前预约的身后手续窗口，提供咨询、案内、受理及申请书制作协助；个性化问答属于另行链接的外部导航，本页本身不提供问答或到厅前预填。"
+                             },
+                             {
+                                 "source_id":  "13123_death_guide",
+                                 "set_capabilities":  {
+                                                          "mandatory_visit":  "not_applicable"
+                                                      }
+                             },
+                             {
+                                 "source_id":  "13101_counter",
+                                 "set_capabilities":  {
+                                                          "prefill":  "yes"
+                                                      },
+                                 "set":  {
+                                             "official_updated_at":  "2026-07-03"
+                                         },
+                                 "evidence_note":  "电话预约时由工作人员访谈并事先准备申请书；到厅后仍可能需要前往多个主管窗口。"
+                             },
+                             {
+                                 "source_id":  "13104_pregnancy",
+                                 "set_capabilities":  {
+                                                          "online_submission":  "yes"
+                                                      },
+                                 "evidence_note":  "妊娠届可通过MyNa电子提交；母子健康手帳和健诊票仍须到指定窗口领取。"
+                             },
+                             {
+                                 "source_id":  "13112_pregnancy",
+                                 "set_capabilities":  {
+                                                          "online_submission":  "yes"
+                                                      },
+                                 "evidence_note":  "妊娠届可通过MyNa电子提交；页面同时说明母子健康手帳交付与孕妇面谈预约。"
+                             },
+                             {
+                                 "source_id":  "13119_preg",
+                                 "set_capabilities":  {
+                                                          "mandatory_visit":  "no"
+                                                      },
+                                 "evidence_note":  "妊娠届可邮寄或电子提交，亲子健康手帳和资料可邮寄交付；面谈预约属于孕妇伴走支援的另一个子流程。"
+                             },
+                             {
+                                 "source_id":  "13119_death_counter",
+                                 "set_capabilities":  {
+                                                          "prefill":  "no"
+                                                      },
+                                 "evidence_note":  "预约优先，提供手续判定、主管部门/材料指引和窗口协助；官方页未证明到厅前预填、QR或申请书预生成。"
+                             }
+                         ],
+    "coverage_overrides":  [
+                               {
+                                   "ward_code":  "13109",
+                                   "subflow_id":  "move_out_notification",
+                                   "coverage_status":  "partial",
+                                   "status_reason":  "现有官方清单仅直接覆盖转入与区内转居，不能作为迁出届完整证据。",
+                                   "gap_note":  "缺迁出届的期限、渠道、材料及伴随手续直接官方页。"
+                               },
+                               {
+                                   "ward_code":  "13107",
+                                   "subflow_id":  "national_health_insurance_move",
+                                   "coverage_status":  "partial",
+                                   "status_reason":  "现有页面直接覆盖国保加入，并给出部分电子申请分支。",
+                                   "gap_note":  "国保丧失及区内地址变更需要其他直接来源，现有单页不足以覆盖完整迁移流程。"
+                               },
+                               {
+                                   "ward_code":  "13115",
+                                   "subflow_id":  "mandatory_visit_summary",
+                                   "coverage_status":  "partial",
+                                   "status_reason":  "区级入口仅列出迁入、迁出和区内迁居的链接，国家页面说明共同原则。",
+                                   "gap_note":  "尚缺杉并区迁入和区内迁居直接页对主要渠道与到厅要求的逐项证据。"
+                               }
+                           ],
+    "coverage_source_overrides":  [
+                                      {
+                                          "ward_code":  "13107",
+                                          "subflow_id":  "pregnancy_notification_handbook",
+                                          "replace_source_id":  "13107_benefits",
+                                          "with_source_id":  "13107_pregnancy"
+                                      },
+                                      {
+                                          "ward_code":  "13123",
+                                          "subflow_id":  "pregnancy_notification_handbook",
+                                          "remove_source_id":  "13123_piyonavi"
+                                      },
+                                      {
+                                          "ward_code":  "13119",
+                                          "subflow_id":  "mandatory_visit_summary",
+                                          "add_source_id":  "13119_no_visit"
+                                      },
+                                      {
+                                          "ward_code":  "13101",
+                                          "subflow_id":  "pregnancy_notification_handbook",
+                                          "add_source_id":  "13101_pregnancy_notification"
+                                      }
+                                  ],
+    "global_coverage_downgrades":  [
+                                       {
+                                           "subflow_id":  "child_health_insurance",
+                                           "from":  "complete",
+                                           "to":  "partial",
+                                           "status_reason":  "区级来源已确认国保等主要入口，但孩子实际加入的保险者可能是区国保或雇主/家属健康保险。",
+                                           "gap_note":  "未逐项覆盖所有实际保险者的材料、期限和提交渠道。"
+                                       },
+                                       {
+                                           "subflow_id":  "childbirth_lump_sum",
+                                           "from":  "complete",
+                                           "to":  "partial",
+                                           "status_reason":  "已确认全国制度及区国保等分支，但实际承办方取决于生产者加入的保险者。",
+                                           "gap_note":  "未逐项覆盖雇主保险等所有实际保险者的支付方式、材料和提交渠道。"
+                                       },
+                                       {
+                                           "subflow_id":  "pension_survivor_procedures",
+                                           "from":  "complete",
+                                           "to":  "partial",
+                                           "status_reason":  "死亡届、未支给年金及部分遗属给付入口已确认。",
+                                           "gap_note":  "遗属基础年金、遗属厚生年金、寡妇年金和死亡一时金等按加入制度分流，未逐项核验全部分支与渠道。"
+                                       }
+                                   ],
+    "source_additions":  [
+                             {
+                                 "ward_code":  "13101",
+                                 "source":  {
+                                                "source_id":  "13101_pregnancy_notification",
+                                                "title":  "妊娠届・母子健康手帳の交付",
+                                                "url":  "https://www.city.chiyoda.lg.jp/koho/kosodate/kosodate/ninshin/boshitecho.html",
+                                                "authority_level":  "ward",
+                                                "host_type":  "official_domain",
+                                                "official_wrapper_url":  null,
+                                                "operator":  "千代田区",
+                                                "entry_types":  [
+                                                                    "HTML"
+                                                                ],
+                                                "capabilities":  {
+                                                                     "information":  "yes",
+                                                                     "questionnaire":  "no",
+                                                                     "reservation":  "no",
+                                                                     "prefill":  "no",
+                                                                     "online_submission":  "yes",
+                                                                     "mandatory_visit":  "yes",
+                                                                     "assisted_counter":  "no"
+                                                                 },
+                                                "official_updated_at":  null,
+                                                "verified_on":  "2026-08-11",
+                                                "languages":  [
+                                                                  "ja"
+                                                              ],
+                                                "evidence_note":  "妊娠届可通过MyNa电子提交；母子健康手帳等は届出後10日以内に窗口领取且不邮寄，因此电子申报与必须到厅可同时成立。"
+                                            }
+                             }
+                         ]
+}

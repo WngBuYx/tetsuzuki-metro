@@ -1,0 +1,267 @@
+{
+  "$schema_version": "0.2",
+  "note": "ライフイベント＝路線図上の「経路」。同じ駅が複数のシナリオに現れる（＝乗換駅）。新しいライフイベントに対応するには、ここに1件足すだけでよい。",
+  "scenarios": [
+    {
+      "id": "death",
+      "name": {
+        "ja": "ご家族が亡くなられたとき",
+        "easy": "かぞくが なくなった とき",
+        "en": "When a family member dies"
+      },
+      "official_theme": "c06 生活 /「出産、育児、結婚、介護・死別などのライフイベントに伴う手続・支援の案内」",
+      "status": "complete",
+      "procedures": [
+        "shibou-todoke",
+        "setainushi-henko",
+        "inkan-henno",
+        "mynumber-henno",
+        "kokuho-henno",
+        "kokuho-fuyou-kanyu",
+        "sousaihi-kokuho",
+        "sousaihi-kouki",
+        "kouki-henno",
+        "kaigo-henno",
+        "nenkin-mishikyu-kokumin",
+        "nenkin-mishikyu-jimusho",
+        "shibou-ichijikin",
+        "izoku-kiso-nenkin",
+        "kafu-nenkin",
+        "sozokunin-daihyo",
+        "junkakutei-shinkoku",
+        "sozokuzei-shinkoku",
+        "sozokunin-kakutei",
+        "houtei-sozoku-joho",
+        "sozoku-houki",
+        "sozoku-touki",
+        "zairyu-card-henno",
+        "ginko-kouza",
+        "seimei-hoken",
+        "koukyo-ryokin"
+      ],
+      "signature_output": {
+        "id": "koseki-copies",
+        "title": {
+          "ja": "戸籍謄本は何通いるのか",
+          "en": "How many family register copies do you need?"
+        },
+        "logic": "ルート上で requires_detail.koseki-tohon == 'submit' の駅数がそのまま必要通数。'show' は使い回せる。",
+        "punchline": {
+          "ja": "素直に取ると10通4,500円。しかし法定相続情報一覧図（無料・必要枚数交付）を1回取れば、10回の提出が1回で済む。",
+          "en": "Ten copies at ¥4,500 — or one free legal-heir list that replaces all ten."
+        }
+      }
+    },
+    {
+      "id": "arrival",
+      "name": {
+        "ja": "日本に来た最初の1年",
+        "easy": "にほんに きた さいしょの 1ねん",
+        "en": "Your first year in Japan"
+      },
+      "official_theme": "c06 生活 + c10 デジタル /「個人や世帯の状況に応じて、手続や支援制度などの情報が自動的に届く仕組み」",
+      "status": "complete",
+      "procedures": [
+        "juukyochi-todokede",
+        "juukyochi-henko",
+        "zairyu-kisai-henko",
+        "shikakugai-katsudo",
+        "zairyu-kikan-koushin",
+        "mynumber-yuukoukikan-henko",
+        "mynumber-tokurei-encho",
+        "kokuho-kanyu-gaikokujin",
+        "kokumin-nenkin-kanyu",
+        "dattai-ichijikin"
+      ],
+      "signature_output": {
+        "id": "mynumber-zairyu-gap",
+        "title": {
+          "ja": "在留期間を更新したら、マイナンバーカードも更新しなければならない",
+          "en": "Renewing your visa does not renew your My Number card"
+        },
+        "logic": "zairyu-kikan-koushin → mynumber-yuukoukikan-henko / mynumber-tokurei-encho という、官庁をまたぐ依存辺。",
+        "punchline": {
+          "ja": "ハンコを押すのは入管、それを使うのは区役所。通知は来ない。気づかなければカードは失効し、再交付に1か月半と1,000円がかかる。",
+          "en": "Immigration stamps it; the ward office uses it. No notice is sent. Miss it and the card dies."
+        },
+        "based_on_real_case": true
+      },
+      "dependency_note": {
+        "ja": "来日1年目は依存関係が最も厳しいシナリオである。住居地届出 → 国保・年金・マイナンバーカード → 銀行口座 → 携帯電話契約 という順序があり、どこか一つで詰まると後続が全て止まる。各官庁は自分の担当分しか説明しないため、この順序を示した公式資料は存在しない。ここが本サービスの価値の中心。",
+        "en": "The first year in Japan has the strictest dependency chain: address registration → insurance/pension/My Number → bank account → phone contract. Each agency explains only its own step; no official source shows the whole ordering."
+      },
+      "key_finding": {
+        "title": "マイナンバーカードの有効期限は、日本人と外国人で別のルールになっている",
+        "detail": {
+          "japanese": {
+            "card": "発行から10回目の誕生日(18歳未満は5回目)",
+            "cert": "発行から5回目の誕生日",
+            "notice": "有効期限の2〜3か月前に有効期限通知書が届く"
+          },
+          "foreigner": {
+            "card": "在留期間の満了日 または 10回目の誕生日のいずれか早い日",
+            "cert": "同上",
+            "notice": "★在留期間満了に伴う失効についての通知は送付されない"
+          }
+        },
+        "why_it_matters": "在留期間を更新しても、マイナンバーカードは自動では延長されない。入管で在留期間を更新した後、別途 区役所で『有効期間変更』の手続きが必要。2つの異なる官庁をまたぐ依存関係であり、しかも通知が来ないため気づけない。期限を過ぎるとカードは失効し、再交付に1,000円(電子証明書不要なら800円)かかる。",
+        "product_meaning": "一覧表では表現できず、依存グラフでしか表現できない典型例。本サービスの存在理由そのものなので、デモの中心に置く。",
+        "sources": [
+          "https://www.city.nerima.tokyo.jp/kurashi/mynumber/mynumber_card/koshin/gaikokujin.html",
+          "https://www.gov-online.go.jp/article/202506/entry-7923.html"
+        ]
+      }
+    },
+    {
+      "id": "moving",
+      "name": {
+        "ja": "引っ越しをするとき",
+        "easy": "ひっこしを する とき",
+        "en": "When you move house"
+      },
+      "official_theme": "c06 生活 + c10 デジタル",
+      "status": "complete",
+      "procedures": [
+        "tenshutsu-todoke",
+        "tennyu-todoke",
+        "mynumber-keizoku-riyou",
+        "kokuho-tetsuzuki-moving",
+        "nenkin-juusho-henko",
+        "jidou-teate-moving",
+        "kaigo-juusho-henko",
+        "inkan-touroku-moving",
+        "menkyo-juusho-henko",
+        "inu-touroku-henko",
+        "yubin-tensou",
+        "lifeline-moving",
+        "ginko-juusho-henko",
+        "juukyochi-henko"
+      ],
+      "signature_output": {
+        "id": "mynumber-14days",
+        "title": {
+          "ja": "転入届が14日を過ぎるとマイナンバーカードが失効する",
+          "en": "Miss the 14-day move-in deadline and your My Number card dies"
+        },
+        "punchline": {
+          "ja": "国保に空白期間ができると、その間の医療費は全額自己負担（10割）になる。",
+          "en": "A gap in health insurance means paying 100% of medical costs."
+        }
+      },
+      "reference": "マイナポータル「引越し関連手続一覧」 https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "employment",
+      "name": {
+        "ja": "就職するとき",
+        "easy": "しごとを はじめる とき",
+        "en": "When you start a job"
+      },
+      "official_theme": "c06 生活",
+      "status": "complete",
+      "procedures": [
+        "shakai-hoken-kanyu",
+        "kokuho-dattai-shushoku",
+        "zairyu-shikaku-henko-shuro",
+        "shozoku-kikan-todokede-nyusha"
+      ],
+      "signature_output": {
+        "id": "kokuho-double-bill",
+        "title": {
+          "ja": "会社の保険に入っても、国民健康保険は自動では抜けない",
+          "en": "Employer coverage does not cancel your National Health Insurance"
+        },
+        "punchline": {
+          "ja": "届出をしないと保険料が二重に請求され続ける。14日以内。",
+          "en": "Without filing, you keep being billed for both. Within 14 days."
+        }
+      }
+    },
+    {
+      "id": "retirement",
+      "name": {
+        "ja": "退職・転職するとき",
+        "easy": "しごとを やめる・かえる とき",
+        "en": "When you leave or change jobs"
+      },
+      "official_theme": "c06 生活",
+      "status": "complete",
+      "procedures": [
+        "kenko-hoken-sentaku",
+        "nenkin-shubetsu-henko",
+        "shitsugyo-kyufu",
+        "juminzei-nofu-henko",
+        "shozoku-kikan-todokede-ridatsu",
+        "shuro-shikaku-shomeisho"
+      ],
+      "signature_output": {
+        "id": "ninikeizoku-20days",
+        "title": {
+          "ja": "任意継続を選べるのは20日間だけ",
+          "en": "You have only 20 days to elect voluntary continuation"
+        },
+        "punchline": {
+          "ja": "国保は14日、任意継続は20日。20日を過ぎると任意継続という選択肢そのものが消える。",
+          "en": "14 days for National Health Insurance, 20 for continuation — after which the option is gone for good."
+        }
+      }
+    },
+    {
+      "id": "marriage",
+      "name": {
+        "ja": "結婚するとき",
+        "easy": "けっこん する とき",
+        "en": "When you get married"
+      },
+      "official_theme": "c06 生活 /「出産、育児、結婚、介護・死別などのライフイベントに伴う手続・支援の案内」",
+      "status": "complete",
+      "procedures": [
+        "konin-todoke",
+        "kaisei-tetsuzuki",
+        "hifuyousha-todoke",
+        "zairyu-kisai-henko-kekkon"
+      ],
+      "signature_output": {
+        "id": "kaisei-chain",
+        "title": {
+          "ja": "改姓は1か所ずつ手作業。まとめて変える仕組みは無い",
+          "en": "A name change must be done institution by institution"
+        },
+        "punchline": {
+          "ja": "順序が効く。免許証を先に変えると、それが本人確認書類になって以降が楽になる。",
+          "en": "Order matters: change your licence first and it becomes the ID for everything else."
+        }
+      }
+    },
+    {
+      "id": "childbirth",
+      "name": {
+        "ja": "子どもが生まれたとき",
+        "easy": "こどもが うまれた とき",
+        "en": "When a child is born"
+      },
+      "official_theme": "c06 生活 /「出産、育児、結婚、介護・死別などのライフイベントに伴う手続・支援の案内」",
+      "status": "complete",
+      "procedures": [
+        "shussho-todoke",
+        "jidou-teate-shussho",
+        "kodomo-hoken-kanyu",
+        "nyuyoji-iryosho",
+        "shussan-ichijikin",
+        "kodomo-zairyu-shutoku"
+      ],
+      "signature_output": {
+        "id": "birth-not-automatic",
+        "title": {
+          "ja": "出生届を出しただけでは、保険も手当も始まらない",
+          "en": "Registering the birth starts nothing else"
+        },
+        "punchline": {
+          "ja": "健康保険・児童手当・医療証はすべて別々の申請。児童手当は15日を1日でも過ぎるとその月分が消える。外国籍の子は30日以内に在留資格の取得が必要で、過ぎると在留資格が一段下がる。",
+          "en": "Insurance, allowance and medical subsidy are separate applications. One day late on the 15-day allowance and that month is lost; a foreign child missing the 30-day residence application is permanently downgraded."
+        },
+        "based_on_real_case": false
+      }
+    }
+  ]
+}

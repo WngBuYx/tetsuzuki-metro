@@ -1,0 +1,194 @@
+{
+  "$schema_version": "0.2",
+  "municipality_code": "131041",
+  "municipality_name": {
+    "ja": "新宿区",
+    "easy": "しんじゅくく",
+    "en": "Shinjuku City"
+  },
+  "primary_source": {
+    "title": "新宿区 おくやみガイドブック",
+    "issued": "2026-04",
+    "url": "https://www.city.shinjuku.lg.jp/content/000398612.pdf",
+    "note": "令和8年(2026年)4月発行。区役所での手続きチェックリスト(P7-10)・区役所以外の主な手続き(P37-38)・戸籍の資料編(P41-44)を一次情報として使用。"
+  },
+  "okuyami_desk": {
+    "exists": true,
+    "name": "おくやみ相談窓口",
+    "tel": "03-5273-0819",
+    "place": "新宿区役所本庁舎1階 戸籍住民課9番窓口",
+    "hours": "平日 9:00-12:00 / 13:00-17:00(対面相談は16:00まで・事前予約制)",
+    "note": "新宿区には既に相談窓口が存在する。本サービスの差別化は『来庁前に・24時間・多言語で・依存関係ごと俯瞰できる』点にある。窓口の否定ではなく前段の補完と位置づける。"
+  },
+  "note": "全国共通グラフ(procedures.json)の window を、この区の実際の課・係で上書きするための表。新しい区に対応するには、このファイルを1枚作るだけでよい。",
+  "windows": {
+    "shibou-todoke": {
+      "dept": "戸籍住民課 戸籍係",
+      "also": [
+        "各特別出張所"
+      ],
+      "tel": "03-5273-3509"
+    },
+    "setainushi-henko": {
+      "dept": "戸籍住民課 住民記録係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "inkan-henno": {
+      "dept": "戸籍住民課 住民記録係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "mynumber-henno": {
+      "dept": "戸籍住民課 住民記録係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kokuho-henno": {
+      "dept": "医療保険年金課 国保資格係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kokuho-fuyou-kanyu": {
+      "dept": "医療保険年金課 国保資格係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "sousaihi-kokuho": {
+      "dept": "医療保険年金課 国保給付係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "sousaihi-kouki": {
+      "dept": "高齢者医療担当課 高齢者医療係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kouki-henno": {
+      "dept": "高齢者医療担当課 高齢者医療係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kaigo-henno": {
+      "dept": "介護保険資格係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "nenkin-mishikyu-kokumin": {
+      "dept": "医療保険年金課 年金係"
+    },
+    "nenkin-mishikyu-jimusho": {
+      "dept": "新宿年金事務所",
+      "tel": "03-3354-5048",
+      "fax": "03-3354-5049",
+      "note": "または請求者の住所を管轄する年金事務所"
+    },
+    "shibou-ichijikin": {
+      "dept": "医療保険年金課 年金係"
+    },
+    "izoku-kiso-nenkin": {
+      "dept": "医療保険年金課 年金係"
+    },
+    "kafu-nenkin": {
+      "dept": "医療保険年金課 年金係"
+    },
+    "sozokunin-daihyo": {
+      "dept": "税務課 課税第一・第二係"
+    },
+    "junkakutei-shinkoku": {
+      "dept": "四谷税務署 または 新宿税務署",
+      "tel": "03-3359-4451 / 03-6757-7776",
+      "note": "新宿区は管轄が2署に分かれる。住所によって異なるため要確認。"
+    },
+    "sozokuzei-shinkoku": {
+      "dept": "四谷税務署 または 新宿税務署",
+      "tel": "03-3359-4451 / 03-6757-7776"
+    },
+    "sozokunin-kakutei": {
+      "dept": "戸籍住民課 戸籍係",
+      "tel": "03-5273-3509",
+      "restriction": "相続で遡る除籍・改製原戸籍の広域交付請求は戸籍住民課戸籍係のみ。各特別出張所では請求できない。"
+    },
+    "houtei-sozoku-joho": {
+      "dept": "東京法務局新宿出張所",
+      "tel": "03-3363-7385"
+    },
+    "sozoku-houki": {
+      "dept": "東京家庭裁判所"
+    },
+    "sozoku-touki": {
+      "dept": "東京法務局新宿出張所",
+      "tel": "03-3363-7385",
+      "note": "不動産の所在地を管轄する法務局。新宿区外の不動産は当該地の法務局。"
+    },
+    "zairyu-card-henno": {
+      "dept": "東京出入国在留管理局 外国人在留総合インフォメーションセンター",
+      "tel": "0570-013904"
+    },
+    "ginko-kouza": {
+      "dept": "取引金融機関"
+    },
+    "seimei-hoken": {
+      "dept": "取引生命保険会社"
+    },
+    "koukyo-ryokin": {
+      "dept": "各契約会社（水道は東京都水道局お客さまセンター 0570-091-100）"
+    },
+    "juukyochi-todokede": {
+      "dept": "戸籍住民課 住民記録係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "juukyochi-henko": {
+      "dept": "戸籍住民課 住民記録係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "zairyu-kisai-henko": {
+      "dept": "地方出入国在留管理局",
+      "note": "★こちらは入管。住居地届出とは窓口が違う。"
+    },
+    "shikakugai-katsudo": {
+      "dept": "住居地を管轄する地方出入国在留管理官署"
+    },
+    "zairyu-kikan-koushin": {
+      "dept": "地方出入国在留管理局"
+    },
+    "mynumber-yuukoukikan-henko": {
+      "dept": "戸籍住民課",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "mynumber-tokurei-encho": {
+      "dept": "戸籍住民課",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kokuho-kanyu-gaikokujin": {
+      "dept": "医療保険年金課 国保資格係",
+      "also": [
+        "各特別出張所"
+      ]
+    },
+    "kokumin-nenkin-kanyu": {
+      "dept": "医療保険年金課 年金係"
+    },
+    "dattai-ichijikin": {
+      "dept": "日本年金機構(出国後に郵送で請求)"
+    }
+  },
+  "local_procedures": []
+}

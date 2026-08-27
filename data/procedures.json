@@ -1,0 +1,3053 @@
+{
+  "$schema_version": "0.2",
+  "scope": "national",
+  "note": "全国共通の手続グラフ。期限・依存関係・必要書類・根拠法令はどの自治体でも同じ。窓口の課名・係名・電話番号は municipalities/ 配下の自治体ファイルで上書きする。",
+  "lines": [
+    {
+      "id": "yakusho",
+      "name": {
+        "ja": "役所線",
+        "easy": "やくしょせん",
+        "en": "Ward Office Line"
+      },
+      "color": "#E60012"
+    },
+    {
+      "id": "hoken",
+      "name": {
+        "ja": "保険線",
+        "easy": "ほけんせん",
+        "en": "Insurance Line"
+      },
+      "color": "#009944"
+    },
+    {
+      "id": "nenkin",
+      "name": {
+        "ja": "年金線",
+        "easy": "ねんきんせん",
+        "en": "Pension Line"
+      },
+      "color": "#F39800"
+    },
+    {
+      "id": "zeimu",
+      "name": {
+        "ja": "税金線",
+        "easy": "ぜいきんせん",
+        "en": "Tax Line"
+      },
+      "color": "#0068B7"
+    },
+    {
+      "id": "sozoku",
+      "name": {
+        "ja": "相続線",
+        "easy": "そうぞくせん",
+        "en": "Inheritance Line"
+      },
+      "color": "#920783"
+    },
+    {
+      "id": "minkan",
+      "name": {
+        "ja": "民間線",
+        "easy": "みんかんせん",
+        "en": "Private Line"
+      },
+      "color": "#7D7D7D"
+    },
+    {
+      "id": "zairyu",
+      "name": {
+        "ja": "在留線",
+        "easy": "ざいりゅうせん",
+        "en": "Residency Line"
+      },
+      "color": "#00A0E9",
+      "authority": "出入国在留管理庁"
+    },
+    {
+      "id": "shokuba",
+      "name": {
+        "ja": "職場線",
+        "easy": "しょくばせん",
+        "en": "Workplace Line"
+      },
+      "color": "#8FC31F",
+      "authority": "勤務先・健保・ハローワーク"
+    }
+  ],
+  "procedures": [
+    {
+      "id": "shibou-todoke",
+      "line": "yakusho",
+      "seq": 1,
+      "name": {
+        "ja": "死亡届の提出",
+        "easy": "しぼうとどけ（しんだことを しらせる かみ）を だす",
+        "en": "Submit the death notification"
+      },
+      "deadline": {
+        "value": 7,
+        "unit": "day",
+        "from": "known",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "shibou-shindansho",
+        "todokedenin-honninkakunin"
+      ],
+      "produces": [
+        "kasou-kyokasho"
+      ],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "死亡届を出すと火葬許可証が交付される。火葬後に火葬日時が記入され、それが埋葬許可証になるので必ず保管する。住民票の消除は自動で行われるため別途手続きは不要。",
+        "easy": "しぼうとどけを だすと「かそうきょかしょ」が もらえます。かそうの あと それが「まいそうきょかしょ」に なります。なくさないで ください。",
+        "en": "Submitting this issues the cremation permit, which becomes the burial permit after cremation. Keep it. Removal from the resident register happens automatically."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=3",
+      "law": "戸籍法86条"
+    },
+    {
+      "id": "setainushi-henko",
+      "line": "yakusho",
+      "seq": 2,
+      "name": {
+        "ja": "世帯主の変更届",
+        "easy": "せたいぬし（いえの だいひょう）を かえる",
+        "en": "Change of head of household"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "deceased_was_head==true",
+        "household_members_15plus>=2"
+      ],
+      "note": {
+        "ja": "亡くなった方が世帯主で、かつ同じ世帯に15歳以上の方が2人以上残っている場合のみ必要。残る方が1人の場合は自動的にその方が世帯主となるため届出は不要。",
+        "easy": "しんだ人が せたいぬしで、15さい いじょうの 人が 2人いじょう のこって いるときだけ ひつようです。",
+        "en": "Required only if the deceased was head of household AND two or more remaining members are aged 15+."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "inkan-henno",
+      "line": "yakusho",
+      "seq": 3,
+      "name": {
+        "ja": "印鑑登録証の返納",
+        "easy": "いんかんとうろくしょうを かえす",
+        "en": "Return the seal registration card"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "inkan-toroku-sho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "has_inkan_toroku==true"
+      ],
+      "note": {
+        "ja": "期限の定めはない。",
+        "easy": "きげんは ありません。",
+        "en": "No deadline."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "mynumber-henno",
+      "line": "yakusho",
+      "seq": 4,
+      "name": {
+        "ja": "マイナンバーカードの返納",
+        "easy": "マイナンバーカードを かえす",
+        "en": "Return the My Number card"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "mynumber-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "has_mynumber_card==true"
+      ],
+      "note": {
+        "ja": "返納を希望する場合のみ。期限の定めはない。",
+        "easy": "かえしたい ときだけ です。きげんは ありません。",
+        "en": "Only if you wish to return it. No deadline."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "kokuho-henno",
+      "line": "hoken",
+      "seq": 1,
+      "name": {
+        "ja": "国民健康保険 資格確認書の返納",
+        "easy": "こくみんけんこうほけんの かみを かえす",
+        "en": "Return the National Health Insurance certificate"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kokuho-shikaku-kakuninsho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "insurance==kokuho"
+      ],
+      "note": {
+        "ja": "74歳までの国民健康保険加入者が対象。資格確認書をお持ちの方のみ。",
+        "easy": "74さいまでの 人で こくほに はいって いた ばあいです。",
+        "en": "For National Health Insurance members up to age 74, if you hold the certificate."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "kokuho-fuyou-kanyu",
+      "line": "hoken",
+      "seq": 2,
+      "name": {
+        "ja": "扶養されていたご家族の国民健康保険加入",
+        "easy": "のこされた かぞくが こくほに はいる",
+        "en": "Enroll dependents in National Health Insurance"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "had_dependents==true"
+      ],
+      "note": {
+        "ja": "故人の健康保険に扶養として入っていたご家族は、新たに国民健康保険に加入する手続きが必要。",
+        "easy": "しんだ人の ほけんに はいって いた かぞくは あたらしく こくほに はいります。",
+        "en": "Family members covered as dependents must newly enroll."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "sousaihi-kokuho",
+      "line": "hoken",
+      "seq": 3,
+      "name": {
+        "ja": "葬祭費の支給申請（国民健康保険）",
+        "easy": "そうしきの おかねを もらう（こくほ）",
+        "en": "Claim funeral expense benefit (NHI)"
+      },
+      "deadline": {
+        "value": 2,
+        "unit": "year",
+        "from": "funeral",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "sougi-ryoushuusho",
+        "moushidenin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "insurance==kokuho"
+      ],
+      "note": {
+        "ja": "葬儀を行い、その費用を支払った方に支給される。請求しないともらえない“取りに行く”手続き。",
+        "easy": "そうしきを して おかねを はらった 人が もらえます。じぶんから もうしこまないと もらえません。",
+        "en": "Paid to whoever held and paid for the funeral. You must claim it — it is not automatic."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=8"
+    },
+    {
+      "id": "sousaihi-kouki",
+      "line": "hoken",
+      "seq": 4,
+      "name": {
+        "ja": "葬祭費の支給申請（後期高齢者医療）",
+        "easy": "そうしきの おかねを もらう（75さい いじょう）",
+        "en": "Claim funeral expense benefit (elderly medical)"
+      },
+      "deadline": {
+        "value": 2,
+        "unit": "year",
+        "from": "funeral",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "sougi-ryoushuusho",
+        "moushidenin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "insurance==kouki"
+      ],
+      "note": {
+        "ja": "75歳以上の後期高齢者医療制度加入者が対象。窓口は国保とは別の課になる。",
+        "easy": "75さい いじょうの 人の ばあいです。まどぐちが こくほとは ちがいます。",
+        "en": "For those 75+. Note this is a different department from NHI."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "kouki-henno",
+      "line": "hoken",
+      "seq": 5,
+      "name": {
+        "ja": "後期高齢者医療 資格確認書等の返納",
+        "easy": "こうきこうれいしゃの かみを かえす",
+        "en": "Return elderly medical insurance certificate"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kouki-shikaku-kakuninsho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "insurance==kouki"
+      ],
+      "note": {
+        "ja": "資格確認書・特定疾病療養受療証が対象。期限の定めはない。",
+        "easy": "きげんは ありません。",
+        "en": "No deadline."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "kaigo-henno",
+      "line": "hoken",
+      "seq": 6,
+      "name": {
+        "ja": "介護保険被保険者証・負担割合証の返納",
+        "easy": "かいごほけんの かみを かえす",
+        "en": "Return long-term care insurance certificates"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kaigo-hihokenshasho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "age>=65 || kaigo_nintei==true"
+      ],
+      "note": {
+        "ja": "65歳以上の方、または介護認定を受けていた方が対象。",
+        "easy": "65さい いじょう または かいごの にんていを うけて いた 人です。",
+        "en": "For those 65+ or certified for long-term care."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "nenkin-mishikyu-kokumin",
+      "line": "nenkin",
+      "seq": 1,
+      "name": {
+        "ja": "未支給年金請求・受給権者死亡届（国民年金・区役所扱い分）",
+        "easy": "もらって いない ねんきんを もらう（くやくしょ）",
+        "en": "Claim unpaid pension / report death (municipal-handled)"
+      },
+      "deadline": {
+        "value": 5,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo",
+        "seikyuunin-kouza",
+        "nenkin-techo"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type==kokumin"
+      ],
+      "note": {
+        "ja": "障害基礎年金・遺族基礎年金・寡婦年金を受給していた場合は区役所の年金係が窓口。",
+        "easy": "しょうがいきそねんきん などを もらって いた ばあいは くやくしょです。",
+        "en": "Handled at the ward office when the deceased received disability/survivor/widow basic pension."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "nenkin-mishikyu-jimusho",
+      "line": "nenkin",
+      "seq": 2,
+      "name": {
+        "ja": "未支給年金請求・受給権者死亡届（国民年金・厚生年金・共済年金）",
+        "easy": "もらって いない ねんきんを もらう（ねんきん じむしょ）",
+        "en": "Claim unpaid pension / report death (pension office)"
+      },
+      "deadline": {
+        "value": 5,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "deadline_report": {
+        "value": 10,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal",
+        "variants": [
+          {
+            "when": "nenkin_type==kokumin",
+            "value": 14,
+            "unit": "day"
+          }
+        ]
+      },
+      "window": {
+        "type": "nenkin-jimusho",
+        "authority": "日本年金機構",
+        "label": {
+          "ja": "住所を管轄する年金事務所",
+          "easy": "ねんきん じむしょ",
+          "en": "Your local pension office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo",
+        "seikyuunin-kouza",
+        "nenkin-techo"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type!=none"
+      ],
+      "skippable_when": [
+        "mynumber_linked_to_nenkin==true"
+      ],
+      "note": {
+        "ja": "死亡届の提出期限は厚生年金10日以内・国民年金14日以内。ただし故人のマイナンバーが日本年金機構に収録済みであれば、死亡届の提出は原則不要。未支給年金の請求は死亡日から5年以内。",
+        "easy": "マイナンバーが とうろく されて いれば しぼうとどけは いりません。もらって いない ねんきんの せいきゅうは 5ねん いないです。",
+        "en": "Death report due in 10 days (employees' pension) or 14 days (national pension) — but generally unnecessary if the deceased's My Number is on file. Unpaid pension claim: within 5 years."
+      },
+      "source": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140731-01.html"
+    },
+    {
+      "id": "shibou-ichijikin",
+      "line": "nenkin",
+      "seq": 3,
+      "name": {
+        "ja": "死亡一時金の支給申請",
+        "easy": "しぼう いちじきんを もらう",
+        "en": "Claim lump-sum death benefit"
+      },
+      "deadline": {
+        "value": 2,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo",
+        "seikyuunin-kouza"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type==kokumin",
+        "received_pension==false"
+      ],
+      "note": {
+        "ja": "国民年金の加入期間があり、年金を受給せずに亡くなられた場合。支給には要件がある。",
+        "easy": "こくみんねんきんに はいって いたが ねんきんを もらわずに しんだ ばあいです。",
+        "en": "If the deceased paid into the national pension but died without receiving it. Conditions apply."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "izoku-kiso-nenkin",
+      "line": "nenkin",
+      "seq": 4,
+      "name": {
+        "ja": "遺族基礎年金の支給申請",
+        "easy": "いぞく きそねんきんを もらう",
+        "en": "Claim survivors' basic pension"
+      },
+      "deadline": {
+        "value": 5,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo",
+        "seikyuunin-kouza"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type==kokumin"
+      ],
+      "note": {
+        "ja": "国民年金の加入期間がある場合。支給には要件（子の有無など）がある。",
+        "easy": "しきゅうには じょうけんが あります。",
+        "en": "Conditions apply (e.g. having dependent children)."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "kafu-nenkin",
+      "line": "nenkin",
+      "seq": 5,
+      "name": {
+        "ja": "寡婦年金の支給申請",
+        "easy": "かふねんきんを もらう",
+        "en": "Claim widow's pension"
+      },
+      "deadline": {
+        "value": 5,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo",
+        "seikyuunin-kouza"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type==kokumin"
+      ],
+      "note": {
+        "ja": "支給には要件がある。死亡一時金とはどちらか一方の選択となる場合がある。",
+        "easy": "しきゅうには じょうけんが あります。",
+        "en": "Conditions apply; may be an either/or choice with the lump-sum death benefit."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=9"
+    },
+    {
+      "id": "sozokunin-daihyo",
+      "line": "zeimu",
+      "seq": 1,
+      "name": {
+        "ja": "特別区民税・都民税 相続人代表者指定届の提出",
+        "easy": "じゅうみんぜいの だいひょうを きめる かみを だす",
+        "en": "Designate representative heir for resident tax"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "had_resident_tax==true"
+      ],
+      "note": {
+        "ja": "住民税の納税義務が残っている場合、納税通知の宛先となる相続人代表者を届け出る。期限の定めはない。",
+        "easy": "じゅうみんぜいを はらう 人を きめます。きげんは ありません。",
+        "en": "Designates who receives the tax notices. No deadline."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=10"
+    },
+    {
+      "id": "junkakutei-shinkoku",
+      "line": "zeimu",
+      "seq": 2,
+      "name": {
+        "ja": "準確定申告",
+        "easy": "しんだ人の ぶんの かくていしんこく",
+        "en": "Final income tax return for the deceased"
+      },
+      "deadline": {
+        "value": 4,
+        "unit": "month",
+        "from": "known",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "zeimusho",
+        "authority": "国税庁",
+        "label": {
+          "ja": "住所を管轄する税務署",
+          "easy": "ぜいむしょ",
+          "en": "Your local tax office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "shotoku-shiryo"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "needs_tax_return==true"
+      ],
+      "note": {
+        "ja": "故人の1月1日から死亡日までの所得について、相続人が代わって申告する。相続の開始を知った日の翌日から4か月以内。",
+        "easy": "しんだ人の しゅうにゅうの ぜいきんを かぞくが かわりに もうしこみます。4かげつ いないです。",
+        "en": "Heirs file the deceased's income tax for Jan 1 to the date of death, within 4 months."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=38"
+    },
+    {
+      "id": "sozokuzei-shinkoku",
+      "line": "zeimu",
+      "seq": 3,
+      "name": {
+        "ja": "相続税の申告・納付",
+        "easy": "そうぞくぜいを はらう",
+        "en": "Inheritance tax filing and payment"
+      },
+      "deadline": {
+        "value": 10,
+        "unit": "month",
+        "from": "known",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "zeimusho",
+        "authority": "国税庁",
+        "label": {
+          "ja": "住所を管轄する税務署",
+          "easy": "ぜいむしょ",
+          "en": "Your local tax office"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "isan-shiryo",
+        "isan-bunkatsu-kyogisho"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "sozokunin-kakutei"
+      ],
+      "appears_when": [
+        "estate_over_threshold!=no"
+      ],
+      "note": {
+        "ja": "基礎控除を超える遺産がある場合。遺産分割協議が整っていることが前提となるため、実質的な準備期間は10か月より短い。",
+        "easy": "いさんが おおい ばあいです。10かげつ いないですが じゅんびは はやめに。",
+        "en": "If the estate exceeds the basic deduction. Requires the division agreement to be settled first, so the real window is shorter than 10 months."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=38"
+    },
+    {
+      "id": "sozokunin-kakutei",
+      "line": "sozoku",
+      "seq": 1,
+      "name": {
+        "ja": "相続人の確定（戸籍の収集）",
+        "easy": "そうぞくする 人を はっきり させる（こせきを あつめる）",
+        "en": "Identify the heirs (collect family registers)"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [
+        "koseki-tohon"
+      ],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "全ての相続手続の起点。亡くなった方の出生から死亡までの戸籍を遡って集める必要がある。★重要: 特別出張所では相続用の遡り請求ができず、本庁舎の戸籍住民課戸籍係に行く必要がある。",
+        "easy": "そうぞくの すべての てつづきの さいしょです。とくべつ しゅっちょうじょでは できません。ほんちょうしゃへ いって ください。",
+        "en": "The starting point for all inheritance procedures. Note: branch offices cannot issue the retroactive registers needed for inheritance — go to the main office."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=43"
+    },
+    {
+      "id": "houtei-sozoku-joho",
+      "line": "sozoku",
+      "seq": 2,
+      "name": {
+        "ja": "法定相続情報一覧図の申出",
+        "easy": "そうぞくする 人の いちらんずを つくる",
+        "en": "Apply for the legal heir information list"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "houmukyoku",
+        "authority": "法務省",
+        "label": {
+          "ja": "不動産の所在地を管轄する法務局",
+          "easy": "ほうむきょく",
+          "en": "The Legal Affairs Bureau for the property"
+        }
+      },
+      "requires": [
+        "koseki-tohon"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [
+        "houtei-sozoku-ichiranzu"
+      ],
+      "depends_on": [
+        "sozokunin-kakutei"
+      ],
+      "appears_when": [],
+      "recommended": true,
+      "note": {
+        "ja": "★戸籍謄本の束を何度も出し直す必要がなくなる制度。無料で必要枚数を交付してもらえるため、銀行・年金・保険など提出先が多いほど効果が大きい。区の公式ガイドブックも推奨している。",
+        "easy": "この かみが あると こせきとうほんを なんども ださなくて よく なります。ただ です。",
+        "en": "Eliminates repeatedly submitting bundles of family registers. Free, and issued in as many copies as needed — the more institutions you deal with, the more it saves."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=3"
+    },
+    {
+      "id": "sozoku-houki",
+      "line": "sozoku",
+      "seq": 3,
+      "name": {
+        "ja": "相続放棄・限定承認の申述",
+        "easy": "しゃっきんなどを つがない ことに する",
+        "en": "Renounce or conditionally accept the inheritance"
+      },
+      "deadline": {
+        "value": 3,
+        "unit": "month",
+        "from": "known",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "katei-saibansho",
+        "authority": "裁判所",
+        "label": {
+          "ja": "被相続人の住所地を管轄する家庭裁判所",
+          "easy": "かてい さいばんしょ",
+          "en": "The Family Court"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo-johyo"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "sozokunin-kakutei"
+      ],
+      "appears_when": [
+        "possible_debt!=no"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★取り返しがつかない期限。自己のために相続の開始があったことを知った時から3か月を過ぎると、原則として借金も含めて全て相続したものとみなされる。負債の有無が不明なうちは最優先で確認すること。",
+        "easy": "★いちばん たいせつな きげんです。3かげつを すぎると しゃっきんも ぜんぶ つぐことに なります。",
+        "en": "★Irreversible deadline. After 3 months from learning of the inheritance, you are deemed to have accepted everything — including debts."
+      },
+      "source": "https://souzoku-pro.info/columns/other/1410/"
+    },
+    {
+      "id": "sozoku-touki",
+      "line": "sozoku",
+      "seq": 4,
+      "name": {
+        "ja": "相続登記（不動産の名義変更）",
+        "easy": "いえや とちの なまえを かえる",
+        "en": "Register inherited real estate"
+      },
+      "deadline": {
+        "value": 3,
+        "unit": "year",
+        "from": "inheritance-known",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "houmukyoku",
+        "authority": "法務省",
+        "label": {
+          "ja": "不動産の所在地を管轄する法務局",
+          "easy": "ほうむきょく",
+          "en": "The Legal Affairs Bureau for the property"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "juminhyo",
+        "isan-bunkatsu-kyogisho",
+        "koteishisan-hyokashomeisho"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "submit"
+      },
+      "produces": [],
+      "depends_on": [
+        "sozokunin-kakutei"
+      ],
+      "appears_when": [
+        "has_real_estate==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★令和6年(2024年)4月1日から義務化。正当な理由なく3年以内に申請しないと10万円以下の過料が科される可能性がある。2024年4月1日より前に発生した相続にも遡及適用され、その場合の期限は2027年3月31日。",
+        "easy": "★2024ねん 4がつから ぎむに なりました。3ねん いないに しないと 10まんえん いかの おかねを はらう ことが あります。",
+        "en": "★Mandatory since April 1, 2024. Failure to apply within 3 years without valid reason may incur a fine of up to ¥100,000. Applies retroactively to earlier inheritances, with a deadline of March 31, 2027."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=4"
+    },
+    {
+      "id": "zairyu-card-henno",
+      "line": "minkan",
+      "seq": 1,
+      "name": {
+        "ja": "在留カード・特別永住者証明書の返納",
+        "easy": "ざいりゅうカードを かえす",
+        "en": "Return the residence card"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "death",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "was_foreign_resident==true"
+      ],
+      "note": {
+        "ja": "故人が外国籍の場合に必要。区役所ではなく入管が窓口。",
+        "easy": "がいこくせきの 人の ばあいです。くやくしょでは ありません。",
+        "en": "For foreign nationals. Handled by immigration, not the ward office."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=38"
+    },
+    {
+      "id": "ginko-kouza",
+      "line": "minkan",
+      "seq": 2,
+      "name": {
+        "ja": "預金口座の解約・名義変更",
+        "easy": "ぎんこうの こうざを かいやくする",
+        "en": "Close or transfer bank accounts"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "The company you contract with"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "isan-bunkatsu-kyogisho",
+        "honninkakunin"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "show"
+      },
+      "produces": [],
+      "depends_on": [
+        "sozokunin-kakutei"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "金融機関が死亡を把握すると口座は凍結される。法定相続情報一覧図があれば戸籍の束の提出を省ける場合が多い。",
+        "easy": "ぎんこうが しった ときに こうざは とまります。",
+        "en": "Accounts are frozen once the bank learns of the death. The legal heir list often replaces the bundle of registers."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=39"
+    },
+    {
+      "id": "seimei-hoken",
+      "line": "minkan",
+      "seq": 3,
+      "name": {
+        "ja": "生命保険金の請求",
+        "easy": "せいめいほけんの おかねを もらう",
+        "en": "Claim life insurance"
+      },
+      "deadline": {
+        "value": 3,
+        "unit": "year",
+        "from": "death",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "The company you contract with"
+        }
+      },
+      "requires": [
+        "koseki-tohon",
+        "shibou-shindansho",
+        "honninkakunin"
+      ],
+      "requires_detail": {
+        "koseki-tohon": "show"
+      },
+      "produces": [],
+      "depends_on": [
+        "shibou-todoke"
+      ],
+      "appears_when": [
+        "has_life_insurance==true"
+      ],
+      "note": {
+        "ja": "請求権の時効は3年。請求しないと支払われない。",
+        "easy": "3ねん いないに もうしこんで ください。",
+        "en": "Claim rights expire after 3 years; payment is not automatic."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=39"
+    },
+    {
+      "id": "koukyo-ryokin",
+      "line": "minkan",
+      "seq": 4,
+      "name": {
+        "ja": "水道・電気・ガス・電話等の名義変更・解約",
+        "easy": "すいどう・でんき・ガス・でんわの てつづき",
+        "en": "Transfer or cancel utilities"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "The company you contract with"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "期限の定めはないが、放置すると引き落としが続くため早めに。",
+        "easy": "きげんは ありませんが はやめに して ください。",
+        "en": "No deadline, but payments keep being drawn until you act."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=39"
+    },
+    {
+      "id": "juukyochi-todokede",
+      "line": "zairyu",
+      "seq": 1,
+      "name": {
+        "ja": "住居地の届出（新規上陸後）",
+        "easy": "すむ ところを やくしょに とどける",
+        "en": "Register your address after arrival"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "address_fixed",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport"
+      ],
+      "produces": [
+        "juminhyo"
+      ],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★窓口は入管ではなく市区町村。よくある誤解。入管法19条の9に基づく義務で、届出を怠ると20万円以下の罰金、さらに在留資格取消のリスクがある。届出をすると在留カードの裏面に住所が記載される。",
+        "easy": "★にゅうかんでは ありません。くやくしょです。14にち いないに しないと ばっきんや ざいりゅうしかくの とりけしに なる ことが あります。",
+        "en": "★Filed at the municipal office, NOT immigration — a common misunderstanding. Required by law; failure risks a fine up to ¥200,000 and even revocation of residence status."
+      },
+      "law": "入管法第19条の9",
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00021.html"
+    },
+    {
+      "id": "juukyochi-henko",
+      "line": "zairyu",
+      "seq": 2,
+      "name": {
+        "ja": "住居地の変更届出（引っ越し後）",
+        "easy": "ひっこしたら すむ ところを とどける",
+        "en": "Report a change of address"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "転入届と同時に行える。こちらも窓口は市区町村であり、入管では受け付けていない。",
+        "easy": "てんにゅうとどけと いっしょに できます。にゅうかんでは できません。",
+        "en": "Can be done together with the move-in notification. Again: municipal office, not immigration."
+      },
+      "law": "入管法第19条の9",
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "zairyu-kisai-henko",
+      "line": "zairyu",
+      "seq": 3,
+      "name": {
+        "ja": "在留カード記載事項の変更届出（氏名・国籍等）",
+        "easy": "なまえなどが かわったら とどける",
+        "en": "Report changes to residence card details"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "change",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "shoumei-shorui"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "name_or_nationality_changed==true"
+      ],
+      "note": {
+        "ja": "★住居地の届出は市区町村、記載事項(氏名・生年月日・性別・国籍地域)の変更は入管。同じ在留カードの話なのに窓口が分かれるため混乱しやすい。",
+        "easy": "★じゅうしょは くやくしょ、なまえは にゅうかん。まどぐちが ちがいます。",
+        "en": "★Address goes to the municipality; name/nationality changes go to immigration. Same card, different counters."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "shikakugai-katsudo",
+      "line": "zairyu",
+      "seq": 4,
+      "name": {
+        "ja": "資格外活動許可の申請（アルバイトをする場合）",
+        "easy": "アルバイトを する ための きょかを とる",
+        "en": "Apply for permission to work part-time"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "before_action"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "shikakugai-shinseisho"
+      ],
+      "produces": [
+        "shikakugai-kyoka"
+      ],
+      "depends_on": [
+        "juukyochi-todokede"
+      ],
+      "appears_when": [
+        "will_work_part_time==true",
+        "is_foreign_resident==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★働き始める『前』に取ること。無許可で就労すると不法就労となり、1年以下の懲役もしくは禁錮または200万円以下の罰金、さらに在留資格の取消や退去強制の対象になりうる。許可を得ても労働時間は週28時間まで(複数の勤務先の合計。連続する7日間で計算)。",
+        "easy": "★はたらく まえに とって ください。きょかが ないと はたらけません。きょかが あっても 1しゅうかん 28じかんまでです。",
+        "en": "★Get this BEFORE starting work. Working without it is illegal employment: up to 1 year imprisonment or ¥2,000,000 fine, plus possible revocation of status and deportation. Even with permission, the cap is 28 hours per week across all jobs."
+      },
+      "source": "https://www.moj.go.jp/isa/content/001349112.pdf"
+    },
+    {
+      "id": "zairyu-kikan-koushin",
+      "line": "zairyu",
+      "seq": 5,
+      "name": {
+        "ja": "在留期間更新許可申請",
+        "easy": "にほんに いられる きかんを のばす",
+        "en": "Apply to extend your period of stay"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "expiry",
+        "kind": "window_opens"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "koushin-shinseisho",
+        "zaigaku-shomeisho"
+      ],
+      "produces": [
+        "new-zairyu-card"
+      ],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "満了日の3か月前から申請できる。満了日を過ぎると不法残留となる。★更新が済んだら、マイナンバーカードの有効期間変更も必要(次の駅)。",
+        "easy": "きげんの 3かげつ まえから できます。すぎると ふほう ざいりゅうに なります。",
+        "en": "Applications open 3 months before expiry. Overstaying makes your presence unlawful. ★After renewal, you must also update your My Number card."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html",
+      "window_opens": {
+        "value": 3,
+        "unit": "month",
+        "before": "expiry",
+        "label": {
+          "ja": "満了日の3か月前から申請できる",
+          "easy": "きげんの 3かげつ まえから できます",
+          "en": "Applications open 3 month(s) before expiry"
+        }
+      }
+    },
+    {
+      "id": "mynumber-yuukoukikan-henko",
+      "line": "yakusho",
+      "seq": 10,
+      "name": {
+        "ja": "マイナンバーカードの有効期間変更（在留期間更新後）",
+        "easy": "マイナンバーカードの きげんを のばす",
+        "en": "Update the validity period of your My Number card"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "after_zairyu_renewal",
+        "kind": "irreversible"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "mynumber-card",
+        "zairyu-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "zairyu-kikan-koushin"
+      ],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "has_mynumber_card==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★★本サービスが最も伝えたい駅。外国人のマイナンバーカードの有効期限は『在留期間の満了日』であり、在留期間を更新してもカードは自動では延長されない。入管で更新した後、別途 区役所での手続きが必要。しかも在留期間満了に伴う失効の通知は送付されない。期限を過ぎると有効期間変更はできなくなり、カードは失効。再交付は1,000円(電子証明書不要なら800円)。日本人のカードは10年有効で、期限前に通知書が届く。",
+        "easy": "★★にゅうかんで きかんを のばしても、カードは そのままです。くやくしょでも てつづきが ひつようです。おしらせは きません。きげんが すぎると カードは つかえなく なり、つくりなおしに 1,000えん かかります。",
+        "en": "★★The station this service exists for. A foreign resident's My Number card expires on their residence expiry date and is NOT extended automatically when the residence period is renewed — a separate municipal procedure is required, and no reminder is sent. Miss it and the card is dead; reissue costs ¥1,000."
+      },
+      "source": "https://www.city.nerima.tokyo.jp/kurashi/mynumber/mynumber_card/koshin/gaikokujin.html"
+    },
+    {
+      "id": "mynumber-tokurei-encho",
+      "line": "yakusho",
+      "seq": 11,
+      "name": {
+        "ja": "マイナンバーカードの特例期間延長（在留期間更新の審査中）",
+        "easy": "しんさちゅうの あいだ カードの きげんを 2かげつ のばす",
+        "en": "Special 2-month extension while your residence renewal is under review"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "before_card_expiry",
+        "kind": "irreversible"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "mynumber-card",
+        "zairyu-card-shinseichu"
+      ],
+      "requires_detail": {
+        "zairyu-card-shinseichu": "show"
+      },
+      "produces": [],
+      "depends_on": [
+        "zairyu-kikan-koushin"
+      ],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "has_mynumber_card==true",
+        "renewal_pending_at_card_expiry==true"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★★実際に起きた失敗例をそのまま駅にしたもの。在留期間の更新許可がカードの有効期限までに下りない場合、区役所で有効期限を『特例で2か月』延長できる。証明に使うのは、在留カード裏面右下の「在留期間更新等許可申請欄」に入管が押した『在留資格更新許可申請中』のハンコ(現物が必要。コピー・画像は不可。電子申請なら受付番号通知メール)。★この延長の再延長は認められない(2か月一回きり)。★構造上の問題: ハンコを押すのは入管、それを使うのは区役所。入管はこのハンコに第二の用途があることを説明せず、区役所は申請中であることを知らず、失効の通知も送られない。情報は全て存在しているのに、両者を繋ぐ責任を持つ主体がいない。",
+        "easy": "★★にゅうかんの しんさが おわらない ときは、ざいりゅうカードの うらの『しんせいちゅう』の ハンコを もって くやくしょへ いくと、カードの きげんを 2かげつ のばせます。1かいだけです。しらないと カードが つかえなく なります。",
+        "en": "★★Drawn from a real failure. If your residence renewal is still under review when the card expires, the municipality can extend it by 2 months — proven by the physical 'application pending' stamp immigration puts on the back of your residence card. Once only, no second extension. The stamp is issued by immigration but used at the ward office; neither side explains the link, and no expiry notice is sent."
+      },
+      "consequence_if_missed": {
+        "ja": "カードは失効。有効期間変更も特例延長もできなくなり、再申請となる。交付まで約1か月〜1か月半、手数料1,000円(電子証明書不要なら800円)。その間、本人確認書類・コンビニ交付・e-Tax等が使えない。",
+        "en": "The card dies. Neither the validity update nor the special extension is possible any more — you must re-apply: about 1–1.5 months and ¥1,000. Meanwhile you lose your photo ID, convenience-store certificate issuance, and e-Tax."
+      },
+      "source": "https://www.city.itabashi.tokyo.jp/tetsuduki/koseki/mynumber/1048802/1047742.html"
+    },
+    {
+      "id": "kokuho-kanyu-gaikokujin",
+      "line": "hoken",
+      "seq": 10,
+      "name": {
+        "ja": "国民健康保険への加入",
+        "easy": "こくみん けんこうほけんに はいる",
+        "en": "Enroll in National Health Insurance"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "entry_or_moving",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "juminhyo"
+      ],
+      "produces": [
+        "kokuho-shikaku-kakuninsho"
+      ],
+      "depends_on": [
+        "juukyochi-todokede"
+      ],
+      "appears_when": [
+        "stay_over_3months==true",
+        "has_employer_insurance==false"
+      ],
+      "critical": true,
+      "note": {
+        "ja": "★3か月を超える在留資格があり、勤務先の健康保険に入っていない人は加入が『義務』。任意ではない。入国日・転入日から14日以内。★遅れても保険料は入国日まで遡って課されるため、後回しにしても安くならない。未加入の間に医療にかかると全額自己負担(10割)。",
+        "easy": "★3かげつを こえて にほんに いる 人は かならず はいります。えらべません。おくれても おかねは さかのぼって かかります。はいって いない ときに びょういんに いくと ぜんぶ じぶんで はらいます。",
+        "en": "★Mandatory (not optional) for anyone with a status of residence over 3 months who lacks employer insurance. Premiums are charged retroactively to your entry date, so delaying saves nothing — and you pay 100% of medical costs while uninsured."
+      },
+      "source": "https://www.city.meguro.tokyo.jp/kokuho/kurashi/kokuho/kanyu-gaikoku.html"
+    },
+    {
+      "id": "kokumin-nenkin-kanyu",
+      "line": "nenkin",
+      "seq": 10,
+      "name": {
+        "ja": "国民年金への加入",
+        "easy": "こくみん ねんきんに はいる",
+        "en": "Enroll in the National Pension"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "entry_or_moving",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "juminhyo"
+      ],
+      "produces": [
+        "nenkin-techo"
+      ],
+      "depends_on": [
+        "juukyochi-todokede"
+      ],
+      "appears_when": [
+        "age>=20",
+        "age<60",
+        "has_employer_pension==false"
+      ],
+      "note": {
+        "ja": "日本に住む20歳以上60歳未満は、国籍を問わず加入義務がある。学生は『学生納付特例』、収入が少ない場合は免除・猶予の制度があるので、払えない場合も窓口で相談すること(未納のまま放置しない)。",
+        "easy": "20さいから 60さいまでの 人は こくせきに かんけいなく はいります。がくせいや おかねが ない 人は まつ せいどが あります。",
+        "en": "Mandatory for all residents aged 20–59 regardless of nationality. Students and low-income residents can apply for deferral or exemption — talk to the counter rather than simply not paying."
+      },
+      "source": "https://www.city.kodaira.tokyo.jp/kurashi/053/053568.html"
+    },
+    {
+      "id": "dattai-ichijikin",
+      "line": "nenkin",
+      "seq": 11,
+      "name": {
+        "ja": "脱退一時金の請求（帰国する場合）",
+        "easy": "くにへ かえる ときに ねんきんの おかねを もらう",
+        "en": "Claim the lump-sum withdrawal payment"
+      },
+      "deadline": {
+        "value": 2,
+        "unit": "year",
+        "from": "departure",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "nenkin-kikou",
+        "authority": "日本年金機構",
+        "label": {
+          "ja": "日本年金機構",
+          "easy": "にほん ねんきん きこう",
+          "en": "Japan Pension Service"
+        }
+      },
+      "requires": [
+        "nenkin-techo",
+        "passport-copy",
+        "kaigai-kouza"
+      ],
+      "produces": [],
+      "depends_on": [
+        "kokumin-nenkin-kanyu"
+      ],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "leaving_japan==true"
+      ],
+      "note": {
+        "ja": "国民年金または厚生年金の加入期間が6か月以上あり、年金を受け取れないまま帰国する場合、出国後2年以内に請求すれば一時金が支給される。★2026年4月1日施行で、支給上限月数が60か月(5年)から96か月(8年)に引き上げられた。古い解説記事は5年のままなので注意。",
+        "easy": "6かげつ いじょう ねんきんを はらって くにへ かえる 人は、2ねん いないに もうしこむと おかねが もどります。",
+        "en": "If you paid in for 6+ months and leave without pension eligibility, you can claim within 2 years of departure. ★From April 1, 2026 the cap rose from 60 to 96 months — older articles still say 5 years."
+      },
+      "source": "https://biz.moneyforward.com/payroll/basic/57372/"
+    },
+    {
+      "id": "tenshutsu-todoke",
+      "line": "yakusho",
+      "seq": 20,
+      "name": {
+        "ja": "転出届の提出（旧住所の区市町村）",
+        "easy": "でていく ことを まえの やくしょに とどける",
+        "en": "Notify your old municipality that you are moving out"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal",
+        "note": "引っ越しの14日前から、当日以降14日以内"
+      },
+      "window": {
+        "jurisdiction": "old",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [
+        "tenshutsu-shomeisho"
+      ],
+      "depends_on": [],
+      "appears_when": [
+        "moving_across_municipality==across"
+      ],
+      "note": {
+        "ja": "引っ越しの14日前から手続きできる。転出証明書が交付され、これが転入届に必要になる（マイナンバーカードで転入する場合は不要なことが多い）。★この時点で印鑑登録は自動的に失効する。",
+        "easy": "ひっこしの 14にち まえから できます。いんかんとうろくは この ときに きえます。",
+        "en": "Can be filed from 14 days before the move. Issues the certificate needed at your new address. Your seal registration lapses automatically here."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "tennyu-todoke",
+      "line": "yakusho",
+      "seq": 21,
+      "name": {
+        "ja": "転入届の提出（新住所の区市町村）",
+        "easy": "ひっこした ことを あたらしい やくしょに とどける",
+        "en": "Register your new address"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "irreversible"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "tenshutsu-shomeisho",
+        "honninkakunin",
+        "mynumber-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tenshutsu-todoke"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "★引っ越した日から14日以内。★この期限を過ぎるとマイナンバーカードが失効する。転入届と同時にカードの継続利用手続きを行うこと。国保・年金・児童手当・介護など、ほぼ全ての後続手続がこの駅を通らないと始まらない、路線図の中心駅。",
+        "easy": "★14にち いないに して ください。すぎると マイナンバーカードが つかえなく なります。ほかの てつづきも ぜんぶ この あとです。",
+        "en": "Within 14 days of moving. Miss it and your My Number card is invalidated. Almost every other procedure depends on this one: the hub station of the map."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "critical": true,
+      "consequence_if_missed": {
+        "ja": "マイナンバーカードが失効し、再交付に手数料と1か月以上を要する。",
+        "en": "The My Number card is invalidated; reissue costs a fee and over a month."
+      }
+    },
+    {
+      "id": "mynumber-keizoku-riyou",
+      "line": "yakusho",
+      "seq": 22,
+      "name": {
+        "ja": "マイナンバーカードの継続利用手続き",
+        "easy": "マイナンバーカードを つづけて つかう てつづき",
+        "en": "Keep your My Number card usable after the move"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "with_tennyu",
+        "kind": "irreversible"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "mynumber-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "has_mynumber_card==true"
+      ],
+      "note": {
+        "ja": "★転入届と同時に行う。忘れるとカードが使えなくなる。★外国人の場合はこれとは別に、在留期間の満了によっても失効する（→ 在留線）。引っ越しと在留期間更新が重なる時期は、失効経路が二つあることになる。",
+        "easy": "てんにゅうとどけと いっしょに して ください。わすれると カードが つかえなく なります。",
+        "en": "Do it together with the move-in notification. Foreign residents face a second, separate expiry route via their residence period."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "critical": true
+    },
+    {
+      "id": "kokuho-tetsuzuki-moving",
+      "line": "hoken",
+      "seq": 20,
+      "name": {
+        "ja": "国民健康保険の資格喪失・加入（引っ越し）",
+        "easy": "こくみん けんこうほけんの てつづき",
+        "en": "Transfer your National Health Insurance"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal"
+      },
+      "window": {
+        "jurisdiction": "both",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kokuho-shikaku-kakuninsho",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "insurance==kokuho"
+      ],
+      "note": {
+        "ja": "旧区で転出日から14日以内に喪失、新区で転入日から14日以内に加入。★空白期間があると、その間の医療費は全額自己負担（10割）になる。同一区内の引っ越しなら住所変更のみ（14日以内）。",
+        "easy": "まえの くで やめて、あたらしい くで はいります。どちらも 14にち いないです。あいだが あくと びょういんだいが ぜんぶ じぶんもちに なります。",
+        "en": "Cancel within 14 days at the old ward and enroll within 14 days at the new one. Any gap means paying 100% of medical costs."
+      },
+      "source": "https://www.city.osaka.lg.jp/fukushi/page/0000369734.html",
+      "critical": true
+    },
+    {
+      "id": "nenkin-juusho-henko",
+      "line": "nenkin",
+      "seq": 20,
+      "name": {
+        "ja": "国民年金の住所変更",
+        "easy": "こくみん ねんきんの じゅうしょへんこう",
+        "en": "Update your National Pension address"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "nenkin-techo"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "nenkin_type==kokumin"
+      ],
+      "note": {
+        "ja": "第1号被保険者は市区町村の窓口で行う。会社員（第2号）は勤務先が手続きするため本人の届出は不要。マイナンバーと基礎年金番号が結び付いていれば省略できる場合がある。",
+        "easy": "じぶんで はらって いる 人は やくしょで します。かいしゃいんは かいしゃが します。",
+        "en": "Category-1 insured file at the municipal office; employees are handled by their employer."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "jidou-teate-moving",
+      "line": "yakusho",
+      "seq": 23,
+      "name": {
+        "ja": "児童手当の認定請求（転入先）",
+        "easy": "じどう てあての もうしこみ",
+        "en": "Claim child allowance at your new municipality"
+      },
+      "deadline": {
+        "value": 15,
+        "unit": "day",
+        "from": "moving",
+        "kind": "irreversible"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin",
+        "seikyuunin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "has_children==true"
+      ],
+      "note": {
+        "ja": "★15日特例。転出予定日の翌日から15日以内に新住所地へ認定請求を出せば、申請が翌月にずれ込んでも前月分から支給される。★過ぎるとその分は遡って受け取れない。旧住所地では「受給事由消滅届」を出す。",
+        "easy": "★15にち いないに もうしこむと、まえの つきから もらえます。おくれると その ぶんは もらえません。",
+        "en": "The 15-day rule: file within 15 days of your planned move-out date and payment continues from the prior month. Miss it and that money is gone."
+      },
+      "source": "https://www.the0123.com/column/housemoving-childcareallowance.html",
+      "critical": true
+    },
+    {
+      "id": "kaigo-juusho-henko",
+      "line": "hoken",
+      "seq": 21,
+      "name": {
+        "ja": "介護保険の住所変更・受給資格証明の提出",
+        "easy": "かいごほけんの じゅうしょへんこう",
+        "en": "Transfer long-term care insurance"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal"
+      },
+      "window": {
+        "jurisdiction": "both",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kaigo-hihokenshasho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "kaigo_nintei==true"
+      ],
+      "note": {
+        "ja": "要介護認定を受けている場合、旧区で「受給資格証明書」をもらい、転入日から14日以内に新区へ提出すると認定が引き継がれる。★14日を過ぎると認定を取り直しになる場合がある。",
+        "easy": "かいごの にんていを うけて いる 人は、まえの くで しょうめいしょを もらって、14にち いないに あたらしい くへ だします。",
+        "en": "Carry your certification over by submitting the eligibility certificate within 14 days, otherwise you may be re-assessed from scratch."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "critical": true
+    },
+    {
+      "id": "inkan-touroku-moving",
+      "line": "yakusho",
+      "seq": 24,
+      "name": {
+        "ja": "印鑑登録（新住所での再登録）",
+        "easy": "いんかんとうろくを もういちど する",
+        "en": "Re-register your seal"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "needs_inkan_shomei==true"
+      ],
+      "note": {
+        "ja": "転出により旧区の印鑑登録は自動的に失効している。新区での登録は自動では行われないため、印鑑証明が必要になる場面（不動産・自動車・相続など）の前に自分で登録し直す必要がある。",
+        "easy": "まえの くの いんかんとうろくは きえて います。あたらしい くで もういちど とうろくします。",
+        "en": "Your old registration lapsed on moving out and the new one is not created for you."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "menkyo-juusho-henko",
+      "line": "minkan",
+      "seq": 20,
+      "name": {
+        "ja": "運転免許証の住所変更",
+        "easy": "うんてん めんきょしょうの じゅうしょへんこう",
+        "en": "Update your driver licence address"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "moving",
+        "kind": "practical"
+      },
+      "window": {
+        "type": "keisatsu",
+        "authority": "警察",
+        "label": {
+          "ja": "警察署・運転免許センター",
+          "easy": "けいさつしょ",
+          "en": "Police station or licence centre"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "has_drivers_license==true"
+      ],
+      "note": {
+        "ja": "明確な日数の定めはないが「速やかに」とされる。更新通知が旧住所に届いて免許の更新自体を逃す原因になるため早めに。本人確認書類として使う機会も多い。",
+        "easy": "はやめに して ください。おくれると こうしんの おしらせが とどきません。",
+        "en": "No fixed deadline but do it promptly: renewal notices are sent to your registered address."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "inu-touroku-henko",
+      "line": "minkan",
+      "seq": 21,
+      "name": {
+        "ja": "犬の登録事項変更届",
+        "easy": "いぬの とうろくの へんこう",
+        "en": "Update your dog registration"
+      },
+      "deadline": {
+        "value": 30,
+        "unit": "day",
+        "from": "moving",
+        "kind": "legal"
+      },
+      "window": {
+        "jurisdiction": "new",
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "inu-kansatsu"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [
+        "has_dog==true"
+      ],
+      "note": {
+        "ja": "狂犬病予防法に基づく届出。30日以内。旧区の鑑札を新区の鑑札と交換する。",
+        "easy": "いぬを かって いる 人は 30にち いないに とどけます。",
+        "en": "Required within 30 days under the Rabies Prevention Act."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "law": "狂犬病予防法"
+    },
+    {
+      "id": "yubin-tensou",
+      "line": "minkan",
+      "seq": 22,
+      "name": {
+        "ja": "郵便物の転送届",
+        "easy": "ゆうびんぶつの てんそう",
+        "en": "Set up mail forwarding"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "日本郵便",
+        "label": {
+          "ja": "郵便局・e転居",
+          "easy": "ゆうびんきょく",
+          "en": "Post office or online"
+        }
+      },
+      "requires": [],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "1年間、旧住所宛の郵便物が新住所に転送される。★行政からの通知（保険証・納税通知・免許更新の案内など）を取りこぼさないための保険になるので、引っ越し直後に最優先で出しておくとよい。",
+        "easy": "1ねんかん、まえの じゅうしょの ゆうびんが とどきます。さいしょに やって おくと あんしんです。",
+        "en": "Forwards mail for one year: a safety net for official notices you would otherwise miss."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "duration": {
+        "value": 1,
+        "unit": "year",
+        "label": {
+          "ja": "転送される期間",
+          "easy": "てんそう される きかん",
+          "en": "Forwarding lasts"
+        }
+      }
+    },
+    {
+      "id": "lifeline-moving",
+      "line": "minkan",
+      "seq": 23,
+      "name": {
+        "ja": "電気・ガス・水道の移転手続き",
+        "easy": "でんき・ガス・すいどうの てつづき",
+        "en": "Transfer electricity, gas and water"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "Your utility providers"
+        }
+      },
+      "requires": [],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "ガスの開栓は立ち会いが必要なため、引っ越し日が決まったらすぐ予約する（繁忙期は数日待ちになる）。",
+        "easy": "ガスは たちあいが ひつようです。はやめに よやくして ください。",
+        "en": "Gas reconnection needs someone present, so book as soon as your date is fixed."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "ginko-juusho-henko",
+      "line": "minkan",
+      "seq": 24,
+      "name": {
+        "ja": "銀行・カード・携帯などの住所変更",
+        "easy": "ぎんこう・カード・けいたいの じゅうしょへんこう",
+        "en": "Update your address with banks, cards and phone"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "The companies you contract with"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "tennyu-todoke"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "新しい住所が記載された本人確認書類を求められることが多いため、転入届のあとに行う。",
+        "easy": "あたらしい じゅうしょの みぶんしょうめいが いる ことが おおいので、てんにゅうとどけの あとに します。",
+        "en": "Usually requires ID showing the new address, so do it after registering the move."
+      },
+      "source": "https://myna.go.jp/html/moving_oss_procedure_list.html"
+    },
+    {
+      "id": "shakai-hoken-kanyu",
+      "line": "shokuba",
+      "seq": 30,
+      "name": {
+        "ja": "健康保険・厚生年金への加入（勤務先が手続き）",
+        "easy": "かいしゃの ほけんに はいる",
+        "en": "Enrol in employer health insurance and pension"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kaisha",
+        "authority": "勤務先",
+        "label": {
+          "ja": "勤務先の担当部署",
+          "easy": "かいしゃの たんとう",
+          "en": "Your employer"
+        }
+      },
+      "requires": [
+        "nenkin-techo"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "employment_type==seishain"
+      ],
+      "note": {
+        "ja": "入社時に勤務先が手続きするため、本人の届出は原則不要。国民健康保険に入っていた場合は、自分で市区町村へ資格喪失の届出をする必要がある（自動では抜けない）。",
+        "easy": "かいしゃが やって くれます。でも こくほは じぶんで やめる てつづきが ひつようです。",
+        "en": "Your employer files this. But if you were on National Health Insurance you must cancel it yourself."
+      },
+      "source": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/index.html"
+    },
+    {
+      "id": "kokuho-dattai-shushoku",
+      "line": "hoken",
+      "seq": 31,
+      "name": {
+        "ja": "国民健康保険の資格喪失届（就職したとき）",
+        "easy": "こくほを やめる てつづき",
+        "en": "Cancel National Health Insurance after starting work"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "employment",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kokuho-shikaku-kakuninsho",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "insurance==kokuho"
+      ],
+      "note": {
+        "ja": "★勤務先の健康保険に入っても、国民健康保険は自動では脱退にならない。届出をしないと保険料が二重に請求され続ける。14日以内。",
+        "easy": "★かいしゃの ほけんに はいっても、こくほは じどうで やめに なりません。じぶんで とどけて ください。",
+        "en": "Employer coverage does not automatically cancel your National Health Insurance — file within 14 days or you keep being billed for both."
+      },
+      "source": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/index.html",
+      "critical": true
+    },
+    {
+      "id": "zairyu-shikaku-henko-shuro",
+      "line": "zairyu",
+      "seq": 10,
+      "name": {
+        "ja": "在留資格変更許可申請（留学 → 就労）",
+        "easy": "ざいりゅうしかくを「りゅうがく」から「しごと」に かえる",
+        "en": "Change your status of residence from student to work"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "before_start",
+        "kind": "before_action"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "naitei-shorui"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "changing_from_student==true"
+      ],
+      "note": {
+        "ja": "★許可が下りる前に新しい在留資格での活動を開始することはできない。内定が出たら早めに申請する。卒業前から申請可能（例年12月頃から受付）。",
+        "easy": "★きょかが でる まえに はたらいては いけません。ないていが でたら はやめに もうしこんで ください。",
+        "en": "You cannot begin the new activity until permission is granted. Apply as soon as you have a job offer."
+      },
+      "source": "https://tlg-visa.law/case/1636/",
+      "critical": true
+    },
+    {
+      "id": "shozoku-kikan-todokede-nyusha",
+      "line": "zairyu",
+      "seq": 11,
+      "name": {
+        "ja": "所属機関等に関する届出（就職・入社）",
+        "easy": "あたらしい かいしゃに はいった ことを にゅうかんに とどける",
+        "en": "Report your new employer to immigration"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "employment",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "employment_type!=none"
+      ],
+      "note": {
+        "ja": "★就労系の在留資格を持つ外国人は、勤務先が変わった日から14日以内に入管へ届け出る義務がある。日本人には存在しない手続。",
+        "easy": "★14にち いないに にゅうかんへ とどけます。にほんじんには ない てつづきです。",
+        "en": "Foreign residents with work-related status must report a change of employer within 14 days. Japanese nationals have no equivalent."
+      },
+      "source": "https://nagoyavisa.com/2000/",
+      "critical": true
+    },
+    {
+      "id": "kenko-hoken-sentaku",
+      "line": "shokuba",
+      "seq": 32,
+      "name": {
+        "ja": "健康保険の選択（国保に入る／任意継続する）",
+        "easy": "けんこうほけんを えらぶ",
+        "en": "Choose between National Health Insurance and continuing your employer plan"
+      },
+      "deadline": {
+        "value": 20,
+        "unit": "day",
+        "from": "retirement",
+        "kind": "irreversible"
+      },
+      "window": {
+        "type": "kenpo",
+        "authority": "健康保険組合",
+        "label": {
+          "ja": "加入していた健康保険組合・協会けんぽ",
+          "easy": "かいしゃの ほけん",
+          "en": "Your health insurance society"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "★★退職後の分かれ道。任意継続を選ぶなら資格喪失日から【20日以内】、国民健康保険なら【14日以内】。★20日を過ぎると任意継続という選択肢そのものが消え、国保しか選べなくなる。どちらが安いかは扶養家族の人数と前年収入で変わるため、期限内に両方の保険料を試算して比べること。",
+        "easy": "★たいしょくの あとの わかれみち。にんいけいぞくは 20にち、こくほは 14にち いないです。20にちを すぎると にんいけいぞくは えらべなく なります。",
+        "en": "The fork after leaving a job: 20 days to elect voluntary continuation, 14 days for National Health Insurance. After 20 days the continuation option disappears permanently."
+      },
+      "source": "https://biz.moneyforward.com/payroll/basic/3051/",
+      "critical": true,
+      "consequence_if_missed": {
+        "ja": "任意継続を選べなくなり、国民健康保険のみとなる。扶養家族が多い場合は保険料が大幅に上がることがある。",
+        "en": "You lose the option entirely and must use National Health Insurance, which can cost far more if you have dependents."
+      }
+    },
+    {
+      "id": "nenkin-shubetsu-henko",
+      "line": "nenkin",
+      "seq": 30,
+      "name": {
+        "ja": "国民年金 第1号被保険者への種別変更",
+        "easy": "こくみんねんきんに きりかえる",
+        "en": "Switch to Category-1 National Pension"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "retirement",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "nenkin-techo",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "退職して厚生年金を抜けたら14日以内。保険料を払えない場合は免除・納付猶予の制度があるので、未納のまま放置せず窓口で相談する（未納は将来の年金額に直接響く）。",
+        "easy": "たいしょくしたら 14にち いないに きりかえます。はらえない ときは そうだんして ください。",
+        "en": "Within 14 days of leaving employer pension coverage. If you cannot pay, apply for exemption rather than simply not paying."
+      },
+      "source": "https://biz.moneyforward.com/payroll/basic/3051/"
+    },
+    {
+      "id": "shitsugyo-kyufu",
+      "line": "shokuba",
+      "seq": 30,
+      "name": {
+        "ja": "雇用保険（失業給付）の受給手続き",
+        "easy": "しつぎょう ほけんの てつづき",
+        "en": "Apply for unemployment benefits"
+      },
+      "deadline": {
+        "value": 1,
+        "unit": "year",
+        "from": "retirement",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "hellowork",
+        "authority": "ハローワーク",
+        "label": {
+          "ja": "住所を管轄するハローワーク",
+          "easy": "ハローワーク",
+          "en": "Your local Hello Work office"
+        }
+      },
+      "requires": [
+        "rishoku-hyo",
+        "honninkakunin",
+        "seikyuunin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "受給期間は原則、離職の翌日から1年間。自己都合退職には給付制限期間がある。離職票は退職後に勤務先から郵送されるため、届かない場合は催促する。",
+        "easy": "はなれた つぎの ひから 1ねんかんです。りしょくひょうが とどかない ときは かいしゃに れんらくして ください。",
+        "en": "Generally claimable for one year from the day after leaving. You need the separation certificate from your former employer."
+      },
+      "source": "https://www.hellowork.mhlw.go.jp/"
+    },
+    {
+      "id": "juminzei-nofu-henko",
+      "line": "shokuba",
+      "seq": 30,
+      "name": {
+        "ja": "住民税の納付方法の変更",
+        "easy": "じゅうみんぜいの はらいかたを かえる",
+        "en": "Change how you pay resident tax"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "kaisha",
+        "authority": "勤務先",
+        "label": {
+          "ja": "勤務先の担当部署",
+          "easy": "かいしゃの たんとう",
+          "en": "Your employer"
+        }
+      },
+      "requires": [],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "給与天引き（特別徴収）から自分で納める（普通徴収）に切り替わる。住民税は前年の所得に対してかかるため、収入が無くなった年でも前年分の請求が来る。★退職直後に想定外の請求が届く原因になりやすい。",
+        "easy": "きゅうりょうから ひかれて いた ぶんを、じぶんで はらう ことに なります。きょねんの ぶんが きます。",
+        "en": "Payment switches from payroll deduction to direct payment. Resident tax is based on last year's income, so a bill arrives even with no current income."
+      },
+      "source": "https://www.tax.metro.tokyo.lg.jp/"
+    },
+    {
+      "id": "shozoku-kikan-todokede-ridatsu",
+      "line": "zairyu",
+      "seq": 12,
+      "name": {
+        "ja": "所属機関等に関する届出（退職・離脱）",
+        "easy": "かいしゃを やめた ことを にゅうかんに とどける",
+        "en": "Report leaving your employer to immigration"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "retirement",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true"
+      ],
+      "note": {
+        "ja": "★退職した日から14日以内。就職時と退職時でそれぞれ届出が必要（1回ではない）。留学生が卒業・退学した場合も同様に「離脱」の届出が要る。",
+        "easy": "★やめた ひから 14にち いないです。はいる ときと やめる とき、2かい とどけます。",
+        "en": "Within 14 days of leaving. Separate filings are required when joining and when leaving — not one combined report."
+      },
+      "source": "https://nagoyavisa.com/2000/",
+      "critical": true
+    },
+    {
+      "id": "shuro-shikaku-shomeisho",
+      "line": "zairyu",
+      "seq": 13,
+      "name": {
+        "ja": "就労資格証明書の交付申請（転職時）",
+        "easy": "あたらしい しごとが ビザに あう ことを たしかめる かみ",
+        "en": "Apply for a certificate of authorised employment"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport",
+        "naitei-shorui"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "job_change==true"
+      ],
+      "note": {
+        "ja": "義務ではないが強く推奨される。転職先の業務が現在の在留資格に合致するかを入管が事前に確認してくれるため、次回の在留期間更新で不許可になる危険を避けられる。これを取らずに転職し、更新時に初めて不適合が判明する事例が多い。",
+        "easy": "ぎむでは ありませんが、とった ほうが あんぜんです。つぎの こうしんで だめに ならない ように たしかめます。",
+        "en": "Not mandatory but strongly advised: immigration confirms in advance that your new job matches your status, avoiding a refusal at renewal time."
+      },
+      "source": "https://office-tree.jp/blog/immigration/engineer-visa-job-change/"
+    },
+    {
+      "id": "konin-todoke",
+      "line": "yakusho",
+      "seq": 30,
+      "name": {
+        "ja": "婚姻届の提出",
+        "easy": "こんいんとどけを だす",
+        "en": "Submit the marriage registration"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "none"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin",
+        "koseki-tohon"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "期限はない。届出をした日が婚姻成立日になる。本籍地以外に出す場合は戸籍謄本が必要（マイナンバー連携で不要な自治体も増えている）。",
+        "easy": "きげんは ありません。だした ひが けっこんの ひに なります。",
+        "en": "No deadline; the date you file is the date of marriage."
+      },
+      "source": "https://www.moj.go.jp/MINJI/minji15.html"
+    },
+    {
+      "id": "kaisei-tetsuzuki",
+      "line": "minkan",
+      "seq": 31,
+      "name": {
+        "ja": "改姓に伴う名義変更（免許・銀行・カード・保険）",
+        "easy": "なまえが かわった ことの てつづき",
+        "en": "Update your name on licence, bank, cards and insurance"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": null,
+        "kind": "practical"
+      },
+      "window": {
+        "type": "minkan",
+        "authority": "民間",
+        "label": {
+          "ja": "契約している事業者",
+          "easy": "けいやくして いる かいしゃ",
+          "en": "The companies you contract with"
+        }
+      },
+      "requires": [
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "konin-todoke"
+      ],
+      "appears_when": [
+        "name_changed==true"
+      ],
+      "note": {
+        "ja": "★1か所ずつ別々に手続きする必要があり、まとめて変える仕組みは無い。運転免許証を先に変えておくと、それが本人確認書類になって以降が楽になる（順序が効く）。",
+        "easy": "★1つずつ かえます。まとめて かえる ほうほうは ありません。めんきょしょうを さきに かえると あとが らくです。",
+        "en": "Each institution must be updated separately; there is no single switch. Update your driving licence first — it then serves as ID for the rest."
+      },
+      "source": "https://myna.go.jp/"
+    },
+    {
+      "id": "hifuyousha-todoke",
+      "line": "shokuba",
+      "seq": 33,
+      "name": {
+        "ja": "健康保険の被扶養者届／国民年金 第3号被保険者の届出",
+        "easy": "ふようの てつづき",
+        "en": "Register a dependent spouse for insurance and pension"
+      },
+      "deadline": {
+        "value": 5,
+        "unit": "day",
+        "from": "marriage",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kaisha",
+        "authority": "勤務先",
+        "label": {
+          "ja": "勤務先の担当部署",
+          "easy": "かいしゃの たんとう",
+          "en": "Your employer"
+        }
+      },
+      "requires": [
+        "honninkakunin",
+        "nenkin-techo"
+      ],
+      "produces": [],
+      "depends_on": [
+        "konin-todoke"
+      ],
+      "appears_when": [
+        "spouse_becomes_dependent==true"
+      ],
+      "note": {
+        "ja": "配偶者を扶養に入れる場合、勤務先経由で届け出る。第3号被保険者になると国民年金保険料の自己負担が無くなる。届出が遅れるとその間が未納扱いになることがある。",
+        "easy": "はいぐうしゃを ふように いれる ときの てつづきです。おくれると みのうに なる ことが あります。",
+        "en": "Filed through your employer. Category-3 status removes the spouse's pension premium; late filing can create unpaid periods."
+      },
+      "source": "https://www.nenkin.go.jp/"
+    },
+    {
+      "id": "zairyu-kisai-henko-kekkon",
+      "line": "zairyu",
+      "seq": 14,
+      "name": {
+        "ja": "在留カードの記載事項変更届出（改姓）",
+        "easy": "なまえが かわった ことを にゅうかんに とどける",
+        "en": "Report your name change to immigration"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "change",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "zairyu-card",
+        "passport"
+      ],
+      "produces": [],
+      "depends_on": [
+        "konin-todoke"
+      ],
+      "appears_when": [
+        "is_foreign_resident==true",
+        "name_changed==true"
+      ],
+      "note": {
+        "ja": "★氏名の変更は入管、住所の変更は市区町村。同じ在留カードでも窓口が分かれる。14日以内。",
+        "easy": "★なまえは にゅうかん、じゅうしょは くやくしょです。",
+        "en": "Name changes go to immigration; address changes go to the municipality. Same card, different counters."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "shussho-todoke",
+      "line": "yakusho",
+      "seq": 31,
+      "name": {
+        "ja": "出生届の提出",
+        "easy": "しゅっしょうとどけを だす",
+        "en": "Register the birth"
+      },
+      "deadline": {
+        "value": 14,
+        "unit": "day",
+        "from": "birth",
+        "kind": "legal"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "shussho-shomeisho",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "★生まれた日を1日目として14日以内。★出生届を出しただけでは、健康保険も児童手当も自動では手続きされない。別々に申請が必要で、ここが最も多い誤解。多くの自治体では「出産ワンストップ窓口」として同じ日にまとめられる。",
+        "easy": "★うまれた ひから 14にち いないです。★これを だす だけでは、ほけんも てあても もらえません。べつべつに もうしこみます。",
+        "en": "Within 14 days counting the birth day. Registering the birth does NOT automatically enrol the child in insurance or start child allowance — those are separate applications. This is the most common misunderstanding."
+      },
+      "source": "https://stepnavi.com/column/childbirth-guide/",
+      "critical": true
+    },
+    {
+      "id": "jidou-teate-shussho",
+      "line": "yakusho",
+      "seq": 32,
+      "name": {
+        "ja": "児童手当の認定請求（出生）",
+        "easy": "じどう てあての もうしこみ",
+        "en": "Claim child allowance after birth"
+      },
+      "deadline": {
+        "value": 15,
+        "unit": "day",
+        "from": "birth",
+        "kind": "irreversible"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "honninkakunin",
+        "seikyuunin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shussho-todoke"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "★出生の翌日から15日以内。★1日でも遅れると、その月分の手当は遡って受け取れない。金額が大きく、取り返しがつかないため最優先。",
+        "easy": "★15にち いないです。★1にち でも おくれると その つきの ぶんは もらえません。",
+        "en": "Within 15 days of birth. Even one day late and that month's payment is lost permanently."
+      },
+      "source": "https://oyakoto.online/postnatal-government-procedures/",
+      "critical": true,
+      "consequence_if_missed": {
+        "ja": "遅れた月分の児童手当は遡って支給されない。",
+        "en": "Payments for the missed month are never recovered."
+      }
+    },
+    {
+      "id": "kodomo-hoken-kanyu",
+      "line": "shokuba",
+      "seq": 34,
+      "name": {
+        "ja": "子どもの健康保険への加入",
+        "easy": "こどもを ほけんに いれる",
+        "en": "Add the child to health insurance"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "birth",
+        "kind": "practical"
+      },
+      "window": {
+        "type": "kaisha",
+        "authority": "勤務先",
+        "label": {
+          "ja": "勤務先の担当部署",
+          "easy": "かいしゃの たんとう",
+          "en": "Your employer"
+        }
+      },
+      "requires": [
+        "shussho-shomeisho"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shussho-todoke"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "国保なら市区町村、勤務先の健康保険なら勤務先経由。乳幼児医療証の申請に保険証が必要になるため、先にこちらを済ませる（順序がある）。",
+        "easy": "こくほは やくしょ、かいしゃの ほけんは かいしゃです。いりょうしょうの まえに します。",
+        "en": "Municipality for National Health Insurance, employer otherwise. Do this before the infant medical certificate, which requires the insurance card."
+      },
+      "source": "https://stepnavi.com/column/childbirth-guide/"
+    },
+    {
+      "id": "nyuyoji-iryosho",
+      "line": "hoken",
+      "seq": 35,
+      "name": {
+        "ja": "乳幼児医療費助成の申請",
+        "easy": "こどもの いりょうしょうの もうしこみ",
+        "en": "Apply for infant medical subsidy"
+      },
+      "deadline": {
+        "value": null,
+        "unit": null,
+        "from": "birth",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kuyakusho",
+        "authority": "市区町村",
+        "label": {
+          "ja": "お住まいの市区町村の窓口",
+          "easy": "すんで いる まちの やくしょ",
+          "en": "Your municipal office"
+        }
+      },
+      "requires": [
+        "kodomo-hokensho",
+        "honninkakunin"
+      ],
+      "produces": [],
+      "depends_on": [
+        "kodomo-hoken-kanyu"
+      ],
+      "appears_when": [],
+      "note": {
+        "ja": "子どもの保険証ができてから申請する。申請しないと医療費の助成が受けられない。自治体により所得制限の有無が異なる。",
+        "easy": "こどもの ほけんしょうが できてから もうしこみます。もうしこまないと たすけて もらえません。",
+        "en": "Apply once the child's insurance card is issued; without it you pay full medical costs."
+      },
+      "source": "https://oyakoto.online/postnatal-government-procedures/"
+    },
+    {
+      "id": "shussan-ichijikin",
+      "line": "shokuba",
+      "seq": 36,
+      "name": {
+        "ja": "出産育児一時金の申請",
+        "easy": "しゅっさんの おかねを もらう",
+        "en": "Claim the childbirth lump-sum benefit"
+      },
+      "deadline": {
+        "value": 2,
+        "unit": "year",
+        "from": "birth",
+        "kind": "claim"
+      },
+      "window": {
+        "type": "kenpo",
+        "authority": "健康保険組合",
+        "label": {
+          "ja": "加入していた健康保険組合・協会けんぽ",
+          "easy": "かいしゃの ほけん",
+          "en": "Your health insurance society"
+        }
+      },
+      "requires": [
+        "shussho-shomeisho",
+        "seikyuunin-kouza"
+      ],
+      "produces": [],
+      "depends_on": [],
+      "appears_when": [],
+      "note": {
+        "ja": "子ども1人につき原則50万円。多くは医療機関へ直接支払われる制度（直接支払制度）を使うため窓口負担が減るが、差額があれば自分で請求する。請求権の時効は2年。",
+        "easy": "こども 1人に 50まんえん くらい もらえます。びょういんに ちょくせつ はらわれる ことが おおいです。",
+        "en": "Generally ¥500,000 per child. Usually paid directly to the hospital, but any balance must be claimed by you. Two-year limit."
+      },
+      "source": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/shussan/index.html"
+    },
+    {
+      "id": "kodomo-zairyu-shutoku",
+      "line": "zairyu",
+      "seq": 15,
+      "name": {
+        "ja": "子の在留資格取得許可申請（日本で生まれた外国籍の子）",
+        "easy": "にほんで うまれた こどもの ビザを とる",
+        "en": "Apply for the child's status of residence"
+      },
+      "deadline": {
+        "value": 30,
+        "unit": "day",
+        "from": "birth",
+        "kind": "irreversible"
+      },
+      "window": {
+        "type": "nyukan",
+        "authority": "出入国在留管理庁",
+        "label": {
+          "ja": "住居地を管轄する地方出入国在留管理官署",
+          "easy": "にゅうかん",
+          "en": "Your regional immigration office"
+        }
+      },
+      "requires": [
+        "shussho-todoke-kisaijiko",
+        "passport",
+        "zairyu-card"
+      ],
+      "produces": [],
+      "depends_on": [
+        "shussho-todoke"
+      ],
+      "appears_when": [
+        "is_foreign_resident==true"
+      ],
+      "note": {
+        "ja": "★★出生日から30日以内。60日以内に出国する場合は不要だが、それを超えて日本に住むなら必須。★30日を過ぎると不法残留に該当する。さらに、親が永住者であっても30日を過ぎた子には原則「永住者」が付与されず「永住者の配偶者等」しか認められない——期限を過ぎたことが子の在留資格を一段下げ、その後の人生に影響し続ける。",
+        "easy": "★★うまれてから 30にち いないです。すぎると ふほう ざいりゅうに なります。しかも こどもの ビザが ひくく なって しまいます。",
+        "en": "Within 30 days of birth. Miss it and the child is unlawfully resident — and even children of permanent residents are then generally denied permanent-resident status, receiving only a dependent status instead. A missed deadline permanently downgrades the child's status."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/syutoku_00001.html",
+      "critical": true,
+      "law": "入管法第22条の2",
+      "consequence_if_missed": {
+        "ja": "不法残留となる。加えて、30日を過ぎると「永住者」の在留資格は原則許可されず、「永住者の配偶者等」しか付与されない。",
+        "en": "The child becomes unlawfully resident, and permanent-resident status is generally no longer available — only a lesser dependent status."
+      }
+    }
+  ]
+}

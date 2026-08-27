@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>てつづきメトロ — 人生の手続を、路線図に。</title>
+<meta name="description" content="死別・引っ越し・出産などの行政手続を路線図として可視化し、必要な書類の通数と窓口へ行く回数を計算します。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header no-print">
+  <span class="brand">
+    <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true">
+      <path d="M3 19 L9 19 L14 8 L23 8" stroke="#d0342c" stroke-width="3.2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="9" cy="19" r="3.4" fill="#fff" stroke="#23241f" stroke-width="2.4"/>
+      <circle cx="20" cy="8" r="3.4" fill="#fff" stroke="#23241f" stroke-width="2.4"/>
+    </svg>
+    てつづきメトロ <small>TETSUZUKI METRO</small>
+  </span>
+  <span class="header-spacer"></span>
+  <div class="lang-toggle" id="langToggle" role="group" aria-label="言語">
+    <button data-lang="ja"   aria-pressed="true">日本語</button>
+    <button data-lang="easy" aria-pressed="false">やさしい</button>
+    <button data-lang="en"   aria-pressed="false">EN</button>
+  </div>
+  <button class="btn btn-quiet" id="btnRestart">最初から</button>
+  <button class="btn btn-danger-quiet" id="btnClear" title="この端末に残った回答を消します">回答を消去</button>
+</header>
+
+<main class="wrap">
+
+  <!-- ═══ 1. 入口 ═══════════════════════════ -->
+  <section class="screen is-active" id="screen-entry">
+    <h1 data-i18n="entryTitle">人生の手続を、路線図に。</h1>
+    <p class="lede" data-i18n="entryLede">
+      家族が亡くなったとき、引っ越すとき——遺族や住民が消耗するのは手続の「数」ではなく、
+      役所への往復の「回数」です。いくつかの質問に答えると、あなたに必要な手続だけを路線図として描き、
+      必要な書類の通数と、1回の来庁でまとめられる手続を計算します。
+    </p>
+    <div class="scenario-grid" id="scenarioGrid"></div>
+    <p class="disclaimer" data-i18n="entryPrivacy">
+      回答はこの端末の中だけで処理され、サーバーには一切送信されません。
+    </p>
+  </section>
+
+  <!-- ═══ 2. 質問 ═══════════════════════════ -->
+  <section class="screen" id="screen-questions">
+    <h1 id="qScenarioTitle"></h1>
+    <p class="lede" data-i18n="qLede">
+      分かる範囲で構いません。答えなかった質問は「不明」として、駅を消さずにグレーで残します。
+    </p>
+    <div id="questionList"></div>
+    <p class="no-print" style="margin-top:20px">
+      <button class="btn btn-primary" id="btnShowMap" data-i18n="qSubmit">路線図をつくる</button>
+      <button class="btn btn-quiet" id="btnMoreQ" data-i18n="qMore">もっと詳しく答える</button>
+    </p>
+  </section>
+
+  <!-- ═══ 3. 路線図＋計算結果 ═══════════════════ -->
+  <section class="screen" id="screen-map">
+    <h1 id="mapTitle"></h1>
+    <div id="alertHost"></div>
+
+    <div class="map-panel">
+      <svg class="map-svg" id="metroSvg" role="img" aria-label="手続の路線図"></svg>
+    </div>
+    <div class="legend no-print" id="legend"></div>
+
+    <div class="cols">
+      <div class="card" id="tripsCard"></div>
+      <div class="card" id="docsCard"></div>
+    </div>
+
+    <p class="no-print" style="margin-top:20px">
+      <button class="btn btn-primary" id="btnPrint" data-i18n="printBtn">持ち物リストを印刷（A4 1枚）</button>
+      <button class="btn" id="btnBackQ" data-i18n="backBtn">質問に戻る</button>
+    </p>
+
+    <p class="disclaimer" id="disclaimer"></p>
+  </section>
+
+</main>
+
+<!-- ═══ 駅詳細ドロワー ═══════════════════════ -->
+<aside class="drawer no-print" id="drawer" aria-hidden="true">
+  <button class="btn btn-quiet drawer-close" id="drawerClose" aria-label="閉じる">✕</button>
+  <div id="drawerBody"></div>
+</aside>
+
+<script type="module" src="js/app.js?v=2"></script>
+</body>
+</html>

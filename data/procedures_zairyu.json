@@ -1,0 +1,242 @@
+{
+  "$schema_version": "0.1",
+  "scenario": "arrival",
+  "scenario_name": {
+    "ja": "来日1年目 / 在留にまつわる手続",
+    "easy": "にほんに きた 1ねんめの てつづき",
+    "en": "First year in Japan / residency procedures"
+  },
+  "note": "死別シナリオ(procedures.json)と同一スキーマ。統合時は共通の手続グラフ + シナリオ定義に分離する。",
+
+  "lines_added": [
+    { "id": "zairyu", "name": { "ja": "在留線", "easy": "ざいりゅうせん", "en": "Residency Line" }, "color": "#00A0E9", "authority": "出入国在留管理庁" }
+  ],
+
+  "key_finding": {
+    "title": "マイナンバーカードの有効期限は、日本人と外国人で別のルールになっている",
+    "detail": {
+      "japanese":  { "card": "発行から10回目の誕生日(18歳未満は5回目)", "cert": "発行から5回目の誕生日", "notice": "有効期限の2〜3か月前に有効期限通知書が届く" },
+      "foreigner": { "card": "在留期間の満了日 または 10回目の誕生日のいずれか早い日", "cert": "同上", "notice": "★在留期間満了に伴う失効についての通知は送付されない" }
+    },
+    "why_it_matters": "在留期間を更新しても、マイナンバーカードは自動では延長されない。入管で在留期間を更新した後、別途 区役所で『有効期間変更』の手続きが必要。2つの異なる官庁をまたぐ依存関係であり、しかも通知が来ないため気づけない。期限を過ぎるとカードは失効し、再交付に1,000円(電子証明書不要なら800円)かかる。",
+    "product_meaning": "一覧表では表現できず、依存グラフでしか表現できない典型例。本サービスの存在理由そのものなので、デモの中心に置く。",
+    "sources": [
+      "https://www.city.nerima.tokyo.jp/kurashi/mynumber/mynumber_card/koshin/gaikokujin.html",
+      "https://www.gov-online.go.jp/article/202506/entry-7923.html"
+    ]
+  },
+
+  "procedures": [
+    {
+      "id": "juukyochi-todokede",
+      "line": "zairyu", "seq": 1,
+      "name": {
+        "ja": "住居地の届出（新規上陸後）",
+        "easy": "すむ ところを やくしょに とどける",
+        "en": "Register your address after arrival"
+      },
+      "deadline": { "value": 14, "unit": "day", "from": "address_fixed", "kind": "legal" },
+      "window": { "type": "kuyakusho", "dept": "戸籍住民課 住民記録係", "also": ["各特別出張所"] },
+      "requires": ["zairyu-card", "passport"],
+      "produces": ["juminhyo"],
+      "depends_on": [],
+      "appears_when": ["is_foreign_resident==true"],
+      "critical": true,
+      "note": {
+        "ja": "★窓口は入管ではなく市区町村。よくある誤解。入管法19条の9に基づく義務で、届出を怠ると20万円以下の罰金、さらに在留資格取消のリスクがある。届出をすると在留カードの裏面に住所が記載される。",
+        "easy": "★にゅうかんでは ありません。くやくしょです。14にち いないに しないと ばっきんや ざいりゅうしかくの とりけしに なる ことが あります。",
+        "en": "★Filed at the municipal office, NOT immigration — a common misunderstanding. Required by law; failure risks a fine up to ¥200,000 and even revocation of residence status."
+      },
+      "law": "入管法第19条の9",
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00021.html"
+    },
+    {
+      "id": "juukyochi-henko",
+      "line": "zairyu", "seq": 2,
+      "name": { "ja": "住居地の変更届出（引っ越し後）", "easy": "ひっこしたら すむ ところを とどける", "en": "Report a change of address" },
+      "deadline": { "value": 14, "unit": "day", "from": "moving", "kind": "legal" },
+      "window": { "type": "kuyakusho", "dept": "戸籍住民課 住民記録係", "also": ["各特別出張所"] },
+      "requires": ["zairyu-card", "honninkakunin"],
+      "produces": [], "depends_on": [],
+      "appears_when": ["is_foreign_resident==true"],
+      "critical": true,
+      "note": {
+        "ja": "転入届と同時に行える。こちらも窓口は市区町村であり、入管では受け付けていない。",
+        "easy": "てんにゅうとどけと いっしょに できます。にゅうかんでは できません。",
+        "en": "Can be done together with the move-in notification. Again: municipal office, not immigration."
+      },
+      "law": "入管法第19条の9",
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "zairyu-kisai-henko",
+      "line": "zairyu", "seq": 3,
+      "name": { "ja": "在留カード記載事項の変更届出（氏名・国籍等）", "easy": "なまえなどが かわったら とどける", "en": "Report changes to residence card details" },
+      "deadline": { "value": 14, "unit": "day", "from": "change", "kind": "legal" },
+      "window": { "type": "nyukan", "dept": "地方出入国在留管理局", "note": "★こちらは入管。住居地届出とは窓口が違う。" },
+      "requires": ["zairyu-card", "passport", "shoumei-shorui"],
+      "produces": [], "depends_on": [],
+      "appears_when": ["is_foreign_resident==true", "name_or_nationality_changed==true"],
+      "note": {
+        "ja": "★住居地の届出は市区町村、記載事項(氏名・生年月日・性別・国籍地域)の変更は入管。同じ在留カードの話なのに窓口が分かれるため混乱しやすい。",
+        "easy": "★じゅうしょは くやくしょ、なまえは にゅうかん。まどぐちが ちがいます。",
+        "en": "★Address goes to the municipality; name/nationality changes go to immigration. Same card, different counters."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "shikakugai-katsudo",
+      "line": "zairyu", "seq": 4,
+      "name": { "ja": "資格外活動許可の申請（アルバイトをする場合）", "easy": "アルバイトを する ための きょかを とる", "en": "Apply for permission to work part-time" },
+      "deadline": { "value": null, "unit": null, "from": null, "kind": "before_action" },
+      "window": { "type": "nyukan", "dept": "住居地を管轄する地方出入国在留管理官署" },
+      "requires": ["zairyu-card", "passport", "shikakugai-shinseisho"],
+      "produces": ["shikakugai-kyoka"],
+      "depends_on": ["juukyochi-todokede"],
+      "appears_when": ["will_work_part_time==true", "is_foreign_resident==true"],
+      "critical": true,
+      "note": {
+        "ja": "★働き始める『前』に取ること。無許可で就労すると不法就労となり、1年以下の懲役もしくは禁錮または200万円以下の罰金、さらに在留資格の取消や退去強制の対象になりうる。許可を得ても労働時間は週28時間まで(複数の勤務先の合計。連続する7日間で計算)。",
+        "easy": "★はたらく まえに とって ください。きょかが ないと はたらけません。きょかが あっても 1しゅうかん 28じかんまでです。",
+        "en": "★Get this BEFORE starting work. Working without it is illegal employment: up to 1 year imprisonment or ¥2,000,000 fine, plus possible revocation of status and deportation. Even with permission, the cap is 28 hours per week across all jobs."
+      },
+      "source": "https://www.moj.go.jp/isa/content/001349112.pdf"
+    },
+    {
+      "id": "zairyu-kikan-koushin",
+      "line": "zairyu", "seq": 5,
+      "name": { "ja": "在留期間更新許可申請", "easy": "にほんに いられる きかんを のばす", "en": "Apply to extend your period of stay" },
+      "deadline": { "value": 3, "unit": "month", "from": "before_expiry", "kind": "window_opens" },
+      "window": { "type": "nyukan", "dept": "地方出入国在留管理局" },
+      "requires": ["zairyu-card", "passport", "koushin-shinseisho", "zaigaku-shomeisho"],
+      "produces": ["new-zairyu-card"],
+      "depends_on": [],
+      "appears_when": ["is_foreign_resident==true"],
+      "critical": true,
+      "note": {
+        "ja": "満了日の3か月前から申請できる。満了日を過ぎると不法残留となる。★更新が済んだら、マイナンバーカードの有効期間変更も必要(次の駅)。",
+        "easy": "きげんの 3かげつ まえから できます。すぎると ふほう ざいりゅうに なります。",
+        "en": "Applications open 3 months before expiry. Overstaying makes your presence unlawful. ★After renewal, you must also update your My Number card."
+      },
+      "source": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00023.html"
+    },
+    {
+      "id": "mynumber-yuukoukikan-henko",
+      "line": "yakusho", "seq": 10,
+      "name": {
+        "ja": "マイナンバーカードの有効期間変更（在留期間更新後）",
+        "easy": "マイナンバーカードの きげんを のばす",
+        "en": "Update the validity period of your My Number card"
+      },
+      "deadline": { "value": null, "unit": null, "from": "after_zairyu_renewal", "kind": "irreversible" },
+      "window": { "type": "kuyakusho", "dept": "戸籍住民課", "also": ["各特別出張所"] },
+      "requires": ["mynumber-card", "zairyu-card"],
+      "produces": [], "depends_on": ["zairyu-kikan-koushin"],
+      "appears_when": ["is_foreign_resident==true", "has_mynumber_card==true"],
+      "critical": true,
+      "note": {
+        "ja": "★★本サービスが最も伝えたい駅。外国人のマイナンバーカードの有効期限は『在留期間の満了日』であり、在留期間を更新してもカードは自動では延長されない。入管で更新した後、別途 区役所での手続きが必要。しかも在留期間満了に伴う失効の通知は送付されない。期限を過ぎると有効期間変更はできなくなり、カードは失効。再交付は1,000円(電子証明書不要なら800円)。日本人のカードは10年有効で、期限前に通知書が届く。",
+        "easy": "★★にゅうかんで きかんを のばしても、カードは そのままです。くやくしょでも てつづきが ひつようです。おしらせは きません。きげんが すぎると カードは つかえなく なり、つくりなおしに 1,000えん かかります。",
+        "en": "★★The station this service exists for. A foreign resident's My Number card expires on their residence expiry date and is NOT extended automatically when the residence period is renewed — a separate municipal procedure is required, and no reminder is sent. Miss it and the card is dead; reissue costs ¥1,000."
+      },
+      "source": "https://www.city.nerima.tokyo.jp/kurashi/mynumber/mynumber_card/koshin/gaikokujin.html"
+    },
+
+    {
+      "id": "mynumber-tokurei-encho",
+      "line": "yakusho", "seq": 11,
+      "name": {
+        "ja": "マイナンバーカードの特例期間延長（在留期間更新の審査中）",
+        "easy": "しんさちゅうの あいだ カードの きげんを 2かげつ のばす",
+        "en": "Special 2-month extension while your residence renewal is under review"
+      },
+      "deadline": { "value": null, "unit": null, "from": "before_card_expiry", "kind": "irreversible" },
+      "window": { "type": "kuyakusho", "dept": "戸籍住民課", "also": ["各特別出張所"] },
+      "requires": ["mynumber-card", "zairyu-card-shinseichu"],
+      "requires_detail": { "zairyu-card-shinseichu": "show" },
+      "produces": [], "depends_on": ["zairyu-kikan-koushin"],
+      "appears_when": ["is_foreign_resident==true", "has_mynumber_card==true", "renewal_pending_at_card_expiry==true"],
+      "critical": true,
+      "note": {
+        "ja": "★★実際に起きた失敗例をそのまま駅にしたもの。在留期間の更新許可がカードの有効期限までに下りない場合、区役所で有効期限を『特例で2か月』延長できる。証明に使うのは、在留カード裏面右下の「在留期間更新等許可申請欄」に入管が押した『在留資格更新許可申請中』のハンコ(現物が必要。コピー・画像は不可。電子申請なら受付番号通知メール)。★この延長の再延長は認められない(2か月一回きり)。★構造上の問題: ハンコを押すのは入管、それを使うのは区役所。入管はこのハンコに第二の用途があることを説明せず、区役所は申請中であることを知らず、失効の通知も送られない。情報は全て存在しているのに、両者を繋ぐ責任を持つ主体がいない。",
+        "easy": "★★にゅうかんの しんさが おわらない ときは、ざいりゅうカードの うらの『しんせいちゅう』の ハンコを もって くやくしょへ いくと、カードの きげんを 2かげつ のばせます。1かいだけです。しらないと カードが つかえなく なります。",
+        "en": "★★Drawn from a real failure. If your residence renewal is still under review when the card expires, the municipality can extend it by 2 months — proven by the physical 'application pending' stamp immigration puts on the back of your residence card. Once only, no second extension. The stamp is issued by immigration but used at the ward office; neither side explains the link, and no expiry notice is sent."
+      },
+      "consequence_if_missed": {
+        "ja": "カードは失効。有効期間変更も特例延長もできなくなり、再申請となる。交付まで約1か月〜1か月半、手数料1,000円(電子証明書不要なら800円)。その間、本人確認書類・コンビニ交付・e-Tax等が使えない。",
+        "en": "The card dies. Neither the validity update nor the special extension is possible any more — you must re-apply: about 1–1.5 months and ¥1,000. Meanwhile you lose your photo ID, convenience-store certificate issuance, and e-Tax."
+      },
+      "source": "https://www.city.itabashi.tokyo.jp/tetsuduki/koseki/mynumber/1048802/1047742.html"
+    },
+    {
+      "id": "kokuho-kanyu-gaikokujin",
+      "line": "hoken", "seq": 10,
+      "name": { "ja": "国民健康保険への加入", "easy": "こくみん けんこうほけんに はいる", "en": "Enroll in National Health Insurance" },
+      "deadline": { "value": 14, "unit": "day", "from": "entry_or_moving", "kind": "legal" },
+      "window": { "type": "kuyakusho", "dept": "医療保険年金課 国保資格係", "also": ["各特別出張所"] },
+      "requires": ["zairyu-card", "passport", "juminhyo"],
+      "produces": ["kokuho-shikaku-kakuninsho"],
+      "depends_on": ["juukyochi-todokede"],
+      "appears_when": ["stay_over_3months==true", "has_employer_insurance==false"],
+      "critical": true,
+      "note": {
+        "ja": "★3か月を超える在留資格があり、勤務先の健康保険に入っていない人は加入が『義務』。任意ではない。入国日・転入日から14日以内。★遅れても保険料は入国日まで遡って課されるため、後回しにしても安くならない。未加入の間に医療にかかると全額自己負担(10割)。",
+        "easy": "★3かげつを こえて にほんに いる 人は かならず はいります。えらべません。おくれても おかねは さかのぼって かかります。はいって いない ときに びょういんに いくと ぜんぶ じぶんで はらいます。",
+        "en": "★Mandatory (not optional) for anyone with a status of residence over 3 months who lacks employer insurance. Premiums are charged retroactively to your entry date, so delaying saves nothing — and you pay 100% of medical costs while uninsured."
+      },
+      "source": "https://www.city.meguro.tokyo.jp/kokuho/kurashi/kokuho/kanyu-gaikoku.html"
+    },
+    {
+      "id": "kokumin-nenkin-kanyu",
+      "line": "nenkin", "seq": 10,
+      "name": { "ja": "国民年金への加入", "easy": "こくみん ねんきんに はいる", "en": "Enroll in the National Pension" },
+      "deadline": { "value": 14, "unit": "day", "from": "entry_or_moving", "kind": "legal" },
+      "window": { "type": "kuyakusho", "dept": "医療保険年金課 年金係" },
+      "requires": ["zairyu-card", "juminhyo"],
+      "produces": ["nenkin-techo"],
+      "depends_on": ["juukyochi-todokede"],
+      "appears_when": ["age>=20", "age<60", "has_employer_pension==false"],
+      "note": {
+        "ja": "日本に住む20歳以上60歳未満は、国籍を問わず加入義務がある。学生は『学生納付特例』、収入が少ない場合は免除・猶予の制度があるので、払えない場合も窓口で相談すること(未納のまま放置しない)。",
+        "easy": "20さいから 60さいまでの 人は こくせきに かんけいなく はいります。がくせいや おかねが ない 人は まつ せいどが あります。",
+        "en": "Mandatory for all residents aged 20–59 regardless of nationality. Students and low-income residents can apply for deferral or exemption — talk to the counter rather than simply not paying."
+      },
+      "source": "https://www.city.kodaira.tokyo.jp/kurashi/053/053568.html"
+    },
+    {
+      "id": "dattai-ichijikin",
+      "line": "nenkin", "seq": 11,
+      "name": { "ja": "脱退一時金の請求（帰国する場合）", "easy": "くにへ かえる ときに ねんきんの おかねを もらう", "en": "Claim the lump-sum withdrawal payment" },
+      "deadline": { "value": 2, "unit": "year", "from": "departure", "kind": "claim" },
+      "window": { "type": "nenkin-kikou", "dept": "日本年金機構(出国後に郵送で請求)" },
+      "requires": ["nenkin-techo", "passport-copy", "kaigai-kouza"],
+      "produces": [], "depends_on": ["kokumin-nenkin-kanyu"],
+      "appears_when": ["is_foreign_resident==true", "leaving_japan==true"],
+      "note": {
+        "ja": "国民年金または厚生年金の加入期間が6か月以上あり、年金を受け取れないまま帰国する場合、出国後2年以内に請求すれば一時金が支給される。★2026年4月1日施行で、支給上限月数が60か月(5年)から96か月(8年)に引き上げられた。古い解説記事は5年のままなので注意。",
+        "easy": "6かげつ いじょう ねんきんを はらって くにへ かえる 人は、2ねん いないに もうしこむと おかねが もどります。",
+        "en": "If you paid in for 6+ months and leave without pension eligibility, you can claim within 2 years of departure. ★From April 1, 2026 the cap rose from 60 to 96 months — older articles still say 5 years."
+      },
+      "source": "https://biz.moneyforward.com/payroll/basic/57372/"
+    }
+  ],
+
+  "documents_added": [
+    { "id": "passport",           "name": { "ja": "パスポート", "easy": "パスポート", "en": "Passport" }, "fee": null, "issued_by": "本国" },
+    { "id": "shikakugai-shinseisho", "name": { "ja": "資格外活動許可申請書", "easy": "アルバイトの きょかの かみ", "en": "Application for permission to engage in activity other than that permitted" }, "fee": 0, "issued_by": "出入国在留管理庁(様式ダウンロード可)" },
+    { "id": "shikakugai-kyoka",   "name": { "ja": "資格外活動許可（在留カード裏面に記載）", "easy": "アルバイトの きょか", "en": "Work permission endorsement" }, "fee": 0, "issued_by": "入管" },
+    { "id": "koushin-shinseisho", "name": { "ja": "在留期間更新許可申請書", "easy": "きかんを のばす かみ", "en": "Application for extension of period of stay" }, "fee": 4000, "issued_by": "入管", "note": "許可時に手数料が必要" },
+    { "id": "zaigaku-shomeisho",  "name": { "ja": "在学証明書・成績証明書等", "easy": "がっこうの しょうめいしょ", "en": "Certificate of enrollment / transcript" }, "fee": null, "issued_by": "在籍する学校" },
+    { "id": "new-zairyu-card",    "name": { "ja": "新しい在留カード", "easy": "あたらしい ざいりゅうカード", "en": "New residence card" }, "fee": 0, "issued_by": "入管" },
+    { "id": "shoumei-shorui",     "name": { "ja": "変更内容を証明する書類", "easy": "かわった ことを しょうめいする かみ", "en": "Documents evidencing the change" }, "fee": null, "issued_by": "—" },
+    { "id": "passport-copy",      "name": { "ja": "パスポートの写し", "easy": "パスポートの コピー", "en": "Copy of passport" }, "fee": null, "issued_by": "—" },
+    { "id": "kaigai-kouza",       "name": { "ja": "本人名義の銀行口座（海外送金可）", "easy": "じぶんの ぎんこう こうざ", "en": "Own bank account able to receive overseas transfer" }, "fee": null, "issued_by": "—" },
+    { "id": "zairyu-card-shinseichu", "name": { "ja": "「在留資格更新許可申請中」の押印がある在留カード", "easy": "『しんせいちゅう』の ハンコが ある ざいりゅうカード", "en": "Residence card bearing the 'application pending' stamp" }, "fee": 0, "issued_by": "入管(在留期間更新の受付時に裏面右下の申請欄へ押印)", "lead_time_days": 0,
+      "warning": { "ja": "★現物が必要。コピー・画像は不可。電子申請の場合は受付番号通知メール(印刷可)で代替できる。このハンコは入管向けの証明であると同時に、区役所でマイナンバーカードの特例期間延長を受けるための鍵でもある——この二つ目の用途は、どちらの窓口でも案内されない。", "easy": "★ほんものが ひつようです。コピーは だめです。", "en": "★The physical card is required — no copies. This stamp is also the key to the municipal 2-month extension, a second use neither counter explains." } }
+  ],
+
+  "dependency_chain_note": {
+    "ja": "来日1年目は依存関係が最も厳しいシナリオである。住居地届出 → 国保・年金・マイナンバーカード → 銀行口座 → 携帯電話契約 という順序があり、どこか一つで詰まると後続が全て止まる。各官庁は自分の担当分しか説明しないため、この順序を示した公式資料は存在しない。ここが本サービスの価値の中心。",
+    "en": "The first year in Japan has the strictest dependency chain: address registration → insurance/pension/My Number → bank account → phone contract. Each agency explains only its own step; no official source shows the whole ordering."
+  }
+}

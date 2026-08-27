@@ -1,0 +1,508 @@
+{
+  "$schema_version": "0.2",
+  "scope": "national",
+  "documents": [
+    {
+      "id": "koseki-tohon",
+      "name": {
+        "ja": "戸籍全部事項証明書（戸籍謄本）",
+        "easy": "こせきとうほん",
+        "en": "Family register certificate"
+      },
+      "fee": 450,
+      "issued_by": "本籍地の市区町村（広域交付制度により本籍地以外でも請求可）",
+      "issued_at_shinjuku": "戸籍住民課 戸籍係 / 各特別出張所",
+      "lead_time_days": 7,
+      "variant_of": null,
+      "warning": {
+        "ja": "亡くなられた方以外に同じ戸籍に残っている方がいる場合はこちら(450円)。全員が除籍されている場合は「除籍謄本」(750円)になる。郵送請求の場合は往復で1週間前後かかるため、7日以内の死亡届とは別に、早い段階で着手する必要がある。",
+        "easy": "ほんせきちが とおい ばあい ゆうそうで 1しゅうかん くらい かかります。はやめに もうしこんで ください。",
+        "en": "¥450 when others remain in the same register. Allow about a week if requesting by mail — start early."
+      }
+    },
+    {
+      "id": "joseki-tohon",
+      "name": {
+        "ja": "除籍全部事項証明書（除籍謄本）・改製原戸籍",
+        "easy": "じょせきとうほん",
+        "en": "Removed family register certificate"
+      },
+      "fee": 750,
+      "issued_by": "本籍地の市区町村",
+      "issued_at_shinjuku": "戸籍住民課 戸籍係",
+      "lead_time_days": 7,
+      "variant_of": "koseki-tohon",
+      "restriction": {
+        "ja": "★相続で遡って請求する除籍・改製原戸籍の広域交付は、戸籍住民課戸籍係でのみ請求できる。各特別出張所では請求できない。また、火曜日の窓口延長・休日窓口では広域交付を取り扱わない。",
+        "easy": "★とくべつ しゅっちょうじょでは できません。ほんちょうしゃへ いって ください。かようびの よる・きゅうじつは できません。",
+        "en": "★Retroactive registers for inheritance can only be requested at the main office's family register section — not at branch offices, and not during Tuesday extended hours or weekend windows."
+      },
+      "warning": {
+        "ja": "亡くなられた方以外に同じ戸籍に残っている方がいない場合、または平成7年4月1日以前に亡くなられた場合はこちら(750円)。新宿区は平成7年4月1日に戸籍の改製を行っている。",
+        "easy": "おなじ こせきに だれも のこって いない ばあいは こちらです。",
+        "en": "¥750 when no one else remains in the register, or for deaths before April 1, 1995."
+      }
+    },
+    {
+      "id": "juminhyo-johyo",
+      "name": {
+        "ja": "住民票の除票",
+        "easy": "じゅうみんひょうの じょひょう",
+        "en": "Removed resident record"
+      },
+      "fee": 300,
+      "issued_by": "住所地の市区町村",
+      "issued_at_shinjuku": "戸籍住民課 住民記録係 / 各特別出張所",
+      "lead_time_days": 1,
+      "warning": {
+        "ja": "住民票の消除自体は死亡届の提出により自動で行われるため、消除のための手続きは不要。ただし各種手続で「除票」の提出を求められることがあるため、必要枚数を確認して取得する。",
+        "easy": "じゅうみんひょうを けす てつづきは いりません。でも かみが ひつような ことが あります。",
+        "en": "Removal happens automatically upon the death notification; you only need to obtain copies when other procedures ask for them."
+      }
+    },
+    {
+      "id": "houtei-sozoku-ichiranzu",
+      "name": {
+        "ja": "法定相続情報一覧図の写し",
+        "easy": "ほうてい そうぞく じょうほう いちらんず",
+        "en": "Certified copy of the legal heir information list"
+      },
+      "fee": 0,
+      "issued_by": "法務局（東京法務局新宿出張所 03-3363-7385）",
+      "lead_time_days": 7,
+      "reusable": true,
+      "recommended": true,
+      "warning": {
+        "ja": "★無料。必要な枚数を交付してもらえる。これがあれば各種相続手続で戸籍謄本の束を何度も出し直す必要がなくなる（区の公式ガイドブックが推奨）。銀行・年金・保険など提出先が3か所以上ある場合はほぼ確実に取得したほうが安い。",
+        "easy": "★ただ です。これが あると こせきの たばを なんども ださなくて よく なります。",
+        "en": "★Free, issued in as many copies as you need, and replaces repeated submission of family register bundles. Worth getting whenever you face three or more institutions."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=3"
+    },
+    {
+      "id": "shibou-shindansho",
+      "name": {
+        "ja": "死亡診断書（死体検案書）",
+        "easy": "しぼう しんだんしょ",
+        "en": "Death certificate (medical)"
+      },
+      "fee": null,
+      "issued_by": "医師（病院等）",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "死亡届と一体の用紙になっている。提出すると原本は戻らないため、生命保険等で必要になることを見越して、提出前にコピーを複数取っておくこと。",
+        "easy": "だす まえに コピーを とって おいて ください。あとで ほけんに ひつようです。",
+        "en": "It is part of the same form as the death notification and will not be returned — photocopy it several times before submitting, as insurers will ask for it."
+      }
+    },
+    {
+      "id": "honninkakunin",
+      "name": {
+        "ja": "窓口に来た方の本人確認書類",
+        "easy": "きた 人の みぶんしょうめいしょ",
+        "en": "Photo ID of the person at the counter"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "顔写真付きの身分証明書が必要（運転免許証・マイナンバーカード・パスポート・在留カード）。学生証など認められないものもある。",
+        "easy": "かおじゃしんの ある みぶんしょうめいしょが ひつようです。",
+        "en": "Photo ID required: driver's licence, My Number card, passport, or residence card. Student IDs are not accepted."
+      },
+      "source": "https://www.city.shinjuku.lg.jp/content/000398612.pdf#page=43"
+    },
+    {
+      "id": "sougi-ryoushuusho",
+      "name": {
+        "ja": "葬儀の領収書（喪主名義）",
+        "easy": "そうしきの りょうしゅうしょ",
+        "en": "Funeral receipt"
+      },
+      "fee": null,
+      "issued_by": "葬儀社",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "葬祭費の請求に必要。喪主の氏名が確認できるものが求められる。",
+        "easy": "そうさいひを もらう ときに ひつようです。",
+        "en": "Needed for the funeral benefit claim; must show the chief mourner's name."
+      }
+    },
+    {
+      "id": "moushidenin-kouza",
+      "name": {
+        "ja": "申請者名義の預金口座がわかるもの",
+        "easy": "もうしこむ 人の つうちょう",
+        "en": "Applicant's bank account details"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "給付金の振込先として必要。",
+        "easy": "おかねを ふりこむ さきです。",
+        "en": "Where the benefit will be paid."
+      }
+    },
+    {
+      "id": "seikyuunin-kouza",
+      "name": {
+        "ja": "請求者名義の預金口座がわかるもの",
+        "easy": "せいきゅうする 人の つうちょう",
+        "en": "Claimant's bank account details"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "nenkin-techo",
+      "name": {
+        "ja": "年金手帳・基礎年金番号がわかるもの",
+        "easy": "ねんきん てちょう",
+        "en": "Pension book / basic pension number"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "kokuho-shikaku-kakuninsho",
+      "name": {
+        "ja": "国民健康保険 資格確認書",
+        "easy": "こくほの かみ",
+        "en": "NHI eligibility certificate"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "kouki-shikaku-kakuninsho",
+      "name": {
+        "ja": "後期高齢者医療 資格確認書等",
+        "easy": "こうきこうれいしゃの かみ",
+        "en": "Elderly medical eligibility certificate"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "kaigo-hihokenshasho",
+      "name": {
+        "ja": "介護保険被保険者証・負担割合証",
+        "easy": "かいごほけんの かみ",
+        "en": "Long-term care insurance certificates"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "inkan-toroku-sho",
+      "name": {
+        "ja": "印鑑登録証",
+        "easy": "いんかん とうろくしょう",
+        "en": "Seal registration card"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "mynumber-card",
+      "name": {
+        "ja": "マイナンバーカード",
+        "easy": "マイナンバーカード",
+        "en": "My Number card"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "zairyu-card",
+      "name": {
+        "ja": "在留カード・特別永住者証明書",
+        "easy": "ざいりゅうカード",
+        "en": "Residence card"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "juminhyo",
+      "name": {
+        "ja": "住民票の写し",
+        "easy": "じゅうみんひょう",
+        "en": "Certificate of residence"
+      },
+      "fee": 300,
+      "issued_by": "住所地の市区町村",
+      "lead_time_days": 1
+    },
+    {
+      "id": "isan-bunkatsu-kyogisho",
+      "name": {
+        "ja": "遺産分割協議書",
+        "easy": "いさんを どう わけるか きめた かみ",
+        "en": "Estate division agreement"
+      },
+      "fee": null,
+      "issued_by": "相続人全員で作成（実印+印鑑証明が必要）",
+      "lead_time_days": 14
+    },
+    {
+      "id": "koteishisan-hyokashomeisho",
+      "name": {
+        "ja": "固定資産評価証明書",
+        "easy": "とちや いえの ねだんの かみ",
+        "en": "Fixed asset valuation certificate"
+      },
+      "fee": 400,
+      "issued_by": "都税事務所（新宿都税事務所 03-3369-7151）",
+      "lead_time_days": 1
+    },
+    {
+      "id": "shotoku-shiryo",
+      "name": {
+        "ja": "故人の所得がわかる資料",
+        "easy": "しんだ人の しゅうにゅうの かみ",
+        "en": "Records of the deceased's income"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "isan-shiryo",
+      "name": {
+        "ja": "遺産の内容がわかる資料",
+        "easy": "いさんの ないようが わかる かみ",
+        "en": "Records of the estate"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "todokedenin-honninkakunin",
+      "name": {
+        "ja": "届出人の本人確認書類・印鑑",
+        "easy": "とどけでる 人の みぶんしょうめい",
+        "en": "ID and seal of the person filing"
+      },
+      "fee": null,
+      "issued_by": "—",
+      "lead_time_days": 0
+    },
+    {
+      "id": "kasou-kyokasho",
+      "name": {
+        "ja": "火葬許可証（→ 火葬後は埋葬許可証）",
+        "easy": "かそうきょかしょ",
+        "en": "Cremation permit (becomes burial permit)"
+      },
+      "fee": 0,
+      "issued_by": "死亡届の提出により交付",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "火葬後に火葬日時が記入され埋葬許可証となる。これがないと墓地に埋葬できないため必ず保管する。",
+        "easy": "これが ないと おはかに いれられません。たいせつに して ください。",
+        "en": "After cremation it becomes the burial permit — without it you cannot inter the remains."
+      }
+    },
+    {
+      "id": "passport",
+      "name": {
+        "ja": "パスポート",
+        "easy": "パスポート",
+        "en": "Passport"
+      },
+      "fee": null,
+      "issued_by": "本国"
+    },
+    {
+      "id": "shikakugai-shinseisho",
+      "name": {
+        "ja": "資格外活動許可申請書",
+        "easy": "アルバイトの きょかの かみ",
+        "en": "Application for permission to engage in activity other than that permitted"
+      },
+      "fee": 0,
+      "issued_by": "出入国在留管理庁(様式ダウンロード可)"
+    },
+    {
+      "id": "shikakugai-kyoka",
+      "name": {
+        "ja": "資格外活動許可（在留カード裏面に記載）",
+        "easy": "アルバイトの きょか",
+        "en": "Work permission endorsement"
+      },
+      "fee": 0,
+      "issued_by": "入管"
+    },
+    {
+      "id": "koushin-shinseisho",
+      "name": {
+        "ja": "在留期間更新許可申請書",
+        "easy": "きかんを のばす かみ",
+        "en": "Application for extension of period of stay"
+      },
+      "fee": 0,
+      "issued_by": "入管",
+      "note": "申請書自体は無料（入管サイトから様式をダウンロードできる）。許可が下りた際に手数料4,000円が必要。",
+      "permit_fee": 4000
+    },
+    {
+      "id": "zaigaku-shomeisho",
+      "name": {
+        "ja": "在学証明書・成績証明書等",
+        "easy": "がっこうの しょうめいしょ",
+        "en": "Certificate of enrollment / transcript"
+      },
+      "fee": null,
+      "issued_by": "在籍する学校"
+    },
+    {
+      "id": "new-zairyu-card",
+      "name": {
+        "ja": "新しい在留カード",
+        "easy": "あたらしい ざいりゅうカード",
+        "en": "New residence card"
+      },
+      "fee": 0,
+      "issued_by": "入管"
+    },
+    {
+      "id": "shoumei-shorui",
+      "name": {
+        "ja": "変更内容を証明する書類",
+        "easy": "かわった ことを しょうめいする かみ",
+        "en": "Documents evidencing the change"
+      },
+      "fee": null,
+      "issued_by": "—"
+    },
+    {
+      "id": "passport-copy",
+      "name": {
+        "ja": "パスポートの写し",
+        "easy": "パスポートの コピー",
+        "en": "Copy of passport"
+      },
+      "fee": null,
+      "issued_by": "—"
+    },
+    {
+      "id": "kaigai-kouza",
+      "name": {
+        "ja": "本人名義の銀行口座（海外送金可）",
+        "easy": "じぶんの ぎんこう こうざ",
+        "en": "Own bank account able to receive overseas transfer"
+      },
+      "fee": null,
+      "issued_by": "—"
+    },
+    {
+      "id": "zairyu-card-shinseichu",
+      "name": {
+        "ja": "「在留資格更新許可申請中」の押印がある在留カード",
+        "easy": "『しんせいちゅう』の ハンコが ある ざいりゅうカード",
+        "en": "Residence card bearing the 'application pending' stamp"
+      },
+      "fee": 0,
+      "issued_by": "入管(在留期間更新の受付時に裏面右下の申請欄へ押印)",
+      "lead_time_days": 0,
+      "warning": {
+        "ja": "★現物が必要。コピー・画像は不可。電子申請の場合は受付番号通知メール(印刷可)で代替できる。このハンコは入管向けの証明であると同時に、区役所でマイナンバーカードの特例期間延長を受けるための鍵でもある——この二つ目の用途は、どちらの窓口でも案内されない。",
+        "easy": "★ほんものが ひつようです。コピーは だめです。",
+        "en": "★The physical card is required — no copies. This stamp is also the key to the municipal 2-month extension, a second use neither counter explains."
+      }
+    },
+    {
+      "id": "tenshutsu-shomeisho",
+      "name": {
+        "ja": "転出証明書",
+        "easy": "でていく ことの しょうめいしょ",
+        "en": "Certificate of moving out"
+      },
+      "fee": 0,
+      "issued_by": "旧住所地の市区町村（転出届の際に交付）",
+      "lead_time_days": 0
+    },
+    {
+      "id": "inu-kansatsu",
+      "name": {
+        "ja": "犬の鑑札",
+        "easy": "いぬの かんさつ",
+        "en": "Dog registration tag"
+      },
+      "fee": 0,
+      "issued_by": "旧住所地の市区町村",
+      "lead_time_days": 0
+    },
+    {
+      "id": "rishoku-hyo",
+      "name": {
+        "ja": "離職票",
+        "easy": "しごとを やめた しょうめい",
+        "en": "Separation certificate"
+      },
+      "fee": 0,
+      "issued_by": "勤務先（退職後に郵送）",
+      "lead_time_days": 14,
+      "warning": {
+        "ja": "退職後10日前後で勤務先から届く。届かないと失業給付の手続きが始められないため、2週間経っても来なければ催促する。",
+        "easy": "2しゅうかん たっても こない ときは かいしゃに れんらくして ください。",
+        "en": "Usually arrives about 10 days after leaving; chase it if it does not, as unemployment benefits cannot start without it."
+      }
+    },
+    {
+      "id": "naitei-shorui",
+      "name": {
+        "ja": "採用内定通知書・雇用契約書等",
+        "easy": "しごとの けいやくしょ",
+        "en": "Job offer or employment contract"
+      },
+      "fee": null,
+      "issued_by": "採用先の企業",
+      "lead_time_days": 0
+    },
+    {
+      "id": "shussho-shomeisho",
+      "name": {
+        "ja": "出生証明書（出生届と一体）",
+        "easy": "うまれた ことの しょうめい",
+        "en": "Birth certificate"
+      },
+      "fee": null,
+      "issued_by": "分娩に立ち会った医師・助産師",
+      "lead_time_days": 0
+    },
+    {
+      "id": "kodomo-hokensho",
+      "name": {
+        "ja": "子どもの健康保険証",
+        "easy": "こどもの ほけんしょう",
+        "en": "Child's health insurance card"
+      },
+      "fee": 0,
+      "issued_by": "保険者",
+      "lead_time_days": 14
+    },
+    {
+      "id": "shussho-todoke-kisaijiko",
+      "name": {
+        "ja": "出生届受理証明書・出生届記載事項証明書",
+        "easy": "しゅっしょうとどけの しょうめい",
+        "en": "Certificate of accepted birth registration"
+      },
+      "fee": 350,
+      "issued_by": "出生届を出した市区町村",
+      "lead_time_days": 1
+    }
+  ]
+}

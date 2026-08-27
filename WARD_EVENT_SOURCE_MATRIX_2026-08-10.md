@@ -1,0 +1,3 @@
+# 已由复核版取代
+
+本文件是复核前报告。请改看 [WARD_EVENT_SOURCE_MATRIX_2026-08-11.md](WARD_EVENT_SOURCE_MATRIX_2026-08-11.md)。

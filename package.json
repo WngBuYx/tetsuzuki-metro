@@ -1,0 +1,13 @@
+{
+  "name": "tetsuzuki-metro",
+  "version": "0.1.0",
+  "description": "人生の行政手続を路線図として可視化する（都知事杯オープンデータ・ハッカソン2026）",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "route": "node src/cli.js",
+    "test": "node --test test/route.test.js",
+    "validate": "node tools/validate.js",
+    "audit": "node tools/audit.js"
+  }
+}

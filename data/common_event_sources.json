@@ -1,0 +1,223 @@
+{
+  "$schema_version": "1.0",
+  "verified_on": "2026-08-11",
+  "note": "全国共通来源。区级矩阵可引用这些source_id，但不能用全国说明替代区级窗口、材料和地方制度差异。",
+  "sources": [
+    {
+      "source_id": "national-moving-digital-agency",
+      "title": "引越し手続オンラインサービス",
+      "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+      "authority_level": "national",
+      "publisher": "デジタル庁",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "no",
+        "prefill": "no",
+        "online_submission": "yes",
+        "mandatory_visit": "yes",
+        "assisted_counter": "not_applicable"
+      },
+      "evidence_note": "MyNa Portal可正式在线提交转出届并向转入地传送来厅予定与申报信息；这不是保证时段的预约，也不是预填服务。转入和转居届本身仍须到新住所自治体窗口提交。"
+    },
+    {
+      "source_id": "national-moving-myna-list",
+      "title": "引越し関連手続一覧",
+      "url": "https://myna.go.jp/html/moving_oss_procedure_list.html",
+      "authority_level": "national",
+      "publisher": "マイナポータル",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "not_applicable",
+        "prefill": "not_applicable",
+        "online_submission": "not_applicable",
+        "mandatory_visit": "yes",
+        "assisted_counter": "not_applicable"
+      },
+      "evidence_note": "列出转入、转居、My Number地址更新、儿童津贴和其他搬家关联事项，并提醒地方手续可能不同。"
+    },
+    {
+      "source_id": "national-childrearing-registry",
+      "title": "子育て支援制度レジストリ",
+      "url": "https://www.digital.go.jp/policies/childrearing-support-registry",
+      "authority_level": "national",
+      "publisher": "デジタル庁",
+      "official_updated_at": "2026-03-05",
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "not_applicable",
+        "reservation": "not_applicable",
+        "prefill": "not_applicable",
+        "online_submission": "not_applicable",
+        "mandatory_visit": "not_applicable",
+        "assisted_counter": "not_applicable"
+      },
+      "evidence_note": "国和自治体育儿支援制度结构库，主要覆盖未就学儿童的124类制度；API需要申请，不是匿名公共导出。"
+    },
+    {
+      "source_id": "national-foreign-child-residence",
+      "title": "在留資格取得許可申請",
+      "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+      "authority_level": "national",
+      "publisher": "出入国在留管理庁",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "no",
+        "prefill": "no",
+        "online_submission": "yes",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "unknown"
+      },
+      "evidence_note": "在日本出生且预计停留超过60日的外国籍孩子，原则上应在事由发生后30日内申请在留资格；官方页面列有在线申请渠道，也允许法定代理人或合资格取次者办理。"
+    },
+    {
+      "source_id": "national-residence-card-return",
+      "title": "在留カード等の返納",
+      "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+      "authority_level": "national",
+      "publisher": "出入国在留管理庁",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "not_applicable",
+        "prefill": "no",
+        "online_submission": "no",
+        "mandatory_visit": "no",
+        "assisted_counter": "unknown"
+      },
+      "evidence_note": "中长期在留者死亡时，亲属或同居者原则上14日内返还；可直接带到入管或邮寄，故不要求必须到厅。"
+    },
+    {
+      "source_id": "national-childbirth-lump-sum",
+      "title": "出産育児一時金等について",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/shussan/index.html",
+      "authority_level": "national",
+      "publisher": "厚生労働省",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "not_applicable",
+        "prefill": "unknown",
+        "online_submission": "unknown",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "unknown"
+      },
+      "evidence_note": "说明原則50万円、直接支払/受取代理/偿还三种路径以及2年申请期限；实际资料和渠道取决于加入的保险者。"
+    },
+    {
+      "source_id": "national-pension-death",
+      "title": "年金を受けている方が亡くなったとき",
+      "url": "https://www.nenkin.go.jp/service/jukyu/tetsuduki/kyotsu/jukyu/20140731-01.html",
+      "authority_level": "national",
+      "publisher": "日本年金機構",
+      "official_updated_at": "2026-04-01",
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "unknown",
+        "prefill": "unknown",
+        "online_submission": "yes",
+        "mandatory_visit": "no",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "说明死亡报告、未支给年金和My Number已收录时的省略条件；部分届书可通过e-Gov电子申请，也可向年金事务所咨询。"
+    },
+    {
+      "source_id": "national-quasi-final-tax-return",
+      "title": "納税者が死亡したときの確定申告（準確定申告）",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+      "authority_level": "national",
+      "publisher": "国税庁",
+      "official_updated_at": "2025-04-01",
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "not_applicable",
+        "prefill": "unknown",
+        "online_submission": "yes",
+        "mandatory_visit": "no",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "需要申告时，原则上从知道继承开始次日起4个月内向被继承人纳税地税务署申告；页面说明e-Tax对应。"
+    },
+    {
+      "source_id": "national-inheritance-tax",
+      "title": "相続税の申告手続",
+      "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/sozoku-zoyo/annai/2223-01.htm",
+      "authority_level": "national",
+      "publisher": "国税庁",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "not_applicable",
+        "prefill": "unknown",
+        "online_submission": "unknown",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "需要相续税申告时，从知道继承开始次日起10个月内提交；是否需要申告取决于遗产和扣除等条件。"
+    },
+    {
+      "source_id": "national-inheritance-renunciation",
+      "title": "相続の放棄の申述",
+      "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html",
+      "authority_level": "national",
+      "publisher": "裁判所",
+      "official_updated_at": null,
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "unknown",
+        "prefill": "yes",
+        "online_submission": "unknown",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "相续放弃原则上须在知道自己开始继承后3个月内向家庭裁判所申述；官方提供申请书和记入例。"
+    },
+    {
+      "source_id": "national-inheritance-registration",
+      "title": "相続登記の申請義務化について",
+      "url": "https://www.moj.go.jp/MINJI/minji05_00599.html",
+      "authority_level": "national",
+      "publisher": "法務省",
+      "official_updated_at": "2026-04-01",
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "unknown",
+        "prefill": "unknown",
+        "online_submission": "unknown",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "取得继承不动产权利后原则上3年内申请继承登记；正当理由なく怠ると10万円以下过料的对象。"
+    },
+    {
+      "source_id": "national-legal-heir-information",
+      "title": "法定相続情報証明制度について",
+      "url": "https://houmukyoku.moj.go.jp/homu/page7_000013.html",
+      "authority_level": "national",
+      "publisher": "法務局",
+      "official_updated_at": "2024-04-01",
+      "capabilities": {
+        "information": "yes",
+        "questionnaire": "no",
+        "reservation": "unknown",
+        "prefill": "yes",
+        "online_submission": "unknown",
+        "mandatory_visit": "unknown",
+        "assisted_counter": "yes"
+      },
+      "evidence_note": "法务局核对户籍和法定继承关系图后，免费交付带认证文的法定继承信息一览图，可用于多种继承和年金手续。"
+    }
+  ]
+}

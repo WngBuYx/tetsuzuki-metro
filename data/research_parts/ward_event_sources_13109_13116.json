@@ -1,0 +1,5975 @@
+{
+  "range": "13109-13116",
+  "verified_on": "2026-08-10",
+  "wards": [
+    {
+      "ward_code": "13109",
+      "ward_name": "品川区",
+      "sources": [
+        {
+          "source_id": "13109_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13109_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13109_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13109_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13109_move_checklist",
+          "title": "引越しの際に必要な手続きチェックリスト",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/20250206184722.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "html",
+            "checklist",
+            "pdf_links"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転居・転出の3種類の公式チェックリストを掲載し、住民異動に伴うマイナンバー、保険、子育て、介護、印鑑等を整理する。従来清单で漏れていた転居系も確認済み。"
+        },
+        {
+          "source_id": "13109_move_life",
+          "title": "引越しするとき",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/life_stageguide/hpg000008038.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "住所異動、国民健康保険、児童手当・子ども医療、年金等の関連手続をまとめた公式ライフイベント入口。"
+        },
+        {
+          "source_id": "13109_pregnancy",
+          "title": "妊娠届・母子健康手帳・妊婦面接",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-ninnshinn/kodomo-ninnshinn-service/hpg000000783.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-07",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届、母子健康手帳交付、妊婦面接と予約方法を案内する。電子届出後も手帳受取・面接は別途行う。"
+        },
+        {
+          "source_id": "13109_birth",
+          "title": "出生届",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koseki/procedure-koseki-todokede/hpg000001411.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2024-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届の期限・窓口・持ち物と、児童手当、子ども医療、子の国保、出産育児一時金への公式関連リンクを示す。"
+        },
+        {
+          "source_id": "13109_birth_checklist",
+          "title": "妊娠・出産の手続きチェックシート",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/shiryokensaku/kosekijyumin/310401ninshinsyussan.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "pdf",
+            "checklist"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠から出生後までの届出、保険・給付・医療助成、母子保健の主要手続を時系列で整理する公式チェックシート。"
+        },
+        {
+          "source_id": "13109_death_corner",
+          "title": "おくやみコーナー",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/okuyami/20231114184050.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "予約制のおくやみコーナーを電子申請または電話で予約でき、必要手続の案内と窓口支援を受けられる。各制度の申請自体がオンライン完結する意味ではない。"
+        },
+        {
+          "source_id": "13109_death_handbook",
+          "title": "品川区おくやみハンドブック",
+          "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20231114184050_7.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "品川区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届・火葬、世帯主、印鑑・マイナンバー、保険・葬祭費、介護、年金、税、相続等を担当先と必要物付きで整理する。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_move_life"
+          ],
+          "status_reason": "転入・転居・転出の3チェックリストと関連制度入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist"
+          ],
+          "status_reason": "3種類の住民異動別チェックリストが期限・窓口・関連手続を示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_nat_moving",
+            "13109_move_checklist"
+          ],
+          "status_reason": "マイナポータル転出と転入時来庁の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist"
+          ],
+          "status_reason": "3種類の住民異動別チェックリストが期限・窓口・関連手続を示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist"
+          ],
+          "status_reason": "3種類の住民異動別チェックリストが期限・窓口・関連手続を示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist"
+          ],
+          "status_reason": "転入時のマイナンバーカード住所変更・継続利用をチェックリストが案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_move_life"
+          ],
+          "status_reason": "引越し時の対象制度、担当窓口と必要手続を公式チェックリストで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_move_life"
+          ],
+          "status_reason": "引越し時の対象制度、担当窓口と必要手続を公式チェックリストで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_move_life"
+          ],
+          "status_reason": "引越し時の対象制度、担当窓口と必要手続を公式チェックリストで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_move_life"
+          ],
+          "status_reason": "引越し時の対象制度、担当窓口と必要手続を公式チェックリストで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_move_checklist",
+            "13109_nat_moving"
+          ],
+          "status_reason": "オンライン転出と、転入・転居および付随手続の来庁必要性を区別できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_pregnancy"
+          ],
+          "status_reason": "妊娠届、母子手帳交付、妊婦面接と予約・電子届出後の来所を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_pregnancy"
+          ],
+          "status_reason": "妊娠届、母子手帳交付、妊婦面接と予約・電子届出後の来所を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_birth",
+            "13109_birth_checklist"
+          ],
+          "status_reason": "出生届の期限・場所・必要物を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_birth",
+            "13109_birth_checklist"
+          ],
+          "status_reason": "出生後の保険・手当・医療助成・出産給付をチェックシートと公式関連先で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_birth",
+            "13109_birth_checklist"
+          ],
+          "status_reason": "出生後の保険・手当・医療助成・出産給付をチェックシートと公式関連先で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_birth",
+            "13109_birth_checklist"
+          ],
+          "status_reason": "出生後の保険・手当・医療助成・出産給付をチェックシートと公式関連先で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_birth",
+            "13109_birth_checklist"
+          ],
+          "status_reason": "出生後の保険・手当・医療助成・出産給付をチェックシートと公式関連先で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13109_birth_checklist",
+            "13109_pregnancy"
+          ],
+          "status_reason": "母子保健の出生後導線は確認できる。",
+          "gap_note": "新生児訪問の個別申込方法・対象条件は専用ページまで再確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得期限とオンライン申請を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13109_birth_checklist",
+            "13109_pregnancy"
+          ],
+          "status_reason": "妊娠・出生後の主要支援入口を確認。",
+          "gap_note": "保育・産後支援を含む全制度の一元ナビではない。"
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_corner",
+            "13109_death_handbook"
+          ],
+          "status_reason": "予約支援窓口と詳細ハンドブックを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook",
+            "13109_nat_pension_death"
+          ],
+          "status_reason": "区窓口案内と日本年金機構の制度別手続を併用できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "ハンドブックに対象者・担当先・必要物を含む手続記載がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_nat_card_return"
+          ],
+          "status_reason": "全国共通の14日以内返納と持参・郵送方法を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_corner"
+          ],
+          "status_reason": "電子または電話で予約するおくやみコーナーを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13109_death_handbook"
+          ],
+          "status_reason": "相続登記・法務局等の区外手続と相談先を案内。",
+          "gap_note": ""
+        }
+      ]
+    },
+    {
+      "ward_code": "13110",
+      "ward_name": "目黒区",
+      "sources": [
+        {
+          "source_id": "13110_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13110_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13110_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13110_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13110_guide_wrapper",
+          "title": "手続案内サービス（公式案内）",
+          "url": "https://www.city.meguro.tokyo.jp/dxsenryaku/kusei/onlineservice/process_guidance.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "html",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "区公式ページから転入・転出・転居・出生・死亡等8イベントの手続案内サービスへリンクし、質問回答で必要手続・窓口・持ち物を示すと説明する。"
+        },
+        {
+          "source_id": "13110_graffer",
+          "title": "目黒区 手続案内サービス",
+          "url": "https://ttzk.graffer.jp/ward-meguro?ttzk-guides=true",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.meguro.tokyo.jp/dxsenryaku/kusei/onlineservice/process_guidance.html",
+          "operator": "株式会社グラファー",
+          "entry_types": [
+            "questionnaire",
+            "life_event_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja",
+            "en"
+          ],
+          "evidence_note": "目黒区公式ページとしてグラファーが運営し、転入・転出・転居・出生・死亡を含む質問型案内を日本語・英語で提供する。届出や申請のオンライン完結機能ではない。"
+        },
+        {
+          "source_id": "13110_moving",
+          "title": "引っ越し",
+          "url": "https://www.city.meguro.tokyo.jp/benrinavi/hikkoshi/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居、マイナポータル転出等の公式ページをまとめた引越し入口。"
+        },
+        {
+          "source_id": "13110_maternal",
+          "title": "妊娠・出産・育児に関する手続きとサービス",
+          "url": "https://www.city.meguro.tokyo.jp/chiikihoken/kosodatekyouiku/ninshin/boshihoken.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "html",
+            "life_event_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-06-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届・母子手帳・相談、出生届、児童手当、子ども医療、出産育児一時金、新生児訪問など妊娠から出生後の公式導線を掲載する。"
+        },
+        {
+          "source_id": "13110_death_corner",
+          "title": "おくやみコーナー・おくやみハンドブック",
+          "url": "https://www.city.meguro.tokyo.jp/kouhou/kurashi/soudan/okuyami.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation",
+            "handbook_link"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-04-14",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "電話または面談予約のおくやみコーナーとハンドブックを案内し、すべての手続が一度に完了する窓口ではないと明記する。"
+        },
+        {
+          "source_id": "13110_death_handbook",
+          "title": "目黒区おくやみハンドブック",
+          "url": "https://www.city.meguro.tokyo.jp/documents/4804/okuyami.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-14",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡後の戸籍・住民、保険、介護、年金、税、各種返却、相続関係の主な手続を一覧化する。"
+        },
+        {
+          "source_id": "13110_funeral",
+          "title": "死亡届と葬儀に関する手続",
+          "url": "https://www.city.meguro.tokyo.jp/koseki/kurashi/kosekitodokede/sougi.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "目黒区",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届・火葬、国保資格返却・葬祭費、年金および相続関係への公式導線を示す。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_guide_wrapper",
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "転入・転出・転居を含む公式質問ガイドと静的入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_moving",
+            "13110_graffer"
+          ],
+          "status_reason": "3住民異動それぞれの公式入口と個別質問案内がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_nat_moving",
+            "13110_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入時来庁の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_moving",
+            "13110_graffer"
+          ],
+          "status_reason": "3住民異動それぞれの公式入口と個別質問案内がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_moving",
+            "13110_graffer"
+          ],
+          "status_reason": "3住民異動それぞれの公式入口と個別質問案内がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "質問結果で該当関連手続を個別化できる。",
+          "gap_note": "静的な各制度ページの内容・提出手段を本分片では逐ページ確認しておらず、問答入口だけで完結とは扱わない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "質問結果で該当関連手続を個別化できる。",
+          "gap_note": "静的な各制度ページの内容・提出手段を本分片では逐ページ確認しておらず、問答入口だけで完結とは扱わない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "質問結果で該当関連手続を個別化できる。",
+          "gap_note": "静的な各制度ページの内容・提出手段を本分片では逐ページ確認しておらず、問答入口だけで完結とは扱わない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "質問結果で該当関連手続を個別化できる。",
+          "gap_note": "静的な各制度ページの内容・提出手段を本分片では逐ページ確認しておらず、問答入口だけで完結とは扱わない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_graffer",
+            "13110_moving"
+          ],
+          "status_reason": "質問結果で該当関連手続を個別化できる。",
+          "gap_note": "静的な各制度ページの内容・提出手段を本分片では逐ページ確認しておらず、問答入口だけで完結とは扱わない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_nat_moving",
+            "13110_moving"
+          ],
+          "status_reason": "オンライン転出と転入・転居の来庁要件を区別できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠届と母子健康手帳の公式手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠期相談・支援への導線を確認。",
+          "gap_note": "面接の予約方式とオンライン可否は個別ページの再確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal",
+            "13110_graffer"
+          ],
+          "status_reason": "出生届の公式導線と出生イベント質問ガイドを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_maternal",
+            "13110_graffer"
+          ],
+          "status_reason": "出生後の保険手続を案内対象として確認。",
+          "gap_note": "加入保険別の具体的提出先・提出方法は分岐先確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠・出産・育児ページに制度別公式導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠・出産・育児ページに制度別公式導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠・出産・育児ページに制度別公式導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal"
+          ],
+          "status_reason": "妊娠・出産・育児ページに制度別公式導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_maternal",
+            "13110_graffer"
+          ],
+          "status_reason": "出生イベント質問ガイドと妊娠・育児総合入口を併用できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_graffer",
+            "13110_death_corner",
+            "13110_death_handbook"
+          ],
+          "status_reason": "質問型案内、支援窓口、詳細冊子を確認。問答は必要手続の識別用。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_funeral",
+            "13110_death_handbook"
+          ],
+          "status_reason": "死亡届・火葬の期限と手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook",
+            "13110_nat_pension_death"
+          ],
+          "status_reason": "区冊子と年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_handbook"
+          ],
+          "status_reason": "ハンドブックが死亡後の制度別手続を担当先と必要物付きで案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_nat_card_return"
+          ],
+          "status_reason": "全国共通の返納期限と郵送・持参方法を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13110_death_corner"
+          ],
+          "status_reason": "電話・面談予約の来庁型おくやみコーナーを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13110_death_handbook",
+            "13110_funeral"
+          ],
+          "status_reason": "相続登記等の区外相談先・関連先を確認。",
+          "gap_note": "相続手続自体は区で完結せず法務局・専門機関等への移行が必要。"
+        }
+      ]
+    },
+    {
+      "ward_code": "13111",
+      "ward_name": "大田区",
+      "sources": [
+        {
+          "source_id": "13111_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13111_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13111_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13111_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13111_guide_wrapper",
+          "title": "各種手続きのご案内について",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/koseki_j/topics/guide.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-11-19",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居・出生・死亡等8イベントの質問型手続ガイドを区公式ページから提供し、必要手続・持ち物・方法を案内すると説明する。"
+        },
+        {
+          "source_id": "13111_graffer",
+          "title": "大田区手続きガイド",
+          "url": "https://ttzk.graffer.jp/ward-ota",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.ota.tokyo.jp/seikatsu/koseki_j/topics/guide.html",
+          "operator": "株式会社グラファー",
+          "entry_types": [
+            "questionnaire",
+            "life_event_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "大田区公式ページから遷移するグラファー運営の質問型案内。必要手続を抽出するが、各届出をオンライン提出するサービスではない。"
+        },
+        {
+          "source_id": "13111_moving",
+          "title": "引越しの手続き",
+          "url": "https://www.city.ota.tokyo.jp/tetsuzuki/hikkoshi/",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居とマイナポータル転出の公式ページをまとめた入口。"
+        },
+        {
+          "source_id": "13111_move_prep",
+          "title": "住民異動届の窓口予約・届書作成",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/koseki_j/topics/tenshutu-yoyaku_pc-smartphone.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "reservation",
+            "prefill"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "yes",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-06-02",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "スマートフォン等で窓口予約と届書情報の事前入力を行いQRコードを窓口で提示する方式。届出はオンライン完結せず来庁が必須。"
+        },
+        {
+          "source_id": "13111_pregnancy",
+          "title": "妊娠したら",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/kodomo/shussan/ninsin.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "life_event_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-18",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届・母子手帳、予約制面接、妊娠期支援および出産育児一時金への導線を案内する。"
+        },
+        {
+          "source_id": "13111_after_birth",
+          "title": "赤ちゃんが生まれたら",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/kodomo/shussan/akachan.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "life_event_guide",
+            "online_forms"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-06-03",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届、児童手当、子ども医療、新生児訪問等を案内し、対象となる給付・出生通知には電子または郵送手段も示す。"
+        },
+        {
+          "source_id": "13111_death_support",
+          "title": "おくやみ手続きガイド及びおくやみコーナー",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/koseki_j/topics/okuyami-corner-guide.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation",
+            "handbook_link"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2025-08-15",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "予約制コーナーで必要手続を確認・案内するが、その後各担当窓口で手続する必要があることを明記する。"
+        },
+        {
+          "source_id": "13111_death_handbook",
+          "title": "大田区おくやみ手続きガイド",
+          "url": "https://www.city.ota.tokyo.jp/seikatsu/koseki_j/topics/okuyami-corner-guide.files/00_okuyami-tetuduki-guide2025.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "大田区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-08-15",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡後の世帯、印鑑・マイナンバー、保険・葬祭費、介護、年金、税、相続・区外手続を詳細に整理する。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_guide_wrapper",
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "3住民異動を含む質問ガイドと公式静的入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_moving",
+            "13111_move_prep"
+          ],
+          "status_reason": "転入・転出・転居の公式手続と窓口予約・事前作成を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_nat_moving",
+            "13111_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入先来庁を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_moving",
+            "13111_move_prep"
+          ],
+          "status_reason": "転入・転出・転居の公式手続と窓口予約・事前作成を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_moving",
+            "13111_move_prep"
+          ],
+          "status_reason": "転入・転出・転居の公式手続と窓口予約・事前作成を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "質問ガイドで関連手続を個別化できる。",
+          "gap_note": "個別制度の静的手続ページと提出手段は本分片で未逐ページ確認。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "質問ガイドで関連手続を個別化できる。",
+          "gap_note": "個別制度の静的手続ページと提出手段は本分片で未逐ページ確認。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "質問ガイドで関連手続を個別化できる。",
+          "gap_note": "個別制度の静的手続ページと提出手段は本分片で未逐ページ確認。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "質問ガイドで関連手続を個別化できる。",
+          "gap_note": "個別制度の静的手続ページと提出手段は本分片で未逐ページ確認。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_graffer",
+            "13111_moving"
+          ],
+          "status_reason": "質問ガイドで関連手続を個別化できる。",
+          "gap_note": "個別制度の静的手続ページと提出手段は本分片で未逐ページ確認。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_nat_moving",
+            "13111_move_prep"
+          ],
+          "status_reason": "事前入力・予約後もQRを窓口提示して届出する必要があり、オンライン完結でないことを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳、予約制面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳、予約制面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_after_birth"
+          ],
+          "status_reason": "出生届の期限・窓口への公式導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_after_birth"
+          ],
+          "status_reason": "出生後の健康保険関連導線を確認。",
+          "gap_note": "加入保険別の必要書類・提出方法は個別ページ確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_after_birth"
+          ],
+          "status_reason": "出生後ページに制度内容と電子・郵送を含む申請導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_after_birth"
+          ],
+          "status_reason": "出生後ページに制度内容と電子・郵送を含む申請導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13111_pregnancy"
+          ],
+          "status_reason": "妊娠・出産ページから出産育児一時金へ案内される。",
+          "gap_note": "加入保険別の申請条件・差額請求方法は専用ページ確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_after_birth"
+          ],
+          "status_reason": "出生後ページに制度内容と電子・郵送を含む申請導線がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_nat_child_residence"
+          ],
+          "status_reason": "全国共通の在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_pregnancy",
+            "13111_after_birth",
+            "13111_graffer"
+          ],
+          "status_reason": "妊娠・出生後の静的案内と出生イベント質問ガイドを併用できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_support",
+            "13111_death_handbook",
+            "13111_graffer"
+          ],
+          "status_reason": "詳細冊子、予約支援窓口、質問型案内を確認。問答は識別用で申請完結ではない。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook",
+            "13111_nat_pension_death"
+          ],
+          "status_reason": "区冊子と日本年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "ハンドブックが対象者・必要物・担当窓口を制度別に示す。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_nat_card_return",
+            "13111_death_handbook"
+          ],
+          "status_reason": "全国共通返納方法と死亡後冊子の区外手続導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_support"
+          ],
+          "status_reason": "予約制来庁窓口を確認。利用後も各担当窓口で手続が必要。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13111_death_handbook"
+          ],
+          "status_reason": "相続登記・法務局・専門相談等への案内を確認。",
+          "gap_note": ""
+        }
+      ]
+    },
+    {
+      "ward_code": "13112",
+      "ward_name": "世田谷区",
+      "sources": [
+        {
+          "source_id": "13112_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13112_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13112_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13112_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13112_moving",
+          "title": "引越しに関する手続き",
+          "url": "https://www.city.setagaya.lg.jp/02312/18274.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居等の住民異動手続への公式入口。関連制度は別ページ・別窓口に分散している。"
+        },
+        {
+          "source_id": "13112_move_related",
+          "title": "転入・転居に伴う関連手続き",
+          "url": "https://www.city.setagaya.lg.jp/02233/84.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "procedure_matrix"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-07-17",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・区内転居に伴う印鑑、マイナンバー、国保、介護、児童手当等を担当窓口別に示す。転出側を同等に網羅するページではない。"
+        },
+        {
+          "source_id": "13112_pregnancy",
+          "title": "妊娠届・母子健康手帳・妊婦面接",
+          "url": "https://www.city.setagaya.lg.jp/02244/1189.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2024-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届、母子健康手帳、ネウボラ面接とLINE・電話等の予約方法を案内する。"
+        },
+        {
+          "source_id": "13112_childcare_guide",
+          "title": "妊娠・出産・子育てガイド",
+          "url": "https://www.city.setagaya.lg.jp/02413/21570.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "pdf_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠から就学前までの制度を案内する総合冊子入口。個別申請ページが複数所管に分散しているため、冊子単独では提出可否まで確定しない項目がある。"
+        },
+        {
+          "source_id": "13112_death_wrapper",
+          "title": "くらしの手続きガイド（お悔やみ）",
+          "url": "https://www.city.setagaya.lg.jp/02233/1171.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2022-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "区公式ページから、質問に答えて必要な死亡後手続を抽出する外部運営ガイドへリンクする。"
+        },
+        {
+          "source_id": "13112_death_graffer",
+          "title": "世田谷区公式 お悔やみガイド",
+          "url": "https://ttzk.graffer.jp/ward-setagaya/death",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.setagaya.lg.jp/02233/1171.html",
+          "operator": "株式会社グラファー",
+          "entry_types": [
+            "questionnaire",
+            "death_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "世田谷区公式から明示リンクされたグラファー運営の死亡後手続質問ガイド。必要手続の識別用で、届出・申請のオンライン完結ではない。"
+        },
+        {
+          "source_id": "13112_death_procedures",
+          "title": "ご遺族の方の諸手続き",
+          "url": "https://www.city.setagaya.lg.jp/02233/1172.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "split_checklists",
+            "assisted_counter",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-03-12",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "世帯・印鑑・マイナンバー、保険、介護、年金、税、区外手続を分割資料で案内し、事前予約制おくやみコーナーでは職員がガイド操作を支援する。各担当窓口の手続は別途必要。"
+        },
+        {
+          "source_id": "13112_death_notification",
+          "title": "死亡届",
+          "url": "https://www.city.setagaya.lg.jp/02233/65.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "世田谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届の期限、届出人、提出先、火葬許可等を案内する公式手続ページ。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_moving",
+            "13112_move_related"
+          ],
+          "status_reason": "住民異動入口と転入・転居関連制度表を確認。",
+          "gap_note": "転出側と各制度が別ページ・別所管に分散し、一枚で全体を完結して確認できない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_moving",
+            "13112_nat_moving"
+          ],
+          "status_reason": "転出届の公式入口とオンライン転出制度を確認。",
+          "gap_note": "世田谷区固有の窓口・例外条件は個別転出ページの再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_nat_moving",
+            "13112_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入先来庁の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_moving",
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居届と付随手続を公式ページで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_moving",
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居届と付随手続を公式ページで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居時の対象制度、担当窓口と必要手続を表で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居時の対象制度、担当窓口と必要手続を表で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居時の対象制度、担当窓口と必要手続を表で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居時の対象制度、担当窓口と必要手続を表で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_move_related"
+          ],
+          "status_reason": "転入・転居時の対象制度、担当窓口と必要手続を表で確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_nat_moving",
+            "13112_move_related"
+          ],
+          "status_reason": "オンライン転出と、転入・転居および付随制度の来庁要件を区別できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳・予約制ネウボラ面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳・予約制ネウボラ面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_childcare_guide"
+          ],
+          "status_reason": "総合冊子が妊娠・出生後の制度と担当先を案内する。",
+          "gap_note": "制度ごとの個別ページ・提出方法が複数所管に分散しており、冊子単独ではオンライン可否や例外まで確定しない。"
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_wrapper",
+            "13112_death_graffer",
+            "13112_death_procedures"
+          ],
+          "status_reason": "質問型識別、分割チェックリスト、職員支援窓口を確認。外部問答は申請完結ではない。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_notification"
+          ],
+          "status_reason": "死亡届と火葬許可の期限・提出先を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures",
+            "13112_nat_pension_death"
+          ],
+          "status_reason": "区の窓口整理と年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "分割資料が制度別の担当窓口・返却物・必要手続を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_nat_card_return",
+            "13112_death_procedures"
+          ],
+          "status_reason": "全国共通返納手続と区外手続への導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "事前予約制おくやみコーナーで職員が質問ガイド操作を支援する。各担当窓口手続は別途必要。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13112_death_procedures"
+          ],
+          "status_reason": "区外・相続関係手続の相談先を案内。",
+          "gap_note": "相続登記等は区で完結せず、法務局・専門機関への移行が必要。"
+        }
+      ]
+    },
+    {
+      "ward_code": "13113",
+      "ward_name": "渋谷区",
+      "sources": [
+        {
+          "source_id": "13113_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13113_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13113_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13113_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13113_moving_multilingual",
+          "title": "住所を変更するとき",
+          "url": "https://www.city.shibuya.tokyo.jp/contents/living-in-shibuya/ja/resident/move.html?lang=ja",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "multilingual_overview"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja",
+            "en",
+            "zh",
+            "ko"
+          ],
+          "evidence_note": "転入・転出・転居の基本届出、国保・印鑑等への入口を多言語で示す。多言語入口の存在だけでは各制度の提出可否や完全性を保証しない。"
+        },
+        {
+          "source_id": "13113_move_in",
+          "title": "転入届",
+          "url": "https://www.city.shibuya.tokyo.jp/kurashi/jumin/ido/t_tennyu.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入届の期限・窓口・持ち物と、マイナンバーカードの継続利用を案内する。"
+        },
+        {
+          "source_id": "13113_care_move",
+          "title": "引越しに伴う介護保険手続",
+          "url": "https://www.city.shibuya.tokyo.jp/kenko/kaigo/kaigo-hoken/hikkoshi_kaigo.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2023-03-17",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・区内転居時の介護保険資格・認定関係手続をケース別に案内する。"
+        },
+        {
+          "source_id": "13113_pregnancy",
+          "title": "妊娠届・妊婦面接",
+          "url": "https://www.city.shibuya.tokyo.jp/kodomo/ninshin/ninshin-sodan/ninpu.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-24",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届、母子健康手帳、予約制妊婦面接とオンライン面接を含む相談方法を案内する。"
+        },
+        {
+          "source_id": "13113_birth",
+          "title": "出生届",
+          "url": "https://www.city.shibuya.tokyo.jp/kurashi/koseki/koseki-todokede/shussho_todoke.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届の期限・届出先・必要書類と出生後の関連制度への入口を示す。"
+        },
+        {
+          "source_id": "13113_childcare_handbook",
+          "title": "ネウボラ子育てハンドブック",
+          "url": "https://www.city.shibuya.tokyo.jp/kodomo/ninshin/kosodate-shien/neuvola_childcare_handbook.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "pdf_handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-31",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠期・産後の必要手続とサービスをまとめ、子の健康保険、児童手当、子ども医療、出産給付、訪問支援等への導線を示す。"
+        },
+        {
+          "source_id": "13113_child_medical",
+          "title": "子ども医療費助成",
+          "url": "https://www.city.shibuya.tokyo.jp/kodomo/kodomo-teate-josei/iryo-josei/kodomo_ij.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生直後を含む子ども医療費助成の対象・必要書類・申請方法を案内する。"
+        },
+        {
+          "source_id": "13113_child_allowance",
+          "title": "児童手当",
+          "url": "https://www.city.shibuya.tokyo.jp/kodomo/kodomo-teate-josei/kodomo-teate/jido_t.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "procedure",
+            "online_form"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生・転入時の児童手当認定請求期限と窓口・郵送・外部電子申請への導線を示す。"
+        },
+        {
+          "source_id": "13113_newborn_visit",
+          "title": "新生児訪問・こんにちは赤ちゃん訪問",
+          "url": "https://www.city.shibuya.tokyo.jp/kodomo/kodomo-sodan/shinseiji-sodan/homon_baby.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "health_guidance"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-10-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja",
+            "en"
+          ],
+          "evidence_note": "生後28日までの新生児訪問と生後4か月までの全戸訪問、育児相談・子育て情報提供を案内する。"
+        },
+        {
+          "source_id": "13113_death_index",
+          "title": "おくやみ",
+          "url": "https://www.city.shibuya.tokyo.jp/contents/case/okuyami.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届、税、年金、保険、介護、世帯等の死亡後手続への公式入口。"
+        },
+        {
+          "source_id": "13113_death_handbook",
+          "title": "おくやみハンドブック・おくやみ手続きナビ",
+          "url": "https://www.city.shibuya.tokyo.jp/kurashi/madoguchi/kurashi-sodansaki/okuyami.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "渋谷区",
+          "entry_types": [
+            "html",
+            "handbook_link",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-09",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "区の死亡後手続ハンドブックを掲載し、公式外部リンクとしておくやみ手続きナビを案内する。専用のおくやみコーナー予約窓口は同ページに記載されない。"
+        },
+        {
+          "source_id": "13113_death_navi",
+          "title": "渋谷区 おくやみ手続きナビ",
+          "url": "https://www.okuyaminavi.net/municipalities/13113",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.shibuya.tokyo.jp/kurashi/madoguchi/kurashi-sodansaki/okuyami.html",
+          "operator": "株式会社鎌倉新書",
+          "entry_types": [
+            "questionnaire",
+            "death_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "区公式ページから明示リンクされた鎌倉新書運営の死亡後手続ナビ。質問で必要手続を抽出するが、申請提出や窓口予約を完結するサービスではない。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual",
+            "13113_move_in"
+          ],
+          "status_reason": "3住民異動の多言語概要と転入専用ページを確認。",
+          "gap_note": "多言語入口だけで各付随制度の完全性・提出可否までは確定しない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "転出・転居の基本期限・窓口への公式案内を確認。",
+          "gap_note": "個別の例外・必要物・関連制度は日本語専用詳細ページの再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_nat_moving",
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "マイナポータル転出と転入時来庁の全国共通境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_move_in",
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "転入届の期限・窓口・持ち物を専用ページで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "転出・転居の基本期限・窓口への公式案内を確認。",
+          "gap_note": "個別の例外・必要物・関連制度は日本語専用詳細ページの再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_move_in"
+          ],
+          "status_reason": "転入時のマイナンバーカード継続利用要件を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "引越し時の関連制度への入口を確認。",
+          "gap_note": "多言語概要からは各制度の全分岐・提出方法を確定できない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "引越し時の関連制度への入口を確認。",
+          "gap_note": "多言語概要からは各制度の全分岐・提出方法を確定できない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_care_move"
+          ],
+          "status_reason": "転入・転出・区内転居の介護保険手続をケース別に確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "引越し時の関連制度への入口を確認。",
+          "gap_note": "多言語概要からは各制度の全分岐・提出方法を確定できない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_nat_moving",
+            "13113_move_in",
+            "13113_moving_multilingual"
+          ],
+          "status_reason": "オンライン転出と転入来庁は区別できる。",
+          "gap_note": "転居および全付随制度の来庁要否を一表で網羅する公式資料は確認できない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳・予約制面接とオンライン面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_pregnancy"
+          ],
+          "status_reason": "妊娠届・母子手帳・予約制面接とオンライン面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_birth"
+          ],
+          "status_reason": "出生届の期限・届出先・必要物を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_childcare_handbook"
+          ],
+          "status_reason": "出生後の加入保険別案内をハンドブックで確認。",
+          "gap_note": "勤務先保険と国保で手続先が分かれ、提出可否は各保険者確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_child_allowance",
+            "13113_childcare_handbook"
+          ],
+          "status_reason": "出生時期限と窓口・郵送・電子申請を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_child_medical",
+            "13113_childcare_handbook"
+          ],
+          "status_reason": "出生直後の必要書類と申請導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_childcare_handbook"
+          ],
+          "status_reason": "出産育児一時金等への公式導線を確認。",
+          "gap_note": "加入保険別の直接支払・差額請求条件は専用制度ページ確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_newborn_visit"
+          ],
+          "status_reason": "新生児訪問・全戸訪問の対象と内容を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_childcare_handbook",
+            "13113_newborn_visit"
+          ],
+          "status_reason": "妊娠期・産後の手続と相談支援を公式ハンドブックで横断できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_index",
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "静的入口、ハンドブック、質問型ナビを確認。外部ナビは必要手続の識別用で申請完結ではない。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_index",
+            "13113_death_handbook"
+          ],
+          "status_reason": "死亡届・火葬関連の公式導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "ハンドブックと公式外部ナビに制度別の対象・担当先がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "返却・税関係の死亡後導線を確認。",
+          "gap_note": "個別ケースの要否・必要書類は担当課確認が必要。"
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "ハンドブックと公式外部ナビに制度別の対象・担当先がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "ハンドブックと公式外部ナビに制度別の対象・担当先がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "ハンドブックと公式外部ナビに制度別の対象・担当先がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_nat_pension_death"
+          ],
+          "status_reason": "区の案内と年金機構の制度別手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "返却・税関係の死亡後導線を確認。",
+          "gap_note": "個別ケースの要否・必要書類は担当課確認が必要。"
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13113_nat_card_return"
+          ],
+          "status_reason": "全国共通の14日以内返納と郵送・持参方法を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "missing",
+          "source_ids": [],
+          "status_reason": "区公式のおくやみ索引・ハンドブック頁・公式サイト検索を実施したが、専用おくやみコーナーの予約制度は確認できなかった。",
+          "gap_note": "ハンドブックと外部質問ナビはあるが、来庁支援コーナー予約とは別物。"
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13113_death_handbook",
+            "13113_death_navi"
+          ],
+          "status_reason": "相続関係の案内先を確認。",
+          "gap_note": "相続手続自体は法務局・金融機関・専門家等で行い、区内完結ではない。"
+        }
+      ]
+    },
+    {
+      "ward_code": "13114",
+      "ward_name": "中野区",
+      "sources": [
+        {
+          "source_id": "13114_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13114_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13114_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13114_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13114_moving",
+          "title": "引越しの手続き",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/koseki/jyuminhyo/hikkoshi.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "procedure_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-07-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居、マイナポータル転出、マイナンバーカード継続利用を案内し、転入・転居は来庁が必要と区別する。"
+        },
+        {
+          "source_id": "13114_move_life",
+          "title": "引越しするとき",
+          "url": "https://www.city.tokyo-nakano.lg.jp/case/hikkoshi/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "国保、子どもの手当・医療、介護、印鑑等の引越し関連制度への公式導線をまとめる。"
+        },
+        {
+          "source_id": "13114_prefill_counter",
+          "title": "書かない窓口",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/digitalmadoguti/0686043520240222141710993.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "prefill"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "yes",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2025-10-10",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "窓口で職員が聞き取り、申請書作成を支援する仕組み。来庁型でありオンライン完結ではない。"
+        },
+        {
+          "source_id": "13114_pregnancy",
+          "title": "妊娠届と母子健康手帳",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/nenreibetsu/ninshin/tetsuduki/ninshintodoke.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-08-21",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届はマイナポータル提出可能だが、母子健康手帳等の受取はすこやか福祉センター等への来所が必要と案内する。"
+        },
+        {
+          "source_id": "13114_birth",
+          "title": "出生届",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/koseki/koseki/syussyotodoke.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-06-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届の提出期限・必要書類・窓口と外国籍児の出生届を案内する。"
+        },
+        {
+          "source_id": "13114_birth_age_index",
+          "title": "出産から1歳まで",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/nenreibetsu/syussan/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "life_stage_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届、国保加入、手当・医療、訪問・相談、産後支援等への公式入口を年齢段階別にまとめる。"
+        },
+        {
+          "source_id": "13114_child_allowance",
+          "title": "児童手当",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/mokuteki/teate/teate/jidoteate.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-21",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生・転入時の児童手当の期限、認定請求、窓口・郵送・電子申請等を案内する。"
+        },
+        {
+          "source_id": "13114_newborn_visit",
+          "title": "こんにちは赤ちゃん訪問",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/nenreibetsu/syussan/sangoshien/akachanhomon.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "health_guidance",
+            "online_form"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "生後4か月以内の家庭訪問と出生通知票の郵送・電子提出方法を案内する。"
+        },
+        {
+          "source_id": "13114_childbirth_lump",
+          "title": "出産育児一時金",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/hoken/kyufu/syussanikuji.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "中野区国保の出産育児一時金、直接支払等の制度と申請条件を案内する。"
+        },
+        {
+          "source_id": "13114_death_index",
+          "title": "ご不幸",
+          "url": "https://www.city.tokyo-nakano.lg.jp/case/gofuko/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届、戸籍・住民、保険、介護、税、年金等の死亡後手続への公式入口。"
+        },
+        {
+          "source_id": "13114_death_support",
+          "title": "おくやみ窓口・おくやみ手続きナビ",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/soudan/soudan/okuyamimadoguchi.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-05-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "電話・Web予約の来庁型おくやみ窓口と外部ナビを案内する。窓口は手続を支援するが、担当課で別途手続が必要な場合がある。"
+        },
+        {
+          "source_id": "13114_death_handbook",
+          "title": "中野区おくやみガイド",
+          "url": "https://www.city.tokyo-nakano.lg.jp/kurashi/soudan/soudan/okuyamimadoguchi.files/2026_okuyamiguide.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "中野区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡後の戸籍・住民、保険、葬祭費、介護、年金、税、返却物、相続・区外手続を整理する。"
+        },
+        {
+          "source_id": "13114_death_navi",
+          "title": "中野区 おくやみ手続きナビ",
+          "url": "https://www.okuyaminavi.net/municipalities/13114",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.tokyo-nakano.lg.jp/kurashi/soudan/soudan/okuyamimadoguchi.html",
+          "operator": "株式会社鎌倉新書",
+          "entry_types": [
+            "questionnaire",
+            "death_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "中野区公式ページから明示リンクされた鎌倉新書運営の質問型死亡後手続ナビ。必要手続を特定する案内であり、申請や届出の受付・完結ではない。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving",
+            "13114_move_life"
+          ],
+          "status_reason": "3住民異動と関連制度の公式入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving"
+          ],
+          "status_reason": "転入・転出・転居の期限・方法・窓口を一つの公式ガイドで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_nat_moving",
+            "13114_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入・転居来庁を明確に区別。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving"
+          ],
+          "status_reason": "転入・転出・転居の期限・方法・窓口を一つの公式ガイドで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving"
+          ],
+          "status_reason": "転入・転出・転居の期限・方法・窓口を一つの公式ガイドで確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving"
+          ],
+          "status_reason": "転入時のマイナンバーカード継続利用を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_move_life"
+          ],
+          "status_reason": "引越し関連制度の公式リンクを確認。",
+          "gap_note": "各制度の申請条件・提出方法はリンク先で再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_move_life"
+          ],
+          "status_reason": "引越し関連制度の公式リンクを確認。",
+          "gap_note": "各制度の申請条件・提出方法はリンク先で再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_move_life"
+          ],
+          "status_reason": "引越し関連制度の公式リンクを確認。",
+          "gap_note": "各制度の申請条件・提出方法はリンク先で再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_move_life"
+          ],
+          "status_reason": "引越し関連制度の公式リンクを確認。",
+          "gap_note": "各制度の申請条件・提出方法はリンク先で再確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_moving",
+            "13114_nat_moving",
+            "13114_prefill_counter"
+          ],
+          "status_reason": "オンライン転出、転入・転居来庁、来庁型書かない窓口の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_pregnancy"
+          ],
+          "status_reason": "電子妊娠届と母子手帳受取の来所を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_pregnancy"
+          ],
+          "status_reason": "母子手帳交付時の相談導線を確認。",
+          "gap_note": "面接名称・予約方式の専用ページを本分片では確認していない。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_birth"
+          ],
+          "status_reason": "出生届の期限・提出先・外国籍児も必要なことを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_birth_age_index"
+          ],
+          "status_reason": "出産から1歳の公式入口に国保加入手続がある。",
+          "gap_note": "勤務先保険を含む加入先別の提出方法は個別確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_child_allowance",
+            "13114_birth_age_index"
+          ],
+          "status_reason": "出生時15日以内の認定請求と提出方法を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_birth_age_index"
+          ],
+          "status_reason": "出生後の子ども医療助成への公式導線を確認。",
+          "gap_note": "専用制度ページの申請方法・必要書類を本分片では未逐項確認。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_childbirth_lump"
+          ],
+          "status_reason": "国保の出産育児一時金と申請条件を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_newborn_visit"
+          ],
+          "status_reason": "全戸訪問と出生通知票の電子提出を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_nat_child_residence",
+            "13114_birth"
+          ],
+          "status_reason": "出生届とは別に必要な全国共通在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_birth_age_index",
+            "13114_newborn_visit"
+          ],
+          "status_reason": "出生から1歳の制度・相談支援を年齢別入口で横断できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_index",
+            "13114_death_support",
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "静的入口、冊子、予約支援窓口、質問型ナビを確認。外部ナビは申請完結ではない。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_nat_pension_death"
+          ],
+          "status_reason": "区冊子と日本年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "冊子と公式外部ナビに制度別の対象・担当窓口・必要物がある。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_nat_card_return",
+            "13114_death_handbook"
+          ],
+          "status_reason": "全国共通返納方法と冊子の区外手続導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13114_death_support"
+          ],
+          "status_reason": "電話・Web予約の来庁型おくやみ窓口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13114_death_handbook",
+            "13114_death_navi"
+          ],
+          "status_reason": "相続登記・専門相談等への案内を確認。",
+          "gap_note": "相続手続自体は区窓口・外部ナビでは完結しない。"
+        }
+      ]
+    },
+    {
+      "ward_code": "13115",
+      "ward_name": "杉並区",
+      "sources": [
+        {
+          "source_id": "13115_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13115_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13115_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13115_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13115_moving",
+          "title": "引っ越し",
+          "url": "https://www.city.suginami.tokyo.jp/hikkoshi/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "life_event_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居と関連制度への公式入口。個別制度の提出可否は各リンク先で確認する構成。"
+        },
+        {
+          "source_id": "13115_pregnancy",
+          "title": "妊娠届・母子健康手帳・ゆりかご面接",
+          "url": "https://www.city.suginami.tokyo.jp/s054/1109.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "procedure",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届は電子提出可能だが、母子健康手帳交付・ゆりかご面接は窓口等で受ける流れと予約方法を案内する。"
+        },
+        {
+          "source_id": "13115_after_birth",
+          "title": "赤ちゃんが生まれたら",
+          "url": "https://www.city.suginami.tokyo.jp/s054/1134.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "life_event_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "新生児訪問、児童手当、子ども医療、産後ケア、訪問育児支援等を公式リンク付きで案内する。"
+        },
+        {
+          "source_id": "13115_newborn_visit",
+          "title": "すこやか赤ちゃん訪問",
+          "url": "https://www.city.suginami.tokyo.jp/s054/1027.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "health_guidance",
+            "online_form"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "生後4か月までの全戸訪問と出生連絡票の電子提出入口を案内する。"
+        },
+        {
+          "source_id": "13115_birth",
+          "title": "出生届",
+          "url": "https://www.city.suginami.tokyo.jp/s018/1002.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届の期限、必要書類、受付窓口と出生時マイナンバーカード特急発行を案内する。"
+        },
+        {
+          "source_id": "13115_childbirth_lump",
+          "title": "出産育児一時金",
+          "url": "https://www.city.suginami.tokyo.jp/s035/12553.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "杉並区国保の出産育児一時金と直接支払・差額申請等を案内する。"
+        },
+        {
+          "source_id": "13115_death_wrapper",
+          "title": "おくやみ",
+          "url": "https://www.city.suginami.tokyo.jp/okuyami/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "life_event_index",
+            "official_wrapper"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-03-30",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "質問型手続ガイド、予約制おくやみコーナー、ハンドブック、死亡届・年金・葬祭費等への公式入口。"
+        },
+        {
+          "source_id": "13115_death_graffer",
+          "title": "杉並区公式 おくやみガイド",
+          "url": "https://ttzk.graffer.jp/city-suginami/okuyami",
+          "authority_level": "ward",
+          "host_type": "vendor_hosted",
+          "official_wrapper_url": "https://www.city.suginami.tokyo.jp/s018/17350.html",
+          "operator": "株式会社グラファー",
+          "entry_types": [
+            "questionnaire",
+            "death_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "杉並区公式ページから明示リンクされたグラファー運営の質問型ガイド。必要手続の洗い出し用で、オンライン申請・窓口予約の完結機能ではない。"
+        },
+        {
+          "source_id": "13115_death_counter",
+          "title": "おくやみコーナー（予約制）",
+          "url": "https://www.city.suginami.tokyo.jp/s018/17350.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2025-09-12",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "電話事前予約制の来庁窓口で区役所内の必要手続を案内し、外部質問ガイドにもリンクする。"
+        },
+        {
+          "source_id": "13115_death_handbook",
+          "title": "杉並区おくやみハンドブック",
+          "url": "https://www.city.suginami.tokyo.jp/documents/10727/suginami_oh_r8-3.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-30",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡後の戸籍・住民、保険、葬祭費、介護、年金、税、返却物、相続等の手続を担当先とともに整理する。"
+        },
+        {
+          "source_id": "13115_death_notification",
+          "title": "死亡届",
+          "url": "https://www.city.suginami.tokyo.jp/s018/10727.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "procedure",
+            "handbook_link"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届と火葬許可の期限・必要物・受付窓口を案内し、おくやみコーナーとハンドブックにもリンクする。"
+        },
+        {
+          "source_id": "13115_funeral",
+          "title": "国民健康保険の葬祭費",
+          "url": "https://www.city.suginami.tokyo.jp/s035/12554.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "杉並区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-01-20",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "国保加入者死亡時の葬祭費の対象・申請者・必要書類等を案内する。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "転入・転出・転居を含む公式引越し入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "3住民異動の専用公式ページへの導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_nat_moving",
+            "13115_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入先来庁の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "3住民異動の専用公式ページへの導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "3住民異動の専用公式ページへの導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "引越し関連制度への公式導線を確認。",
+          "gap_note": "総合入口からは各制度の全条件・提出方法を確定できず、専用ページ確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "引越し関連制度への公式導線を確認。",
+          "gap_note": "総合入口からは各制度の全条件・提出方法を確定できず、専用ページ確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "引越し関連制度への公式導線を確認。",
+          "gap_note": "総合入口からは各制度の全条件・提出方法を確定できず、専用ページ確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "引越し関連制度への公式導線を確認。",
+          "gap_note": "総合入口からは各制度の全条件・提出方法を確定できず、専用ページ確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_moving"
+          ],
+          "status_reason": "引越し関連制度への公式導線を確認。",
+          "gap_note": "総合入口からは各制度の全条件・提出方法を確定できず、専用ページ確認が必要。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_nat_moving",
+            "13115_moving"
+          ],
+          "status_reason": "オンライン転出と転入・転居の来庁要件を区別できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_pregnancy"
+          ],
+          "status_reason": "電子妊娠届、母子手帳交付、予約制ゆりかご面接と来所を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_pregnancy"
+          ],
+          "status_reason": "電子妊娠届、母子手帳交付、予約制ゆりかご面接と来所を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_birth"
+          ],
+          "status_reason": "出生届の期限・必要物・受付窓口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_birth",
+            "13115_after_birth"
+          ],
+          "status_reason": "出生後の保険関連導線を確認。",
+          "gap_note": "加入保険別の申請先・必要書類は各保険者ページ確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_after_birth"
+          ],
+          "status_reason": "出生後15日以内の手当と子ども医療助成の対象・申請先を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_after_birth"
+          ],
+          "status_reason": "出生後15日以内の手当と子ども医療助成の対象・申請先を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_childbirth_lump"
+          ],
+          "status_reason": "国保の出産育児一時金の制度・申請条件を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_after_birth",
+            "13115_newborn_visit"
+          ],
+          "status_reason": "全戸訪問の対象と出生連絡票電子提出を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_after_birth",
+            "13115_newborn_visit"
+          ],
+          "status_reason": "産後ケア、訪問、手当・医療、相談支援を出生後入口で横断できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_wrapper",
+            "13115_death_graffer",
+            "13115_death_handbook"
+          ],
+          "status_reason": "静的入口、詳細冊子、質問型識別を確認。外部問答は申請完結ではない。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_notification",
+            "13115_death_handbook"
+          ],
+          "status_reason": "死亡届と火葬許可の期限・必要物・窓口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "ハンドブックが制度別の対象・返却物・担当先を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "ハンドブックが制度別の対象・返却物・担当先を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "ハンドブックが制度別の対象・返却物・担当先を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_funeral",
+            "13115_death_handbook"
+          ],
+          "status_reason": "国保葬祭費の対象・申請者・必要書類を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "ハンドブックが制度別の対象・返却物・担当先を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook",
+            "13115_nat_pension_death"
+          ],
+          "status_reason": "区冊子と日本年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "ハンドブックが制度別の対象・返却物・担当先を案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_nat_card_return",
+            "13115_death_handbook"
+          ],
+          "status_reason": "全国共通返納方法と冊子の区外手続導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13115_death_counter"
+          ],
+          "status_reason": "電話事前予約制の来庁型おくやみコーナーを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13115_death_handbook"
+          ],
+          "status_reason": "相続登記・遺言・専門相談等の案内先を確認。",
+          "gap_note": "相続手続は区で完結せず外部機関へ移行する。"
+        }
+      ]
+    },
+    {
+      "ward_code": "13116",
+      "ward_name": "豊島区",
+      "sources": [
+        {
+          "source_id": "13116_nat_moving",
+          "title": "引越し手続オンラインサービス",
+          "url": "https://www.digital.go.jp/policies/moving_onestop_service",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "デジタル庁",
+          "entry_types": [
+            "html",
+            "national_service"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "unknown",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-03-16",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "マイナポータルで転出届をオンライン提出し転入先への来庁予定を連絡できる一方、転入届・転居届はオンライン提出できず来庁が必要と明記する。"
+        },
+        {
+          "source_id": "13116_nat_child_residence",
+          "title": "日本で出生した外国人の在留資格取得許可申請",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-10.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "日本で出生し60日を超えて在留予定の外国籍児について出生から30日以内の在留資格取得手続とオンライン申請入口を案内する。"
+        },
+        {
+          "source_id": "13116_nat_pension_death",
+          "title": "身近な方が亡くなったとき（年金）",
+          "url": "https://www.nenkin.go.jp/service/scenebetsu/shibou.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "日本年金機構",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-03-28",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "未支給年金、遺族年金、寡婦年金、死亡一時金など死亡後の年金手続を制度別に案内する。"
+        },
+        {
+          "source_id": "13116_nat_card_return",
+          "title": "中長期在留者が死亡した場合の在留カード返納",
+          "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00020.html",
+          "authority_level": "national",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "出入国在留管理庁",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡した中長期在留者の在留カードを14日以内に地方出入国在留管理官署へ持参または郵送する方法を案内する。"
+        },
+        {
+          "source_id": "13116_moving",
+          "title": "住所異動の届出",
+          "url": "https://www.city.toshima.lg.jp/096/tetsuzuki/todokede/kiroku/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure_index"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-01-19",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "転入・転出・転居等の住民異動届への公式入口。関連する保険・子育て・介護手続は各所管ページで確認する構成。"
+        },
+        {
+          "source_id": "13116_pregnancy",
+          "title": "妊娠届・母子健康手帳",
+          "url": "https://www.city.toshima.lg.jp/219/kosodate/ninshin/shussanmade/001311.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-07",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "妊娠届は電子提出できるが手続は完了せず、母子健康手帳等の受取・面接には来所が必要と案内する。"
+        },
+        {
+          "source_id": "13116_parent_support",
+          "title": "妊娠から出産・子育て期の相談支援および経済的支援",
+          "url": "https://www.city.toshima.lg.jp/219/kosodate/ninshin/2303161305.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "life_event_guide",
+            "reservation"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "yes",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-06-03",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "予約制ゆりかご面接、出生時支援、こんにちは赤ちゃん訪問、子育て期アンケート等を時系列で案内する。"
+        },
+        {
+          "source_id": "13116_birth",
+          "title": "赤ちゃんが生まれたときは（出生届）",
+          "url": "https://www.city.toshima.lg.jp/094/tetsuzuki/todokede/todokede/000292.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-14",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届の期限・届出先・必要物、出生児の住民登録、乳幼児医療証等の関連案内を掲載する。"
+        },
+        {
+          "source_id": "13116_child_allowance",
+          "title": "児童手当",
+          "url": "https://www.city.toshima.lg.jp/261/kosodate/kosodate/teate-jose/017993.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure",
+            "online_form"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "yes",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-19",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生・転入時の児童手当申請を窓口・郵送・オンラインの各方法で案内する。"
+        },
+        {
+          "source_id": "13116_child_benefits",
+          "title": "児童の手当と医療費助成制度のご案内",
+          "url": "https://www.city.toshima.lg.jp/261/kosodate/2304271022.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "pdf_guide"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-01",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "児童手当と子ども医療費助成の対象・申請制度を令和8年4月版冊子で案内する。"
+        },
+        {
+          "source_id": "13116_newborn",
+          "title": "赤ちゃん訪問",
+          "url": "https://www.city.toshima.lg.jp/220/kosodate/kosodate/kenko/001357.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "health_guidance"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "no",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生通知票受理後に全出生児家庭へ保健師・助産師が訪問し、健康・育児相談と子育て情報を提供する。"
+        },
+        {
+          "source_id": "13116_childbirth_lump",
+          "title": "出産育児一時金",
+          "url": "https://www.city.toshima.lg.jp/112/tetsuzuki/nenkin/kenkohoken/kyufu/018182.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "unknown",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": null,
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "豊島区国保の出産育児一時金、直接支払・受取代理・差額等の申請方法を案内する。"
+        },
+        {
+          "source_id": "13116_parent_map",
+          "title": "MAP for PAPA",
+          "url": "https://www.city.toshima.lg.jp/documents/53932/20250904141730.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "pdf",
+            "checklist"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2025-09-04",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "出生届、児童手当、国保加入等、出生直後に必要となる主な父母向け手続をチェック形式で案内する。"
+        },
+        {
+          "source_id": "13116_death_corner",
+          "title": "おくやみコーナー",
+          "url": "https://www.city.toshima.lg.jp/093/2105180941.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "assisted_counter",
+            "reservation",
+            "handbook_link"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "yes",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "yes"
+          },
+          "official_updated_at": "2026-05-07",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "電話またはインターネット予約を優先する来庁型コーナーで必要手続を案内し、公式手続ガイドを配布・掲載する。"
+        },
+        {
+          "source_id": "13116_death_handbook",
+          "title": "豊島区おくやみ手続きガイド",
+          "url": "https://www.city.toshima.lg.jp/documents/35308/2026web_okuyami.pdf",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "pdf",
+            "handbook"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-05-07",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡後の戸籍・住民、保険、葬祭費、介護、年金、税、返却物、相続等を担当窓口・必要物付きで案内する。"
+        },
+        {
+          "source_id": "13116_death_notification",
+          "title": "死亡届",
+          "url": "https://www.city.toshima.lg.jp/094/tetsuzuki/todokede/todokede/000310/index.html",
+          "authority_level": "ward",
+          "host_type": "official_domain",
+          "official_wrapper_url": null,
+          "operator": "豊島区",
+          "entry_types": [
+            "html",
+            "procedure"
+          ],
+          "capabilities": {
+            "information": "yes",
+            "questionnaire": "no",
+            "reservation": "no",
+            "prefill": "no",
+            "online_submission": "no",
+            "mandatory_visit": "yes",
+            "assisted_counter": "no"
+          },
+          "official_updated_at": "2026-04-14",
+          "verified_on": "2026-08-10",
+          "languages": [
+            "ja"
+          ],
+          "evidence_note": "死亡届の期限・届出人・届出先・火葬許可等を案内する公式ページ。"
+        }
+      ],
+      "coverage": [
+        {
+          "event_id": "moving",
+          "subflow_id": "moving_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "転入・転出・転居の公式手続入口を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_out_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "3住民異動の専用ページへの公式導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "myna_move_out_online",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_nat_moving",
+            "13116_moving"
+          ],
+          "status_reason": "マイナポータル転出と転入先来庁の境界を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "move_in_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "3住民異動の専用ページへの公式導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "intra_ward_move_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "3住民異動の専用ページへの公式導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mynumber_address_continued_use",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "住所異動入口から関連制度へ到達できる。",
+          "gap_note": "総合入口だけでは制度別の全分岐・提出方法を確定できない。多言語入口の有無も完全性の代替にしていない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "national_health_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "住所異動入口から関連制度へ到達できる。",
+          "gap_note": "総合入口だけでは制度別の全分岐・提出方法を確定できない。多言語入口の有無も完全性の代替にしていない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "child_allowance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "住所異動入口から関連制度へ到達できる。",
+          "gap_note": "総合入口だけでは制度別の全分岐・提出方法を確定できない。多言語入口の有無も完全性の代替にしていない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "care_insurance_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "住所異動入口から関連制度へ到達できる。",
+          "gap_note": "総合入口だけでは制度別の全分岐・提出方法を確定できない。多言語入口の有無も完全性の代替にしていない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "seal_registration_move",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_moving"
+          ],
+          "status_reason": "住所異動入口から関連制度へ到達できる。",
+          "gap_note": "総合入口だけでは制度別の全分岐・提出方法を確定できない。多言語入口の有無も完全性の代替にしていない。"
+        },
+        {
+          "event_id": "moving",
+          "subflow_id": "mandatory_visit_summary",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_nat_moving",
+            "13116_moving"
+          ],
+          "status_reason": "オンライン転出と転入・転居の来庁要件を区別できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_notification_handbook",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_pregnancy",
+            "13116_parent_support"
+          ],
+          "status_reason": "電子妊娠届後の来所、母子手帳、予約制ゆりかご面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "pregnancy_interview_support",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_pregnancy",
+            "13116_parent_support"
+          ],
+          "status_reason": "電子妊娠届後の来所、母子手帳、予約制ゆりかご面接を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "birth_notification",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_birth"
+          ],
+          "status_reason": "出生届の期限・必要物・住民登録を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_health_insurance",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_birth",
+            "13116_parent_map"
+          ],
+          "status_reason": "出生後の国保加入等の導線を確認。",
+          "gap_note": "勤務先保険を含む加入先別の申請方法は各保険者確認が必要。"
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_allowance_birth",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_child_allowance",
+            "13116_parent_map"
+          ],
+          "status_reason": "出生時の期限と窓口・郵送・オンライン申請を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "child_medical_subsidy",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_child_benefits",
+            "13116_birth"
+          ],
+          "status_reason": "子ども医療費助成の対象・申請制度と出生時導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childbirth_lump_sum",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_childbirth_lump"
+          ],
+          "status_reason": "国保の直接支払・受取代理・差額等の申請方法を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "newborn_visit_health_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_newborn",
+            "13116_parent_support"
+          ],
+          "status_reason": "全出生児家庭への訪問と相談内容を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "foreign_child_residence_status",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_nat_child_residence"
+          ],
+          "status_reason": "全国共通の出生後在留資格取得手続を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "childbirth",
+          "subflow_id": "childcare_support_navigation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_parent_support",
+            "13116_newborn",
+            "13116_child_benefits"
+          ],
+          "status_reason": "妊娠から出生・訪問・手当・医療までの公式導線を横断できる。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_guidance",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_corner",
+            "13116_death_handbook"
+          ],
+          "status_reason": "予約優先支援窓口と詳細手続ガイドを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "death_notification_cremation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_notification",
+            "13116_death_handbook"
+          ],
+          "status_reason": "死亡届・火葬許可の期限・提出先を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "household_register_change",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "mynumber_seal_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "health_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "funeral_benefit",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "care_insurance_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "pension_survivor_procedures",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook",
+            "13116_nat_pension_death"
+          ],
+          "status_reason": "区冊子と日本年金機構の制度別案内を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "resident_tax_heir_representative",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "手続ガイドが対象者・担当窓口・必要物を制度別に案内。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "foreign_resident_card_return",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_nat_card_return",
+            "13116_death_handbook"
+          ],
+          "status_reason": "全国共通返納方法と冊子の区外手続導線を確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "bereavement_counter_reservation",
+          "coverage_status": "complete",
+          "source_ids": [
+            "13116_death_corner"
+          ],
+          "status_reason": "電話またはインターネット予約を優先する来庁型おくやみコーナーを確認。",
+          "gap_note": ""
+        },
+        {
+          "event_id": "death",
+          "subflow_id": "inheritance_referral",
+          "coverage_status": "partial",
+          "source_ids": [
+            "13116_death_handbook"
+          ],
+          "status_reason": "相続関係の外部手続・相談先を確認。",
+          "gap_note": "相続登記等は区で完結せず、法務局・専門機関等への移行が必要。"
+        }
+      ]
+    }
+  ]
+}
